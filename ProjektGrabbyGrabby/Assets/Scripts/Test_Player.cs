@@ -10,13 +10,21 @@ public class Test_Player : MonoBehaviour
     bool whileTouch = false;
     public Vector2 tPosition;
     public Touch touch;
+    public AudioSource asYeet;
+    public AudioClip asYeetClip;
 
     private void Awake()
     {
         spring = GetComponent<SpringJoint2D>();
         rigid = GetComponent<Rigidbody2D>();
+        asYeet = GetComponent<AudioSource>();
 
         releaseDelay = 1 / (spring.frequency * 4);
+    }
+
+    private void Start()
+    {
+        asYeetClip = asYeet.clip;
     }
     public void Update()
     {
@@ -56,6 +64,10 @@ public class Test_Player : MonoBehaviour
         Debug.Log("isnottouched");
         rigid.isKinematic = false;
         StartCoroutine(Release());
+        if (!asYeet.isPlaying)
+        {
+            asYeet.Play();
+        }
     }
 
     private IEnumerator Release()

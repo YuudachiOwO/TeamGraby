@@ -47,14 +47,18 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11592}
+      Script: {instanceID: 11594}
     - Class: 114
-      Script: {instanceID: 12172}
+      Script: {instanceID: 12174}
     - Class: 114
-      Script: {instanceID: 14228}
+      Script: {instanceID: 14230}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -160,7 +164,7 @@ ScriptsOnlyBuild:
     className: TMP_InputField
   - hash:
       serializedVersion: 2
-      Hash: 06cd89f8a3d725516df8a104caeb0cbb
+      Hash: 240e51d733c2cd0e65cd3a11e2133325
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Test_Player
