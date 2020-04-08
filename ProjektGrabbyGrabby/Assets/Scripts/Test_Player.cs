@@ -18,7 +18,6 @@ public class Test_Player : MonoBehaviour
         spring = GetComponent<SpringJoint2D>();
         rigid = GetComponent<Rigidbody2D>();
         asYeet = GetComponent<AudioSource>();
-
         releaseDelay = 1 / (spring.frequency * 4);
     }
 
@@ -26,42 +25,34 @@ public class Test_Player : MonoBehaviour
     {
         asYeetClip = asYeet.clip;
     }
+
+    //TOUCHSCREEN FUNCTION / TRANSFORM PLAYER IF TOUCH SCREEN//
     public void Update()
     {
-        //TOUCHSCREEN FUNCTION / TRANSFORM PLAYER IF TOUCH SCREEN//
-        /*if (Input.touchCount > 0)
-        {
-            Touch touch = Input.GetTouch(0);
-            Vector3 touchPosition = Camera.main.ScreenToWorldPoint(touch.position);
-            touchPosition.z = 0f;
-            transform.position = touchPosition;
-        } */
-
         touch = Input.GetTouch(0);
-        Debug.Log(touch.position);
 
         if (whileTouch)
         {
             DragBall();
         }
     }
+
+    //Ball Position//
     private void DragBall()
     {
         Vector2 tPosition = Camera.main.ScreenToWorldPoint(touch.position);
         rigid.position = tPosition;
     }
-    //CUT SPRING / IF BUTTONS IS NOT TOUCHED ANYMORE SPRING RELEASE//
+
+    //Check if ball is touched//
     private void OnMouseDown()
     {
         whileTouch = true;
-        Debug.Log("istouched");
         rigid.isKinematic = true;
     }
-
     private void OnMouseUp()
     {
         whileTouch = false;
-        Debug.Log("isnottouched");
         rigid.isKinematic = false;
         StartCoroutine(Release());
         if (!asYeet.isPlaying)
@@ -70,6 +61,7 @@ public class Test_Player : MonoBehaviour
         }
     }
 
+    //IEnumerator to deactivate the Spring//
     private IEnumerator Release()
     {
         yield return new WaitForSeconds(releaseDelay);
