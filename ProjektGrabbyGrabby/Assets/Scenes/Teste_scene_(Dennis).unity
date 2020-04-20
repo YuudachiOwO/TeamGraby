@@ -1686,6 +1686,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0dc81320d0ba9443a5883911aef7b05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  whileTouch: 0
   tPosition: {x: 0, y: 0}
   asYeet: {fileID: 0}
   asYeetClip: {fileID: 0}
@@ -2120,6 +2121,7 @@ GameObject:
   - component: {fileID: 1900725049}
   - component: {fileID: 1900725048}
   - component: {fileID: 1900725047}
+  - component: {fileID: 1900725050}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -2192,6 +2194,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1900725050
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1900725046}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a79b9beee7c0044ba1e5cfc785b51ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerPos: {fileID: 1450953922}
+  testPlayer: {fileID: 1450953923}
 --- !u!1 &2006997282
 GameObject:
   m_ObjectHideFlags: 0

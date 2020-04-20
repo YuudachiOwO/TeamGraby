@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class Test_Player : MonoBehaviour
 {
-    private SpringJoint2D spring;
+    public SpringJoint2D spring;
     private Rigidbody2D rigid;
     private float releaseDelay;
-    bool whileTouch = false;
+    public bool whileTouch = false;
     public Vector2 tPosition;
     public Touch touch;
     public AudioSource asYeet;
