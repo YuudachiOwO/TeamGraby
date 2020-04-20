@@ -4,17 +4,60 @@ using UnityEngine;
 
 public class LevelGenerator : MonoBehaviour
 {
+    //Components
+    [SerializeField] public Transform levelPart_Start;
+    [SerializeField] public Transform EndlessGround;
+    [SerializeField] public GameObject player;
+    public GameObject[] End;
+    public Vector3[] EndPos;
+    private const float PlayerDistance = 200f;
+    private Vector3 lastEndPosition;
+    private Vector3 DestroyPosition;
 
-    [SerializeField] private Transform levelPart_Start;
-    [SerializeField] private Transform levelPart_1;
-   
 
     private void Awake()
     {
-        SpawnLevelPart(new Vector3(38, -4));
+        lastEndPosition = levelPart_Start.Find("EndPosition").position;
+        int startingSpawnLevelParts = 5;
+        for (int i = 0; i < startingSpawnLevelParts; i++)
+        {
+            SpawnLevelPart();
+        }
     }
-    private void SpawnLevelPart(Vector3 spawnPosition)
+
+    private void Start()
     {
-        Instantiate(levelPart_1, spawnPosition, Quaternion.identity);
+        End = GameObject.FindGameObjectsWithTag("EndPosition");
+
+    }
+
+    //If the player is ?? away from a part, spawn a new LevelPart
+    private void Update()
+    {
+        for (int i = 0; i < End.Length; i++)
+        {
+            GetComponent<LevelGenerator>().EndPos[i] = End[i].transform.position;
+        }
+        Debug.Log(EndPos);
+
+        if (Vector3.Distance(player.transform.position, lastEndPosition) < PlayerDistance)
+            SpawnLevelPart();
+
+        //if (Vector3.Distance(player.transform.position, End)
+
+    }
+
+    //Spawn a Levelpart at the EndPosition Marker
+    private void SpawnLevelPart()
+    {
+        Transform lastLevelPartTransform = SpawnLevelPart(lastEndPosition);
+        lastEndPosition = lastLevelPartTransform.Find("EndPosition").position;
+    }
+
+    //Spawn LevelPart
+    private Transform SpawnLevelPart(Vector3 spawnposition)
+    {
+        Transform levelPartTransform = Instantiate(EndlessGround, spawnposition, Quaternion.identity);
+        return levelPartTransform;
     }
 }
