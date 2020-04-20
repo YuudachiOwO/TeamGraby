@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7041942702606072996}
   m_Layer: 0
   m_Name: LevelPart_Start
-  m_TagString: Untagged
+  m_TagString: EndPosition
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1412,7 +1412,7 @@ GameObject:
   - component: {fileID: 7900134468103779886}
   m_Layer: 0
   m_Name: EndPosition
-  m_TagString: EndPosition
+  m_TagString: Untagged
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

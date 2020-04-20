@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Drawing;
 using UnityEngine;
 
 public class LevelGenerator : MonoBehaviour
@@ -27,21 +28,26 @@ public class LevelGenerator : MonoBehaviour
 
     private void Start()
     {
-        End = GameObject.FindGameObjectsWithTag("EndPosition");
 
     }
 
     //If the player is ?? away from a part, spawn a new LevelPart
     private void Update()
     {
-        for (int i = 0; i < End.Length; i++)
-        {
-            GetComponent<LevelGenerator>().EndPos[i] = End[i].transform.position;
-        }
-        Debug.Log(EndPos);
+
 
         if (Vector3.Distance(player.transform.position, lastEndPosition) < PlayerDistance)
+        {
             SpawnLevelPart();
+        }
+
+        End = GameObject.FindGameObjectsWithTag("EndPosition");
+
+        for (int i = 0; i <= End.Length; i++)
+        {
+            GetComponent<LevelGenerator>().EndPos[i] = End[i].transform.position;
+            
+        }
 
         //if (Vector3.Distance(player.transform.position, End)
 
