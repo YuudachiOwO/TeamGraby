@@ -65,6 +65,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Camera_Follow.cs" />
     <Compile Include="Assets\Scripts\LevelGenerator.cs" />
+    <Compile Include="Assets\Scripts\PlatformDestroyer.cs" />
     <Compile Include="Assets\Scripts\Restart_Script.cs" />
     <Compile Include="Assets\Scripts\Test_Player.cs" />
     <Reference Include="Unity.Timeline.Editor">
