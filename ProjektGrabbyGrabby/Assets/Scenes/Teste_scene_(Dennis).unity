@@ -1611,6 +1611,7 @@ GameObject:
   - component: {fileID: 1450953922}
   - component: {fileID: 1450953921}
   - component: {fileID: 1450953920}
+  - component: {fileID: 1450953925}
   - component: {fileID: 1450953919}
   - component: {fileID: 1450953918}
   - component: {fileID: 1450953923}
@@ -1856,6 +1857,22 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1450953925
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1450953917}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7138e688c0df75549817b324ffce6133, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerRB: {fileID: 0}
+  jetpackBurning: 0
+  boosterStrengthUp: 100
+  boosterStrengthSide: 100
 --- !u!1 &1605388770
 GameObject:
   m_ObjectHideFlags: 0
