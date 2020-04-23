@@ -1,11 +1,12 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
-    - Camera_Follow
-    - Jetpack_Boost
+    - CameraFollowPlayer
+    - LevelGenerator
+    - PlatformDestroyer
     - Restart_Script
     - Test_Player
-    - Wall_Breaker
+    - Trampoline_Bounce
     Unity.2D.Animation.Editor.dll:
     - UnityEditor.U2D.Animation.BoneGizmo
     Unity.2D.Tilemap.Editor.dll:
@@ -29,7 +30,7 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.Image
     - UnityEngine.UI.Text
   sceneClasses:
-    Assets/Scenes/Teste_scene_(Dennis).unity:
+    Assets/Scenes/Teste_scene_(Kevin).unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -57,29 +58,31 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11202}
+      Script: {instanceID: 11172}
     - Class: 114
-      Script: {instanceID: 11488}
+      Script: {instanceID: 11218}
     - Class: 114
-      Script: {instanceID: 11542}
+      Script: {instanceID: 11460}
     - Class: 114
-      Script: {instanceID: 11624}
+      Script: {instanceID: 11514}
     - Class: 114
-      Script: {instanceID: 12206}
+      Script: {instanceID: 11596}
     - Class: 114
-      Script: {instanceID: 12878}
+      Script: {instanceID: 11616}
     - Class: 114
-      Script: {instanceID: 12902}
+      Script: {instanceID: 12178}
     - Class: 114
-      Script: {instanceID: 13108}
+      Script: {instanceID: 12874}
     - Class: 114
-      Script: {instanceID: 13656}
+      Script: {instanceID: 13628}
     - Class: 114
-      Script: {instanceID: 13848}
+      Script: {instanceID: 13696}
     - Class: 114
-      Script: {instanceID: 14154}
+      Script: {instanceID: 13820}
     - Class: 114
-      Script: {instanceID: 14274}
+      Script: {instanceID: 13954}
+    - Class: 114
+      Script: {instanceID: 14246}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -113,6 +116,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_SelectionCaret
+  - hash:
+      serializedVersion: 2
+      Hash: f7c8a001602c01c9d62ab88e8ae9f3b0
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Trampoline_Bounce
   - hash:
       serializedVersion: 2
       Hash: 87ff43d2baf3385cba327d8f803a4ebb
@@ -625,5 +634,5 @@ ScriptsOnlyBuild:
     className: PlayableTrack
   platform: 13
   scenePathNames:
-  - Assets/Scenes/Teste_scene_(Dennis).unity
+  - Assets/Scenes/Teste_scene_(Kevin).unity
   playerPath: C:/Users/LeYuudachi/Desktop/GA_Projekt/GrabbyGrab/TeamGraby/ProjektGrabbyGrabby/test.apk

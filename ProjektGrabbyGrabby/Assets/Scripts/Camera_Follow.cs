@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -15,4 +16,7 @@ public class Camera_Follow : MonoBehaviour
             transform.position = new Vector3(playerPos.position.x, playerPos.position.y, transform.position.z);
         }
     }
+
+
+
 }

@@ -65,11 +65,15 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\CameraFollowPlayer.cs" />
     <Compile Include="Assets\Scripts\Camera_Follow.cs" />
+    <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\Jetpack_Boost.cs" />
     <Compile Include="Assets\Scripts\LevelGenerator.cs" />
     <Compile Include="Assets\Scripts\PlatformDestroyer.cs" />
+    <Compile Include="Assets\Scripts\PlayerController.cs" />
     <Compile Include="Assets\Scripts\Restart_Script.cs" />
+    <Compile Include="Assets\Scripts\ScoreManager.cs" />
     <Compile Include="Assets\Scripts\Test_Player.cs" />
+    <Compile Include="Assets\Scripts\Trampoline_Bounce.cs" />
     <Compile Include="Assets\Scripts\Wall_Breaker.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/LeYuudachi/Desktop/GA_Projekt/GrabbyGrab/TeamGraby/ProjektGrabbyGrabby/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
