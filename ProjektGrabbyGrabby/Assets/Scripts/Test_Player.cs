@@ -47,15 +47,19 @@ public class Test_Player : MonoBehaviour
     //Check if ball is touched//
     private void OnMouseDown()
     {
-        whileTouch = true;
-        rigid.isKinematic = true;
+        if (spring.enabled)
+        {
+            whileTouch = true;
+            rigid.isKinematic = true;
+        }
+
     }
     private void OnMouseUp()
     {
         whileTouch = false;
         rigid.isKinematic = false;
         StartCoroutine(Release());
-        if (!asYeet.isPlaying)
+        if (!asYeet.isPlaying && spring.enabled)
         {
             asYeet.Play();
         }

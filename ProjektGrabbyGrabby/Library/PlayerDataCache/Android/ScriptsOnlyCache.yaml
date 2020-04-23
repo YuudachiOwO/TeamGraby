@@ -1,8 +1,11 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - Camera_Follow
+    - Jetpack_Boost
     - Restart_Script
     - Test_Player
+    - Wall_Breaker
     Unity.2D.Animation.Editor.dll:
     - UnityEditor.U2D.Animation.BoneGizmo
     Unity.2D.Tilemap.Editor.dll:
@@ -26,7 +29,7 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.Image
     - UnityEngine.UI.Text
   sceneClasses:
-    Assets/Scenes/Teste_scene.unity:
+    Assets/Scenes/Teste_scene_(Dennis).unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -35,13 +38,7 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 21
       Script: {instanceID: 0}
-    - Class: 23
-      Script: {instanceID: 0}
     - Class: 28
-      Script: {instanceID: 0}
-    - Class: 33
-      Script: {instanceID: 0}
-    - Class: 43
       Script: {instanceID: 0}
     - Class: 48
       Script: {instanceID: 0}
@@ -60,23 +57,29 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11170}
+      Script: {instanceID: 11202}
     - Class: 114
-      Script: {instanceID: 11456}
+      Script: {instanceID: 11488}
     - Class: 114
-      Script: {instanceID: 11510}
+      Script: {instanceID: 11542}
     - Class: 114
-      Script: {instanceID: 11592}
+      Script: {instanceID: 11624}
     - Class: 114
-      Script: {instanceID: 12172}
+      Script: {instanceID: 12206}
     - Class: 114
-      Script: {instanceID: 12866}
+      Script: {instanceID: 12878}
     - Class: 114
-      Script: {instanceID: 13618}
+      Script: {instanceID: 12902}
     - Class: 114
-      Script: {instanceID: 14228}
+      Script: {instanceID: 13108}
     - Class: 114
-      Script: {instanceID: 20732}
+      Script: {instanceID: 13656}
+    - Class: 114
+      Script: {instanceID: 13848}
+    - Class: 114
+      Script: {instanceID: 14154}
+    - Class: 114
+      Script: {instanceID: 14274}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -190,7 +193,7 @@ ScriptsOnlyBuild:
     className: TMP_InputField
   - hash:
       serializedVersion: 2
-      Hash: 240e51d733c2cd0e65cd3a11e2133325
+      Hash: 24642b880f7f36bbf49d3629eea14d6f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Test_Player
@@ -200,6 +203,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: GridLayoutGroup
+  - hash:
+      serializedVersion: 2
+      Hash: 16fee77f2ea0204f2e33100db0982c9d
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CameraFollowPlayer
   - hash:
       serializedVersion: 2
       Hash: 8aa3d6ccbcb54ee8db6c1229854adaaa
@@ -370,6 +379,12 @@ ScriptsOnlyBuild:
     className: TextContainer
   - hash:
       serializedVersion: 2
+      Hash: 4da4c6612edea3b000250eaf13bcbadc
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Jetpack_Boost
+  - hash:
+      serializedVersion: 2
       Hash: 5f1752ed2092162f016c19510c28a8b9
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -386,6 +401,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: VerticalLayoutGroup
+  - hash:
+      serializedVersion: 2
+      Hash: 2ee59765c95b5052f9bff14a5cb2adb8
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Wall_Breaker
   - hash:
       serializedVersion: 2
       Hash: 98bf293cd34a2f7168fb0675fad19457
@@ -472,6 +493,18 @@ ScriptsOnlyBuild:
     className: BeforeAfterTestCommandState
   - hash:
       serializedVersion: 2
+      Hash: 0ba4eec32d90bfaae19f5d0eaa6a55a1
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: LevelGenerator
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Restart_Script
+  - hash:
+      serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -482,6 +515,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_StyleSheet
+  - hash:
+      serializedVersion: 2
+      Hash: c05a61c122c1780164da69d3acfed011
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PlatformDestroyer
   - hash:
       serializedVersion: 2
       Hash: df434544c9f7b33d1cc7e635b180d279
@@ -506,6 +545,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
     className: BaseInput
+  - hash:
+      serializedVersion: 2
+      Hash: 548e8438f221d403c1e5e143868fa7a9
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Camera_Follow
   - hash:
       serializedVersion: 2
       Hash: caa533b001ae39b864ba8425019e2268
@@ -578,13 +623,7 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: Restart_Script
   platform: 13
   scenePathNames:
-  - Assets/Scenes/Teste_scene.unity
+  - Assets/Scenes/Teste_scene_(Dennis).unity
   playerPath: C:/Users/LeYuudachi/Desktop/GA_Projekt/GrabbyGrab/TeamGraby/ProjektGrabbyGrabby/test.apk

@@ -1870,7 +1870,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerRB: {fileID: 0}
-  jetpackBurning: 0
+  jetpackBurning: 1
   boosterStrengthUp: 100
   boosterStrengthSide: 100
 --- !u!1 &1605388770
