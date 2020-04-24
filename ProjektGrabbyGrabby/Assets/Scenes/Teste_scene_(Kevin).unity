@@ -585,8 +585,8 @@ MonoBehaviour:
     m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
+    m_HorizontalOverflow: 1
+    m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: 'Score: ??'
 --- !u!222 &625779638
@@ -732,12 +732,12 @@ PrefabInstance:
     - target: {fileID: 1664592259182427335, guid: 3fac55a4e98bf0440948233d227d3ec9,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 21.25
+      value: -31.95
       objectReference: {fileID: 0}
     - target: {fileID: 1664592259182427335, guid: 3fac55a4e98bf0440948233d227d3ec9,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -5
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 1664592259182427335, guid: 3fac55a4e98bf0440948233d227d3ec9,
         type: 3}
@@ -835,6 +835,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   platformDestructionPoint: {fileID: 891402000}
+--- !u!4 &910760144 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 134756905760512036, guid: 9be52272eca78ef4b8d6ece023d4e3bd,
+    type: 3}
+  m_PrefabInstance: {fileID: 5512181697207518872}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &940120293
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -981,8 +987,8 @@ MonoBehaviour:
     m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
+    m_HorizontalOverflow: 1
+    m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: 'Highscore: ??'
 --- !u!222 &1180413051
@@ -1020,8 +1026,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1600940490}
-  - component: {fileID: 1600940491}
-  - component: {fileID: 1600940492}
   m_Layer: 0
   m_Name: HighscoreManager
   m_TagString: Untagged
@@ -1043,42 +1047,12 @@ Transform:
   m_Father: {fileID: 713654776}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1600940491
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+--- !u!4 &1679645260 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4199996118952583210, guid: 50c11c2df8e960b4f8ac8c4fd284ff24,
+    type: 3}
+  m_PrefabInstance: {fileID: 940120293}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1600940489}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 32767d5cf1ad99748a0e3322c3bf679b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scoreText: {fileID: 0}
-  scoreCount: 0
-  highscoreText: {fileID: 0}
-  highScoreCount: 0
-  pointsPerSecond: 0
-  scoredeath: 0
---- !u!114 &1600940492
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1600940489}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 32767d5cf1ad99748a0e3322c3bf679b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scoreText: {fileID: 625779637}
-  scoreCount: 0
-  highscoreText: {fileID: 1180413050}
-  highScoreCount: 0
-  pointsPerSecond: 1
-  scoredeath: 1
 --- !u!1 &1900725046
 GameObject:
   m_ObjectHideFlags: 0
@@ -1091,6 +1065,7 @@ GameObject:
   - component: {fileID: 1900725048}
   - component: {fileID: 1900725047}
   - component: {fileID: 1900725050}
+  - component: {fileID: 1900725051}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1157,7 +1132,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1900725046}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -1}
+  m_LocalPosition: {x: 0, y: -0.54, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 548001784}
@@ -1180,12 +1155,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1450953924}
   testPlayer: {fileID: 1450953919}
-  offset: {x: 0, y: 0, z: -0.36}
-  smoothSpeed: 0.32
-  xMin: -1
-  xMax: 1
-  yMin: -1
-  yMax: 1
+  yMin: -0.6
+  yMax: 9999999
+--- !u!114 &1900725051
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1900725046}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a79b9beee7c0044ba1e5cfc785b51ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerPos: {fileID: 1450953924}
+  testPlayer: {fileID: 1450953919}
+  smoothSpeed: 0.125
+  playerZ: {fileID: 910760144}
+  pp: {x: 0, y: 0, z: 0}
 --- !u!1 &2006997282
 GameObject:
   m_ObjectHideFlags: 0
@@ -1452,36 +1440,19 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1429520051, guid: 9be52272eca78ef4b8d6ece023d4e3bd, type: 3}
+      propertyPath: scoreText
+      value: 
+      objectReference: {fileID: 625779637}
+    - target: {fileID: 1429520051, guid: 9be52272eca78ef4b8d6ece023d4e3bd, type: 3}
+      propertyPath: checkpoint
+      value: 
+      objectReference: {fileID: 1679645260}
     - target: {fileID: 5512181695757748774, guid: 9be52272eca78ef4b8d6ece023d4e3bd,
         type: 3}
       propertyPath: m_ConnectedRigidBody
       value: 
       objectReference: {fileID: 103464083}
-    - target: {fileID: 5512181695757748774, guid: 9be52272eca78ef4b8d6ece023d4e3bd,
-        type: 3}
-      propertyPath: m_ConnectedAnchor.x
-      value: 0.07827568
-      objectReference: {fileID: 0}
-    - target: {fileID: 5512181695757748774, guid: 9be52272eca78ef4b8d6ece023d4e3bd,
-        type: 3}
-      propertyPath: m_ConnectedAnchor.y
-      value: 1.4199452
-      objectReference: {fileID: 0}
-    - target: {fileID: 5512181695757748774, guid: 9be52272eca78ef4b8d6ece023d4e3bd,
-        type: 3}
-      propertyPath: m_Distance
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5512181695757748774, guid: 9be52272eca78ef4b8d6ece023d4e3bd,
-        type: 3}
-      propertyPath: m_Frequency
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5512181695757748824, guid: 9be52272eca78ef4b8d6ece023d4e3bd,
-        type: 3}
-      propertyPath: m_Interpolate
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5512181696815963937, guid: 9be52272eca78ef4b8d6ece023d4e3bd,
         type: 3}
       propertyPath: m_Name
