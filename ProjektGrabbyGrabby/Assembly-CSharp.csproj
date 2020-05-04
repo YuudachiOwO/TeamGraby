@@ -72,6 +72,7 @@
     <Compile Include="Assets\Scripts\PlayerController.cs" />
     <Compile Include="Assets\Scripts\Restart_Script.cs" />
     <Compile Include="Assets\Scripts\ScoreManager.cs" />
+    <Compile Include="Assets\Scripts\TESTSCRIPT.cs" />
     <Compile Include="Assets\Scripts\Test_Player.cs" />
     <Compile Include="Assets\Scripts\Trampoline_Bounce.cs" />
     <Compile Include="Assets\Scripts\Wall_Breaker.cs" />

@@ -2,17 +2,17 @@ ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
     - CameraFollowPlayer
+    - Camera_Follow
+    - GameManager
     - LevelGenerator
     - PlatformDestroyer
     - Restart_Script
+    - ScoreManager
     - Test_Player
-    - Trampoline_Bounce
     Unity.2D.Animation.Editor.dll:
     - UnityEditor.U2D.Animation.BoneGizmo
     Unity.2D.Tilemap.Editor.dll:
     - UnityEditor.Tilemaps.GridPaintingState
-    - UnityEditor.Tilemaps.GridPaletteBrushes
-    - UnityEditor.Tilemaps.GridPalettes
     - UnityEditor.Tilemaps.SceneViewGridManager
     - UnityEditor.Tilemaps.TileDragAndDropManager
     Unity.Rider.Editor.dll:
@@ -58,9 +58,7 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11172}
-    - Class: 114
-      Script: {instanceID: 11218}
+      Script: {instanceID: 11170}
     - Class: 114
       Script: {instanceID: 11460}
     - Class: 114
@@ -70,19 +68,25 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11616}
     - Class: 114
-      Script: {instanceID: 12178}
+      Script: {instanceID: 11774}
     - Class: 114
-      Script: {instanceID: 12874}
+      Script: {instanceID: 12180}
     - Class: 114
-      Script: {instanceID: 13628}
+      Script: {instanceID: 12876}
     - Class: 114
-      Script: {instanceID: 13696}
+      Script: {instanceID: 13630}
     - Class: 114
-      Script: {instanceID: 13820}
+      Script: {instanceID: 13644}
     - Class: 114
-      Script: {instanceID: 13954}
+      Script: {instanceID: 13700}
     - Class: 114
-      Script: {instanceID: 14246}
+      Script: {instanceID: 13824}
+    - Class: 114
+      Script: {instanceID: 13958}
+    - Class: 114
+      Script: {instanceID: 14130}
+    - Class: 114
+      Script: {instanceID: 14250}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -214,7 +218,7 @@ ScriptsOnlyBuild:
     className: GridLayoutGroup
   - hash:
       serializedVersion: 2
-      Hash: 16fee77f2ea0204f2e33100db0982c9d
+      Hash: dde33a8f7a4b70d93ce708d2f0a934ea
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: CameraFollowPlayer
@@ -242,6 +246,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
     className: PhysicsRaycaster
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: GameManager
   - hash:
       serializedVersion: 2
       Hash: bd3cf68c8964d3c66d1c43f4f98508c9
@@ -496,6 +506,12 @@ ScriptsOnlyBuild:
     className: GraphicRaycaster
   - hash:
       serializedVersion: 2
+      Hash: 8f72afce5004cc594a3d4180e2f68105
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ScoreManager
+  - hash:
+      serializedVersion: 2
       Hash: 88cc9df3c6fc697bfbeacd24c0d6f2d7
     assemblyName: UnityEngine.TestRunner.dll
     namespaceName: UnityEngine.TestTools
@@ -556,7 +572,7 @@ ScriptsOnlyBuild:
     className: BaseInput
   - hash:
       serializedVersion: 2
-      Hash: 548e8438f221d403c1e5e143868fa7a9
+      Hash: 8adac4c7d41ee2f06c23d82943f53f51
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Camera_Follow
