@@ -23,7 +23,7 @@ public class Wall_Breaker : MonoBehaviour
         {
             if (playerRB.velocity.x > 1)
             {
-                Destroy(this.gameObject);
+                this.gameObject.SetActive(false);
             }
             else
             {
@@ -40,7 +40,7 @@ public class Wall_Breaker : MonoBehaviour
         {
             if (playerRB.velocity.x > 1)
             {
-                Destroy(this.gameObject);
+                this.gameObject.SetActive(false);
             }
             else
             {

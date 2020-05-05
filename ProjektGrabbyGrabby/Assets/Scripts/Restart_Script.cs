@@ -9,6 +9,6 @@ public class Restart_Script : MonoBehaviour
 
     public void Reset()
     {
-        SceneManager.LoadScene("Teste_scene");
+        SceneManager.LoadScene("Teste_scene_(Kevin)");
     }
 }
