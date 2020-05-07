@@ -18,7 +18,7 @@ public class SceneChange : MonoBehaviour
     public void quitGame()
     {
         Application.Quit(); //Quit Game button
-        UnityEditor.EditorApplication.isPlaying = false; //Quit Game in Unity Editor
+        //UnityEditor.EditorApplication.isPlaying = false; //Quit Game in Unity Editor
     }
 
 }

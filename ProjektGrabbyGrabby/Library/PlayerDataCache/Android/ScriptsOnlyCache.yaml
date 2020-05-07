@@ -9,8 +9,11 @@ ScriptsOnlyBuild:
     - ObjectPooler
     - PlatformDestroyer
     - Restart_Script
+    - SceneChange
     - ScoreManager
     - Test_Player
+    - Trampoline_Bounce
+    - Wall_Breaker
     Unity.2D.Animation.Editor.dll:
     - UnityEditor.U2D.Animation.BoneGizmo
     Unity.2D.Tilemap.Editor.dll:
@@ -21,6 +24,12 @@ ScriptsOnlyBuild:
     - UnityEditor.Tilemaps.TileDragAndDropManager
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
+    Unity.TextMeshPro.dll:
+    - TMPro.TMP_FontAsset
+    - TMPro.TMP_Settings
+    - TMPro.TMP_SpriteAsset
+    - TMPro.TMP_StyleSheet
+    - TMPro.TextMeshProUGUI
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
@@ -34,6 +43,69 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.Image
     - UnityEngine.UI.Text
   sceneClasses:
+    Assets/Scenes/Menu.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 49
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 109
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 11192}
+    - Class: 114
+      Script: {instanceID: 11538}
+    - Class: 114
+      Script: {instanceID: 12000}
+    - Class: 114
+      Script: {instanceID: 12206}
+    - Class: 114
+      Script: {instanceID: 12258}
+    - Class: 114
+      Script: {instanceID: 12902}
+    - Class: 114
+      Script: {instanceID: 13248}
+    - Class: 114
+      Script: {instanceID: 13266}
+    - Class: 114
+      Script: {instanceID: 13556}
+    - Class: 114
+      Script: {instanceID: 13656}
+    - Class: 114
+      Script: {instanceID: 13936}
+    - Class: 114
+      Script: {instanceID: 14276}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
+      Script: {instanceID: 0}
+    - Class: 212
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
+      Script: {instanceID: 0}
     Assets/Scenes/Teste_scene_(Kevin).unity:
     - Class: 1
       Script: {instanceID: 0}
@@ -68,39 +140,43 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11212}
+      Script: {instanceID: 11192}
     - Class: 114
-      Script: {instanceID: 11224}
+      Script: {instanceID: 11204}
     - Class: 114
-      Script: {instanceID: 11504}
+      Script: {instanceID: 11240}
     - Class: 114
-      Script: {instanceID: 11558}
+      Script: {instanceID: 11484}
+    - Class: 114
+      Script: {instanceID: 11538}
+    - Class: 114
+      Script: {instanceID: 11620}
     - Class: 114
       Script: {instanceID: 11640}
     - Class: 114
-      Script: {instanceID: 11660}
+      Script: {instanceID: 11798}
     - Class: 114
-      Script: {instanceID: 11820}
+      Script: {instanceID: 12206}
     - Class: 114
-      Script: {instanceID: 12226}
+      Script: {instanceID: 12878}
     - Class: 114
-      Script: {instanceID: 12898}
+      Script: {instanceID: 12902}
     - Class: 114
-      Script: {instanceID: 12922}
+      Script: {instanceID: 13108}
     - Class: 114
-      Script: {instanceID: 13676}
+      Script: {instanceID: 13656}
     - Class: 114
-      Script: {instanceID: 13690}
+      Script: {instanceID: 13670}
     - Class: 114
-      Script: {instanceID: 13746}
+      Script: {instanceID: 13726}
     - Class: 114
-      Script: {instanceID: 13870}
+      Script: {instanceID: 13850}
     - Class: 114
-      Script: {instanceID: 14004}
+      Script: {instanceID: 13984}
     - Class: 114
-      Script: {instanceID: 14176}
+      Script: {instanceID: 14156}
     - Class: 114
-      Script: {instanceID: 14296}
+      Script: {instanceID: 14276}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -322,6 +398,12 @@ ScriptsOnlyBuild:
     className: AnimationPlayableAsset
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SceneChange
+  - hash:
+      serializedVersion: 2
       Hash: aba7b2852ef61d175dd9602e7723d5e5
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -538,7 +620,7 @@ ScriptsOnlyBuild:
     className: BeforeAfterTestCommandState
   - hash:
       serializedVersion: 2
-      Hash: 80b374ad20efb6544209de06ca042748
+      Hash: 0a36f1fd8ddba91c221d9f087aece192
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: LevelGenerator
@@ -670,5 +752,6 @@ ScriptsOnlyBuild:
     className: PlayableTrack
   platform: 13
   scenePathNames:
+  - Assets/Scenes/Menu.unity
   - Assets/Scenes/Teste_scene_(Kevin).unity
-  playerPath: C:/Users/LeYuudachi/Desktop/GA_Projekt/GrabbyGrab/TeamGraby/ProjektGrabbyGrabby/test.apk
+  playerPath: C:/Users/LeYuudachi/Desktop/GA_Projekt/GrabbyGrab/TeamGraby/ProjektGrabbyGrabby/test1.apk

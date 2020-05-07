@@ -71,7 +71,7 @@ public class LevelGenerator : MonoBehaviour
             {
                 GameObject newTrampoline = trampolinePool.GetPooledObject();
                 //float wallXPosition = Random.Range(-platformWidths[platformSelector] / 2f + 1f, platformWidths[platformSelector] / 2f + 1f);
-                Vector3 trampolinePosition = new Vector3(0f, 1.3f, 0f);
+                Vector3 trampolinePosition = new Vector3(-3f, 1.3f, 0f);
 
                 newTrampoline.transform.position = transform.position + trampolinePosition;
                 newTrampoline.transform.rotation = transform.rotation;

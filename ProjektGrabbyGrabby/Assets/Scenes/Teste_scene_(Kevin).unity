@@ -158,11 +158,11 @@ MonoBehaviour:
   distanceBetweenMax: 0
   theObjectPools:
   - {fileID: 1679022985}
-  randomWallThreshold: 75
+  randomWallThreshold: 45
   wallPool: {fileID: 163984935}
   player: {fileID: 1450953919}
   trampolinePool: {fileID: 881378758}
-  randomTrampolineThreshold: 77
+  randomTrampolineThreshold: 60
 --- !u!4 &25851771
 Transform:
   m_ObjectHideFlags: 0
@@ -324,7 +324,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pooledObject: {fileID: 1664592259182427961, guid: 3573811fb77027c4ea655e45eab1fd7c,
     type: 3}
-  pooledAmount: 5
+  pooledAmount: 3
 --- !u!1 &182349174
 GameObject:
   m_ObjectHideFlags: 0
@@ -922,7 +922,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pooledObject: {fileID: 6120527353283132573, guid: 0c868f2ac988ee849b6c14228d99e9cd,
     type: 3}
-  pooledAmount: 3
+  pooledAmount: 5
 --- !u!1 &891402000
 GameObject:
   m_ObjectHideFlags: 0
