@@ -24,7 +24,6 @@ public class LevelGenerator : MonoBehaviour
 
     void Start()
     {
-        //platformWidth = platform.GetComponent<BoxCollider2D>().size.x;
         platformWidths = new float[theObjectPools.Length];
 
         for (int i = 0; i < theObjectPools.Length; i++)
@@ -41,13 +40,11 @@ public class LevelGenerator : MonoBehaviour
 
     void Update()
     {
-        if (transform.position.x < generationPoint.position.x/*&& !player.spring.enabled*/)
+        if (transform.position.x < generationPoint.position.x)
         {
             distanceBetween = Random.Range(distanceBetweenMin, distanceBetweenMax);
             platformSelector = Random.Range(0, theObjectPools.Length);
             transform.position = new Vector3(transform.position.x + (platformWidths[platformSelector] / 2) + distanceBetween, transform.position.y, transform.position.z);
-
-            //Instantiate(platform thePlatforms[platformSelector], transform.position, transform.rotation);
             GameObject newPlatform = theObjectPools[platformSelector].GetPooledObject();
             newPlatform.transform.position = transform.position;
             newPlatform.transform.rotation = transform.rotation;
@@ -58,9 +55,7 @@ public class LevelGenerator : MonoBehaviour
             if (Random.Range(0f, 100f) < randomWallThreshold)
             {
                 GameObject newWall = wallPool.GetPooledObject();
-                //float wallXPosition = Random.Range(-platformWidths[platformSelector] / 2f + 1f, platformWidths[platformSelector] / 2f + 1f);
                 Vector3 wallPosition = new Vector3(0f, 3f, 0f);
-
                 newWall.transform.position = transform.position + wallPosition;
                 newWall.transform.rotation = transform.rotation;
                 newWall.SetActive(true);
@@ -70,7 +65,6 @@ public class LevelGenerator : MonoBehaviour
             if (Random.Range(0f, 100f) < randomTrampolineThreshold)
             {
                 GameObject newTrampoline = trampolinePool.GetPooledObject();
-                //float wallXPosition = Random.Range(-platformWidths[platformSelector] / 2f + 1f, platformWidths[platformSelector] / 2f + 1f);
                 Vector3 trampolinePosition = new Vector3(-3f, 1.3f, 0f);
 
                 newTrampoline.transform.position = transform.position + trampolinePosition;

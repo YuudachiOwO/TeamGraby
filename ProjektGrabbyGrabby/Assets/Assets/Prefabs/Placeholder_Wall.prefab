@@ -166,3 +166,4 @@ MonoBehaviour:
   playerRB: {fileID: 0}
   WallBreakable: {fileID: 1664592259182427961}
   rbv: {x: 0, y: 0, z: 0}
+  breakSpeed: 10

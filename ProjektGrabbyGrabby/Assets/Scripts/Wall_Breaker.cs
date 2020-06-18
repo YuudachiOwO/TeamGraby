@@ -8,6 +8,7 @@ public class Wall_Breaker : MonoBehaviour
     public Rigidbody2D playerRB;
     public GameObject WallBreakable;
     public Vector3 rbv;
+    public float breakSpeed;
 
     // Start is called before the first frame update
     void Start()
@@ -21,7 +22,7 @@ public class Wall_Breaker : MonoBehaviour
     {
        // if(coll.gameObject.tag == "Player")
         {
-            if (playerRB.velocity.x > 1)
+            if (playerRB.velocity.x > breakSpeed)
             {
                 this.gameObject.SetActive(false);
             }
@@ -38,7 +39,7 @@ public class Wall_Breaker : MonoBehaviour
     {
         // if(coll.gameObject.tag == "Player")
         {
-            if (playerRB.velocity.x > 1)
+            if (playerRB.velocity.x > breakSpeed)
             {
                 this.gameObject.SetActive(false);
             }
