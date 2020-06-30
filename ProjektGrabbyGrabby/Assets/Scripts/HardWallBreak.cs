@@ -8,7 +8,7 @@ public class HardWallBreak : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (acidTrip.allDestructive)
+        if (acidTrip.allDestructive && other.gameObject.tag == "Player")
         {
             this.gameObject.SetActive(false);
         }

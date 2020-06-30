@@ -62,6 +62,7 @@
      <Compile Include="Assets\Scripts\GameManager.cs" />
      <Compile Include="Assets\Scripts\HardWallBreak.cs" />
      <Compile Include="Assets\Scripts\JetPack_PowerUp.cs" />
+     <Compile Include="Assets\Scripts\JetpackAnimation.cs" />
      <Compile Include="Assets\Scripts\Jetpack_Boost.cs" />
      <Compile Include="Assets\Scripts\LevelGenerator.cs" />
      <Compile Include="Assets\Scripts\ObjectPooler.cs" />

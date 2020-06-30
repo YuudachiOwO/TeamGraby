@@ -21,19 +21,18 @@ public class AcidTrip : MonoBehaviour
         {
             destructiveTimer += Time.deltaTime;
             Mathf.RoundToInt(destructiveTimer);
-            if (duration-destructiveTimer < 0)
+            if (duration - destructiveTimer < 0)
             {
                 allDestructive = false;
             }
         }
     }
 
-
-
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.tag == "Player")
         {
+            destructiveTimer = 0;
             Debug.Log("Hit");
             allDestructive = true;
         }

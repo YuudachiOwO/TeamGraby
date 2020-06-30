@@ -38,6 +38,8 @@ public class Trampoline_Bounce : MonoBehaviour
     {
         if (playerVelocity.y <= 0)
         {
+            playerVelocity = new Vector3(playerVelocity.x, 0, playerVelocity.z);
+            playerRB.velocity = playerVelocity;
             playerRB.AddForce(new Vector2(trampolineX, trampolineY));
         }
     }

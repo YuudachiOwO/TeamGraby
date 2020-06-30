@@ -11,32 +11,30 @@ public class JetPack_PowerUp : MonoBehaviour
     public float duration = 5f;
     public bool isNumbering;
     public float timePassed;
-    //public Text durationText;
     public float durationCount;
 
     void Awake()
     {
+        timePassed = 0;
         player = GameObject.FindGameObjectWithTag("Player");
         boost = player.GetComponent<Jetpack_Boost>();
         boost.enabled = false;
         boost.jetpackBurning = false;
-       // durationText.enabled = false;
     }
+
     void Update()
     {
-
+        durationCount = duration - timePassed;
 
         if (boost.enabled)
         {
-           // durationText.enabled = true;
-          //  durationText.text = "Jetpack Duration: " + durationCount;
 
-            if (/*Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began*/ Input.GetMouseButtonDown(0))
+            if (Input.GetMouseButtonDown(0))
             {
                 boost.jetpackBurning = true;
             }
 
-            if (/*Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Ended*/ Input.GetMouseButtonUp(0))
+            if (Input.GetMouseButtonUp(0))
             {
                 boost.jetpackBurning = false;
             }
@@ -48,17 +46,12 @@ public class JetPack_PowerUp : MonoBehaviour
             if (boost.jetpackBurning)
             {
                 timePassed += Time.deltaTime;
-                Mathf.RoundToInt(timePassed);
-                durationCount = duration - timePassed;
+                Mathf.RoundToInt(timePassed); 
             }
-
-        }
-        else
-        {            
-          //  durationText.enabled = false;
         }
 
     }
+
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.tag == "Player")

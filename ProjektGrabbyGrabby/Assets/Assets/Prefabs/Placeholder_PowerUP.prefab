@@ -101,8 +101,7 @@ MonoBehaviour:
   duration: 3
   isNumbering: 0
   timePassed: 0
-  durationText: {fileID: 0}
-  durationCount: 0
+  durationCount: 3
 --- !u!70 &6846005707466410241
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
