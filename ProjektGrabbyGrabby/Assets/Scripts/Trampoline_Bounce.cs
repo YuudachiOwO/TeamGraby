@@ -8,7 +8,8 @@ public class Trampoline_Bounce : MonoBehaviour
     public Vector3 playerVelocity;
     public Rigidbody2D playerRB;
     public GameObject player;
-    public float trampoline;
+    public float trampolineX;
+    public float trampolineY;
     public EdgeCollider2D edgy;
 
     void Start()
@@ -27,12 +28,9 @@ public class Trampoline_Bounce : MonoBehaviour
     {
         if (playerVelocity.y < 0)
         {
-            /*playerVelocity = new Vector3(playerVelocity.x ,playerVelocity.y * (-1f), playerVelocity.z);
-            playerRB.velocity = playerVelocity;*/
             playerVelocity = new Vector3(playerVelocity.x, 0, playerVelocity.z);
             playerRB.velocity = playerVelocity;
-
-            playerRB.AddForce(new Vector2(0f, trampoline));
+            playerRB.AddForce(new Vector2(trampolineX, trampolineY));
         }
     }
 
@@ -40,24 +38,7 @@ public class Trampoline_Bounce : MonoBehaviour
     {
         if (playerVelocity.y <= 0)
         {
-            /*playerVelocity = new Vector3(playerVelocity.x ,playerVelocity.y * (-1f), playerVelocity.z);
-            playerRB.velocity = playerVelocity;*/
-            playerRB.AddForce(new Vector2(0f, trampoline));
+            playerRB.AddForce(new Vector2(trampolineX, trampolineY));
         }
-    }
-
-    void OnTriggerEnter2D(Collider2D collider)
-    {
-        edgy.isTrigger = true;
-    }
-
-    void OnTriggerStay2D(Collider2D collider)
-    {
-        edgy.isTrigger = true;
-    }
-
-    void OnTriggerExit2D(Collider2D collider)
-    {
-        edgy.isTrigger = false;
     }
 }

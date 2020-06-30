@@ -22,6 +22,15 @@ public class LevelGenerator : MonoBehaviour
     public ObjectPooler trampolinePool;
     public float randomTrampolineThreshold;
 
+    public ObjectPooler breakWall;
+    public float randomBreakWallThreshold;
+
+    public ObjectPooler jetpack;
+    public float randomJetpackThreshold;
+
+    public ObjectPooler acid;
+    public float randomAcidThreshold;
+
     void Start()
     {
         platformWidths = new float[theObjectPools.Length];
@@ -50,8 +59,6 @@ public class LevelGenerator : MonoBehaviour
             newPlatform.transform.rotation = transform.rotation;
             newPlatform.SetActive(true);
 
-
-
             if (Random.Range(0f, 100f) < randomWallThreshold)
             {
                 GameObject newWall = wallPool.GetPooledObject();
@@ -61,7 +68,6 @@ public class LevelGenerator : MonoBehaviour
                 newWall.SetActive(true);
             }
 
-
             if (Random.Range(0f, 100f) < randomTrampolineThreshold)
             {
                 GameObject newTrampoline = trampolinePool.GetPooledObject();
@@ -70,6 +76,33 @@ public class LevelGenerator : MonoBehaviour
                 newTrampoline.transform.position = transform.position + trampolinePosition;
                 newTrampoline.transform.rotation = transform.rotation;
                 newTrampoline.SetActive(true);
+            }
+
+            if (Random.Range(0f, 100f) < randomBreakWallThreshold)
+            {
+                GameObject newBreakWall = breakWall.GetPooledObject();
+                Vector3 BreakWallPosition = new Vector3(-6f, 2.5f, 0f);
+                newBreakWall.transform.position = transform.position + BreakWallPosition;
+                newBreakWall.transform.rotation = transform.rotation;
+                newBreakWall.SetActive(true);
+            }
+
+            if (Random.Range(0f, 100f) < randomJetpackThreshold)
+            {
+                GameObject newJetpack = jetpack.GetPooledObject();
+                Vector3 JetpackPosition = new Vector3(-8f, Random.Range(1f, 6f), 0f);
+                newJetpack.transform.position = transform.position + JetpackPosition;
+                newJetpack.transform.rotation = transform.rotation;
+                newJetpack.SetActive(true);
+            }
+
+            if (Random.Range(0f, 100f) < randomAcidThreshold)
+            {
+                GameObject newAcid = acid.GetPooledObject();
+                Vector3 AcidPosition = new Vector3(-10f, Random.Range(1f, 6f), 0f);
+                newAcid.transform.position = transform.position + AcidPosition;
+                newAcid.transform.rotation = transform.rotation;
+                newAcid.SetActive(true);
             }
 
 

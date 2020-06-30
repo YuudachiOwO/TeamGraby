@@ -12,6 +12,8 @@ public class Test_Player : MonoBehaviour
     public Touch touch;
     public AudioSource asYeet;
     public AudioClip asYeetClip;
+    public bool timeStart = false;
+    public float timeAfter;
 
     private void Awake()
     {
@@ -56,12 +58,22 @@ public class Test_Player : MonoBehaviour
     }
     private void OnMouseUp()
     {
+        timeStart = true;
         whileTouch = false;
         rigid.isKinematic = false;
         StartCoroutine(Release());
         if (!asYeet.isPlaying && spring.enabled)
         {
             asYeet.Play();
+        }
+    }
+
+    public void FixedUpdate()
+    {
+
+        if (timeStart)
+        {
+            timeAfter += Time.deltaTime;
         }
     }
 

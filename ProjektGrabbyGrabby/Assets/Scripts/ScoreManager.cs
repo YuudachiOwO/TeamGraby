@@ -13,7 +13,6 @@ public class ScoreManager : MonoBehaviour
     public Transform checkpoint;
     public Test_Player testPlayer;
 
-
     void Update()
     {
         if (!testPlayer.spring.enabled)

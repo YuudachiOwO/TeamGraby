@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: -1434003991156179513}
   - component: {fileID: 4254838345644006831}
   - component: {fileID: 835861407228470659}
-  - component: {fileID: 821359664846339515}
   m_Layer: 0
   m_Name: Trampolin
   m_TagString: Untagged
@@ -112,11 +111,13 @@ EdgeCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_EdgeRadius: 0
+  m_EdgeRadius: 0.05
   m_Points:
-  - {x: -1.6734921, y: 0.10460472}
-  - {x: -0.13938999, y: 0.10571647}
-  - {x: 1.4939954, y: 0.11338925}
+  - {x: -1.7142484, y: -0.75127745}
+  - {x: -1.7200708, y: -0.75127745}
+  - {x: -0.022943258, y: -0.7501657}
+  - {x: 1.6919549, y: -0.7424929}
+  - {x: 1.6861317, y: -0.7483158}
 --- !u!114 &835861407228470659
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -132,31 +133,6 @@ MonoBehaviour:
   playerVelocity: {x: 0, y: 0, z: 0}
   playerRB: {fileID: 0}
   player: {fileID: 0}
-  trampoline: 17
+  trampolineX: 60
+  trampolineY: 30
   edgy: {fileID: 0}
---- !u!61 &821359664846339515
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6120527353283132573}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.04828179, y: -0.4383782}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.95, y: 1.92}
-    newSize: {x: 3.68, y: 0.84}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 2.937743, y: 0.7853854}
-  m_EdgeRadius: 0

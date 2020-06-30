@@ -55,16 +55,20 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\AcidTrip.cs" />
      <Compile Include="Assets\Scripts\CameraClamp.cs" />
      <Compile Include="Assets\Scripts\CameraFollowPlayer.cs" />
      <Compile Include="Assets\Scripts\Camera_Follow.cs" />
      <Compile Include="Assets\Scripts\GameManager.cs" />
+     <Compile Include="Assets\Scripts\HardWallBreak.cs" />
+     <Compile Include="Assets\Scripts\JetPack_PowerUp.cs" />
      <Compile Include="Assets\Scripts\Jetpack_Boost.cs" />
      <Compile Include="Assets\Scripts\LevelGenerator.cs" />
      <Compile Include="Assets\Scripts\ObjectPooler.cs" />
      <Compile Include="Assets\Scripts\ParallaxScrolling.cs" />
      <Compile Include="Assets\Scripts\PlatformDestroyer.cs" />
      <Compile Include="Assets\Scripts\PlayerController.cs" />
+     <Compile Include="Assets\Scripts\Player_Rotation_Lock.cs" />
      <Compile Include="Assets\Scripts\Restart_Script.cs" />
      <Compile Include="Assets\Scripts\SceneChange.cs" />
      <Compile Include="Assets\Scripts\ScoreManager.cs" />

@@ -1,16 +1,21 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
-    - CameraFollowPlayer
+    - AcidTrip
+    - CameraClamp
     - Camera_Follow
     - GameManager
+    - HardWallBreak
+    - JetPack_PowerUp
     - Jetpack_Boost
     - LevelGenerator
     - ObjectPooler
     - PlatformDestroyer
+    - Player_Rotation_Lock
     - Restart_Script
     - SceneChange
     - ScoreManager
+    - SkyBackgound
     - Test_Player
     - Trampoline_Bounce
     - Wall_Breaker
@@ -77,17 +82,17 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12902}
     - Class: 114
-      Script: {instanceID: 13248}
+      Script: {instanceID: 13252}
     - Class: 114
-      Script: {instanceID: 13266}
+      Script: {instanceID: 13270}
     - Class: 114
-      Script: {instanceID: 13556}
+      Script: {instanceID: 13560}
     - Class: 114
-      Script: {instanceID: 13656}
+      Script: {instanceID: 13660}
     - Class: 114
-      Script: {instanceID: 13936}
+      Script: {instanceID: 13940}
     - Class: 114
-      Script: {instanceID: 14276}
+      Script: {instanceID: 14284}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -125,6 +130,12 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 61
       Script: {instanceID: 0}
+    - Class: 62
+      Script: {instanceID: 0}
+    - Class: 68
+      Script: {instanceID: 0}
+    - Class: 70
+      Script: {instanceID: 0}
     - Class: 74
       Script: {instanceID: 0}
     - Class: 81
@@ -152,8 +163,6 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11620}
     - Class: 114
-      Script: {instanceID: 11640}
-    - Class: 114
       Script: {instanceID: 11798}
     - Class: 114
       Script: {instanceID: 12206}
@@ -164,19 +173,31 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 13108}
     - Class: 114
-      Script: {instanceID: 13656}
+      Script: {instanceID: 13122}
     - Class: 114
-      Script: {instanceID: 13670}
+      Script: {instanceID: 13166}
     - Class: 114
-      Script: {instanceID: 13726}
+      Script: {instanceID: 13660}
     - Class: 114
-      Script: {instanceID: 13850}
+      Script: {instanceID: 13674}
     - Class: 114
-      Script: {instanceID: 13984}
+      Script: {instanceID: 13730}
     - Class: 114
-      Script: {instanceID: 14156}
+      Script: {instanceID: 13854}
     - Class: 114
-      Script: {instanceID: 14276}
+      Script: {instanceID: 13990}
+    - Class: 114
+      Script: {instanceID: 14006}
+    - Class: 114
+      Script: {instanceID: 14164}
+    - Class: 114
+      Script: {instanceID: 14284}
+    - Class: 114
+      Script: {instanceID: 56130}
+    - Class: 114
+      Script: {instanceID: 83802}
+    - Class: 114
+      Script: {instanceID: 84008}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -218,7 +239,7 @@ ScriptsOnlyBuild:
     className: TMP_SelectionCaret
   - hash:
       serializedVersion: 2
-      Hash: f7c8a001602c01c9d62ab88e8ae9f3b0
+      Hash: 5aafe60278df77abe245492190842f9a
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Trampoline_Bounce
@@ -302,7 +323,7 @@ ScriptsOnlyBuild:
     className: TMP_InputField
   - hash:
       serializedVersion: 2
-      Hash: 24642b880f7f36bbf49d3629eea14d6f
+      Hash: 2e1178e82b7149f27e467e15445371bb
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Test_Player
@@ -524,10 +545,22 @@ ScriptsOnlyBuild:
     className: VerticalLayoutGroup
   - hash:
       serializedVersion: 2
-      Hash: 2ee59765c95b5052f9bff14a5cb2adb8
+      Hash: a2df8fc4b749c336f9e86c2445ead1ac
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Wall_Breaker
+  - hash:
+      serializedVersion: 2
+      Hash: 017f6ba2eb8d6c416ff7ebbba28dae8f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SkyBackgound
+  - hash:
+      serializedVersion: 2
+      Hash: dde33a8f7a4b70d93ce708d2f0a934ea
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CameraClamp
   - hash:
       serializedVersion: 2
       Hash: 98bf293cd34a2f7168fb0675fad19457
@@ -620,7 +653,7 @@ ScriptsOnlyBuild:
     className: BeforeAfterTestCommandState
   - hash:
       serializedVersion: 2
-      Hash: 0a36f1fd8ddba91c221d9f087aece192
+      Hash: 5b071837345f7be459023bca09bdccaa
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: LevelGenerator
@@ -644,10 +677,22 @@ ScriptsOnlyBuild:
     className: TMP_StyleSheet
   - hash:
       serializedVersion: 2
+      Hash: d41163ea21948227db101b291d74b40c
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ParallaxScrolling
+  - hash:
+      serializedVersion: 2
       Hash: c05a61c122c1780164da69d3acfed011
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlatformDestroyer
+  - hash:
+      serializedVersion: 2
+      Hash: d8650cef82e48ef5da9a7804a106b8dc
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: JetPack_PowerUp
   - hash:
       serializedVersion: 2
       Hash: df434544c9f7b33d1cc7e635b180d279
@@ -750,8 +795,26 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
+  - hash:
+      serializedVersion: 2
+      Hash: c5330dbeabb3e2e249b2ea8e08a004b2
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Player_Rotation_Lock
+  - hash:
+      serializedVersion: 2
+      Hash: 39707507b5381e6359f62d507c3bdbf2
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: AcidTrip
+  - hash:
+      serializedVersion: 2
+      Hash: bdc02a6b31d9c1b48261f7fde7f21211
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: HardWallBreak
   platform: 13
   scenePathNames:
   - Assets/Scenes/Menu.unity
   - Assets/Scenes/Teste_scene_(Kevin).unity
-  playerPath: C:/Users/LeYuudachi/Desktop/GA_Projekt/GrabbyGrab/TeamGraby/ProjektGrabbyGrabby/test1.apk
+  playerPath: D:/SS2020_Project/TeamGraby/ProjektGrabbyGrabby/Yay.apk
