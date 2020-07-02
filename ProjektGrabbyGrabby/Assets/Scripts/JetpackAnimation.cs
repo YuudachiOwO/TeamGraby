@@ -9,7 +9,6 @@ public class JetpackAnimation : MonoBehaviour
     public GameObject player;
     public Jetpack_Boost boost;
     public JetPack_PowerUp jetpackPowerUP;
-    public bool isNumbering;
 
 
 
@@ -45,6 +44,7 @@ public class JetpackAnimation : MonoBehaviour
             if (jetpackPowerUP.timePassed >= jetpackPowerUP.duration)
             {
                 jetpack.SetActive(false);
+                jetpackAnim.enabled = false;
             }
 
             if (boost.jetpackBurning)

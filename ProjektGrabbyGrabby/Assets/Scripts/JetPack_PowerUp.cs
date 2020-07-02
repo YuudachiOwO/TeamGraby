@@ -9,7 +9,6 @@ public class JetPack_PowerUp : MonoBehaviour
     public GameObject player;
     public Jetpack_Boost boost;
     public float duration = 5f;
-    public bool isNumbering;
     public float timePassed;
     public float durationCount;
 
@@ -24,6 +23,9 @@ public class JetPack_PowerUp : MonoBehaviour
 
     void Update()
     {
+        Debug.Log(timePassed);
+
+
         durationCount = duration - timePassed;
 
         if (boost.enabled)
@@ -52,12 +54,4 @@ public class JetPack_PowerUp : MonoBehaviour
 
     }
 
-    void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.gameObject.tag == "Player")
-        {
-            timePassed = 0;
-            boost.enabled = true;
-        }
-    }
 }

@@ -10,32 +10,33 @@ public class Wall_Breaker : MonoBehaviour
     public Vector3 rbv;
     public float breakSpeed;
     public AcidTrip acidTrip;
+    public Animator wallBreakAnim;
+    public BoxCollider2D coll;
 
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
         playerRB = player.GetComponent<Rigidbody2D>();
+        wallBreakAnim = WallBreakable.GetComponent<Animator>();
+
+        wallBreakAnim.enabled = false;
     }
 
-    void OnCollisionEnter2D(Collision2D coll)
+    void Update()
     {
-        if (playerRB.velocity.x > breakSpeed)
+        if (!WallBreakable.activeSelf)
         {
-            this.gameObject.SetActive(false);
-        }
-        else
-        {
-            rbv = playerRB.velocity;
-            rbv = new Vector3(0, rbv.y, rbv.z);
-            playerRB.velocity = rbv;
-        }
+            wallBreakAnim.enabled = false;
+        } 
     }
+
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (playerRB.velocity.x > breakSpeed)
         {
-            this.gameObject.SetActive(false);
+            this.coll.enabled = false;
+            wallBreakAnim.enabled = true;
         }
         else
         {

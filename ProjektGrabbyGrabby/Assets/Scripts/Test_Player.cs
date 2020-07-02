@@ -14,6 +14,8 @@ public class Test_Player : MonoBehaviour
     public AudioClip asYeetClip;
     public bool timeStart = false;
     public float timeAfter;
+    public Jetpack_Boost boost;
+    public JetPack_PowerUp jetpackPowerUp;
 
     private void Awake()
     {
@@ -84,4 +86,13 @@ public class Test_Player : MonoBehaviour
         spring.enabled = false;
     }
 
+    public void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.tag == "JetpackPU")
+        {
+            jetpackPowerUp.timePassed = 0;
+            boost.enabled = true;
+            other.gameObject.SetActive(false);
+        }
+    }
 }

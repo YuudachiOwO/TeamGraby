@@ -30,7 +30,7 @@ public class AcidTrip : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.tag == "Player")
+        if (other.gameObject.tag == "AcidPU")
         {
             destructiveTimer = 0;
             Debug.Log("Hit");

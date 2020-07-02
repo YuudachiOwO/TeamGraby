@@ -32,6 +32,12 @@ public class Player_Rotation_Lock : MonoBehaviour
                 playerRB.velocity = playerVelocity;
             }
         }
+
+        if (playerVelocity.x < 0 && !testPlayer.spring.enabled)
+        {
+            playerVelocity = new Vector2(0, playerRB.velocity.y);
+            playerRB.velocity = playerVelocity;
+        }
     }
 
     void OnCollisionStay2D(Collision2D other)

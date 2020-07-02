@@ -151,6 +151,8 @@ GameObject:
   - component: {fileID: 1193733100}
   - component: {fileID: 3826587181060160294}
   - component: {fileID: 3007421803975423648}
+  - component: {fileID: 2608066039531644549}
+  - component: {fileID: 5295133704967131227}
   m_Layer: 0
   m_Name: Player_Placeholder
   m_TagString: Player
@@ -301,6 +303,8 @@ MonoBehaviour:
   asYeetClip: {fileID: 0}
   timeStart: 0
   timeAfter: 0
+  boost: {fileID: 1193733100}
+  jetpackPowerUp: {fileID: 2608066039531644549}
 --- !u!82 &5512181695757748828
 AudioSource:
   m_ObjectHideFlags: 0
@@ -447,7 +451,7 @@ MonoBehaviour:
   playerRB: {fileID: 5512181695757748824}
   jetpackBurning: 0
   boosterStrengthUp: 0.3
-  boosterStrengthSide: 0.8
+  boosterStrengthSide: 0.5
 --- !u!114 &3826587181060160294
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -480,13 +484,44 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbdb35bbff5912f4f8e9804246fa7f45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jetpack: {fileID: 0}
-  jetpackAnim: {fileID: 0}
+  jetpack: {fileID: 3627271127619127259}
+  jetpackAnim: {fileID: 6234398245584979038}
   player: {fileID: 5512181695757748773}
   boost: {fileID: 1193733100}
-  jetpackPowerUP: {fileID: 6846005707466410246, guid: d085786139f37054da522c8568894d42,
-    type: 3}
-  isNumbering: 0
+  jetpackPowerUP: {fileID: 2608066039531644549}
+--- !u!114 &2608066039531644549
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5512181695757748773}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebbb38fd85c3adc4189652b4c3b33325, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 5512181695757748773}
+  boost: {fileID: 1193733100}
+  duration: 3
+  timePassed: 0
+  durationCount: 0
+--- !u!114 &5295133704967131227
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5512181695757748773}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8810757e151ce274483802c60dc4d990, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  allDestructive: 0
+  player: {fileID: 5512181696815963937}
+  destructiveTimer: 0
+  duration: 5
 --- !u!1 &5512181696815963937
 GameObject:
   m_ObjectHideFlags: 0

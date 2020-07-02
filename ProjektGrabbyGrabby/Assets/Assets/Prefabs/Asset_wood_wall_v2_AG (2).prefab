@@ -99,7 +99,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.1984272, y: 0.5612531}
+  m_Offset: {x: -0.1984272, y: 0.16473532}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -110,7 +110,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 5.060322, y: 7.5214205}
+  m_Size: {x: 5.060322, y: 8.314456}
   m_EdgeRadius: 0
 --- !u!61 &1648378779882562210
 BoxCollider2D:
@@ -125,7 +125,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.58115196, y: 0.43853235}
+  m_Offset: {x: -0.58115196, y: 0.028340816}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -136,7 +136,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 7.60207, y: 8.382112}
+  m_Size: {x: 7.60207, y: 9.202495}
   m_EdgeRadius: 0
 --- !u!114 &4079332516914090157
 MonoBehaviour:
@@ -156,6 +156,8 @@ MonoBehaviour:
   rbv: {x: 0, y: 0, z: 0}
   breakSpeed: 10
   acidTrip: {fileID: 0}
+  wallBreakAnim: {fileID: 0}
+  coll: {fileID: 1648378779882562213}
 --- !u!114 &3331944744868770156
 MonoBehaviour:
   m_ObjectHideFlags: 0

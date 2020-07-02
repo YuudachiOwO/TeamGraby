@@ -71,7 +71,7 @@ public class LevelGenerator : MonoBehaviour
             if (Random.Range(0f, 100f) < randomTrampolineThreshold)
             {
                 GameObject newTrampoline = trampolinePool.GetPooledObject();
-                Vector3 trampolinePosition = new Vector3(-3f, 1.3f, 0f);
+                Vector3 trampolinePosition = new Vector3(-3f, 1.2f, 0f);
 
                 newTrampoline.transform.position = transform.position + trampolinePosition;
                 newTrampoline.transform.rotation = transform.rotation;
