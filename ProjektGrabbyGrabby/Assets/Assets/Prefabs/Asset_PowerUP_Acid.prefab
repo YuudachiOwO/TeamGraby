@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2061165315773846835}
   - component: {fileID: 2061165315773846834}
   - component: {fileID: 2061165315773846988}
+  - component: {fileID: 5119213446728362168}
   m_Layer: 0
   m_Name: Asset_PowerUP_Acid
   m_TagString: AcidPU
@@ -95,3 +96,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   platformDestructionPoint: {fileID: 0}
+--- !u!70 &5119213446728362168
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2061165315773846833}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.24221578, y: 2.3737175}
+  m_Size: {x: 4.089928, y: 5.2525644}
+  m_Direction: 0

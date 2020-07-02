@@ -4,39 +4,33 @@ using UnityEngine;
 
 public class ParallaxScrolling : MonoBehaviour
 {
-    public Transform[] backgrounds;
-    public float parallaxAmount = 1f;
-    public float[] parallaxScales;
+    private Transform cameraTransform;
+    private Vector3 lastCameraPosition;
+    private float textureUnitSizeX;
 
-    public Transform cam;
-    public Vector3 previousCamPosition;
+    public Vector2 parallaxEffectMultiplier;
+    private void Start()
 
-    void Awake()
     {
-        cam = Camera.main.transform;
+        cameraTransform = Camera.main.transform;
+        lastCameraPosition = cameraTransform.position;
+        Sprite sprite = GetComponent<SpriteRenderer>().sprite;
+        Texture2D texture = sprite.texture;
+        textureUnitSizeX = texture.width / sprite.pixelsPerUnit;
     }
 
-    void Start()
+    private void FixedUpdate()
     {
-        previousCamPosition = cam.position;
-        parallaxScales = new float[backgrounds.Length];
-        for (int i = 0; i < backgrounds.Length; i++)
+        Vector3 deltaMovement = cameraTransform.position - lastCameraPosition;
+        transform.position += new Vector3(deltaMovement.x * parallaxEffectMultiplier.x, deltaMovement.y * parallaxEffectMultiplier.y, deltaMovement.z);
+        lastCameraPosition = cameraTransform.position;
+
+        if(Mathf.Abs(cameraTransform.position.x - transform.position.x) >= textureUnitSizeX)
         {
-            parallaxScales[i] = backgrounds[i].position.z * (-1f);
+            float offsetPositionX = (cameraTransform.position.x - transform.position.x) % textureUnitSizeX;
+            transform.position = new Vector3(cameraTransform.position.x, transform.position.y);
         }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-     for (int i = 0; i < backgrounds.Length; i++)
-        {
-            float parallax = (previousCamPosition.x - cam.position.x) * parallaxScales[i];
-            float backgroundTargetPosX = backgrounds[i].position.x + parallax;
-            Vector3 backgroundsTargetPos = new Vector3(backgroundTargetPosX, backgrounds[i].position.y, backgrounds[i].position.z);
 
-            backgrounds[i].position = Vector3.Lerp(backgrounds[i].position, backgroundsTargetPos, parallaxAmount * Time.deltaTime);
-        }
-        previousCamPosition = cam.position;
-    }
 }

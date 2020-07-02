@@ -59,6 +59,7 @@
      <Compile Include="Assets\Scripts\CameraClamp.cs" />
      <Compile Include="Assets\Scripts\CameraFollowPlayer.cs" />
      <Compile Include="Assets\Scripts\Camera_Follow.cs" />
+     <Compile Include="Assets\Scripts\CannonShot.cs" />
      <Compile Include="Assets\Scripts\GameManager.cs" />
      <Compile Include="Assets\Scripts\HardWallBreak.cs" />
      <Compile Include="Assets\Scripts\JetPack_PowerUp.cs" />

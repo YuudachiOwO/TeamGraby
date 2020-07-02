@@ -11,6 +11,7 @@ ScriptsOnlyBuild:
     - Jetpack_Boost
     - LevelGenerator
     - ObjectPooler
+    - ParallaxScrolling
     - PlatformDestroyer
     - Player_Rotation_Lock
     - Restart_Script
@@ -39,11 +40,8 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.StateMachineNode
-    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -96,13 +94,13 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 13272}
     - Class: 114
-      Script: {instanceID: 13562}
+      Script: {instanceID: 13564}
     - Class: 114
-      Script: {instanceID: 13662}
+      Script: {instanceID: 13664}
     - Class: 114
-      Script: {instanceID: 13942}
+      Script: {instanceID: 13944}
     - Class: 114
-      Script: {instanceID: 14288}
+      Script: {instanceID: 14290}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -189,27 +187,29 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 13270}
     - Class: 114
-      Script: {instanceID: 13662}
+      Script: {instanceID: 13524}
     - Class: 114
-      Script: {instanceID: 13676}
+      Script: {instanceID: 13664}
     - Class: 114
-      Script: {instanceID: 13732}
+      Script: {instanceID: 13678}
     - Class: 114
-      Script: {instanceID: 13856}
+      Script: {instanceID: 13734}
     - Class: 114
-      Script: {instanceID: 13992}
+      Script: {instanceID: 13858}
     - Class: 114
-      Script: {instanceID: 14008}
+      Script: {instanceID: 13960}
     - Class: 114
-      Script: {instanceID: 14126}
+      Script: {instanceID: 13994}
     - Class: 114
-      Script: {instanceID: 14168}
+      Script: {instanceID: 14010}
     - Class: 114
-      Script: {instanceID: 14288}
+      Script: {instanceID: 14128}
     - Class: 114
-      Script: {instanceID: 14360}
+      Script: {instanceID: 14170}
     - Class: 114
-      Script: {instanceID: 41638}
+      Script: {instanceID: 14290}
+    - Class: 114
+      Script: {instanceID: 14362}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -335,7 +335,7 @@ ScriptsOnlyBuild:
     className: TMP_InputField
   - hash:
       serializedVersion: 2
-      Hash: 2e1178e82b7149f27e467e15445371bb
+      Hash: 9890aa04295d8ffb48da5e16904899ac
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Test_Player
@@ -557,7 +557,7 @@ ScriptsOnlyBuild:
     className: VerticalLayoutGroup
   - hash:
       serializedVersion: 2
-      Hash: a2df8fc4b749c336f9e86c2445ead1ac
+      Hash: d4be38a9522902f295cbdf1d1d245ef4
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Wall_Breaker
@@ -641,6 +641,12 @@ ScriptsOnlyBuild:
     className: TimelineAsset
   - hash:
       serializedVersion: 2
+      Hash: 889a15d7b18bb736dc2d06fececef650
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: JetpackAnimation
+  - hash:
+      serializedVersion: 2
       Hash: 3b760e6526e13f7504f59e210145899a
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -695,7 +701,7 @@ ScriptsOnlyBuild:
     className: TMP_StyleSheet
   - hash:
       serializedVersion: 2
-      Hash: d41163ea21948227db101b291d74b40c
+      Hash: 93732d3a3da98547d903542d2bfef736
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ParallaxScrolling
@@ -707,7 +713,7 @@ ScriptsOnlyBuild:
     className: PlatformDestroyer
   - hash:
       serializedVersion: 2
-      Hash: d8650cef82e48ef5da9a7804a106b8dc
+      Hash: 0ebcb96b909306ddb3b63e6720beb9f3
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: JetPack_PowerUp
@@ -825,14 +831,8 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
-  - hash:
-      serializedVersion: 2
-      Hash: b1f6cbcfd2dd0187692bf230fa4910b4
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: JetpackAnimation
   platform: 13
   scenePathNames:
   - Assets/Scenes/Menu.unity
   - Assets/Scenes/Teste_scene_(Kevin).unity
-  playerPath: D:/SS2020_Project/TeamGraby/ProjektGrabbyGrabby/0.1.3.1.apk
+  playerPath: D:/SS2020_Project/TeamGraby/ProjektGrabbyGrabby/0.1.3.2.apk

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SkyBackgound : MonoBehaviour
 {
-    public Transform camera;
+    public new Transform camera;
     public Transform background;
 
 

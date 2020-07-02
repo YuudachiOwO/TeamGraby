@@ -214,7 +214,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -2
   m_Sprite: {fileID: 5841949061898353627, guid: 073b0ac7a5c01ae488b1dfc17e3755cf,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -470,8 +470,7 @@ MonoBehaviour:
   testPlayer: {fileID: 5512181695757748827}
   grounded: 0
   timeOnGround: 0
-  acidTrip: {fileID: -6478701546566369617, guid: e359e794fc17ca940b17761c5591b34d,
-    type: 3}
+  acidTrip: {fileID: 5295133704967131227}
 --- !u!114 &3007421803975423648
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -519,7 +518,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   allDestructive: 0
-  player: {fileID: 5512181696815963937}
+  player: {fileID: 5512181695757748773}
   destructiveTimer: 0
   duration: 5
 --- !u!1 &5512181696815963937
