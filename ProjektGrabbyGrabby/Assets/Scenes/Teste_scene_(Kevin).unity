@@ -457,7 +457,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 482453150}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.57, y: 5.1, z: -2.3320312}
+  m_LocalPosition: {x: 0.57, y: 5.1, z: 0}
   m_LocalScale: {x: 0.8, y: 0.8, z: 1}
   m_Children:
   - {fileID: 1185348120}
@@ -1084,38 +1084,12 @@ MonoBehaviour:
   pooledObject: {fileID: 6120527353283132573, guid: 0c868f2ac988ee849b6c14228d99e9cd,
     type: 3}
   pooledAmount: 3
---- !u!1 &885259289 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8707802995345840390, guid: f4ff6ec593415da4cb5000f840e35713,
+--- !u!95 &885259290 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 7455074530781874940, guid: f4ff6ec593415da4cb5000f840e35713,
     type: 3}
   m_PrefabInstance: {fileID: 693773041438782745}
   m_PrefabAsset: {fileID: 0}
---- !u!61 &885259290
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 885259289}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -2.7321959, y: -4.4761543}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 20.22, y: 15.11}
-    newSize: {x: 20.22, y: 15.11}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 10.570116, y: 5.1113195}
-  m_EdgeRadius: 0
 --- !u!1 &891402000
 GameObject:
   m_ObjectHideFlags: 0
@@ -1531,7 +1505,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1185348119}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.7, y: -8.28, z: 0}
+  m_LocalPosition: {x: -2.5, y: -8.28, z: 0}
   m_LocalScale: {x: 1.25, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 482453151}
@@ -1676,7 +1650,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1201316131}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.7984429, y: 9.096037, z: 2.3320312}
+  m_LocalPosition: {x: 0.7984429, y: 14.71, z: 2.3320312}
   m_LocalScale: {x: 1.25, y: 1.25, z: 1}
   m_Children: []
   m_Father: {fileID: 482453151}
@@ -1778,7 +1752,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 5512181697207518872}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2010235841}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b0dc81320d0ba9443a5883911aef7b05, type: 3}
@@ -2352,29 +2326,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2006997282}
   m_CullTransparentMesh: 0
---- !u!1 &2010235841 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5512181695757748773, guid: 9be52272eca78ef4b8d6ece023d4e3bd,
-    type: 3}
-  m_PrefabInstance: {fileID: 5512181697207518872}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &2010235854
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2010235841}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: db5b4e26c0cdf2d45bd0b86022d7c921, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 0}
-  playerRB: {fileID: 0}
-  cannon: {fileID: 0}
-  cannonLock: {fileID: 0}
-  cannonLockPoint: {x: 0, y: 0, z: 0}
 --- !u!1 &2097786995
 GameObject:
   m_ObjectHideFlags: 0
@@ -2510,6 +2461,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7455074530781874940, guid: f4ff6ec593415da4cb5000f840e35713,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8707802995345840390, guid: f4ff6ec593415da4cb5000f840e35713,
         type: 3}
       propertyPath: m_Name
@@ -2625,6 +2581,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Jetpack
       objectReference: {fileID: 0}
+    - target: {fileID: 4880215809855999619, guid: 9be52272eca78ef4b8d6ece023d4e3bd,
+        type: 3}
+      propertyPath: cannonAnim
+      value: 
+      objectReference: {fileID: 885259290}
     - target: {fileID: 5512181695757748774, guid: 9be52272eca78ef4b8d6ece023d4e3bd,
         type: 3}
       propertyPath: m_ConnectedRigidBody

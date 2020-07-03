@@ -9,7 +9,7 @@ public class ParallaxScrolling : MonoBehaviour
     private float textureUnitSizeX;
 
     public Vector2 parallaxEffectMultiplier;
-    private void Start()
+    private void Awake()
 
     {
         cameraTransform = Camera.main.transform;

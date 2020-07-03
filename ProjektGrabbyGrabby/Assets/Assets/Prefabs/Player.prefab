@@ -153,6 +153,7 @@ GameObject:
   - component: {fileID: 3007421803975423648}
   - component: {fileID: 2608066039531644549}
   - component: {fileID: 5295133704967131227}
+  - component: {fileID: 4880215809855999619}
   m_Layer: 0
   m_Name: Player_Placeholder
   m_TagString: Player
@@ -521,6 +522,31 @@ MonoBehaviour:
   player: {fileID: 5512181695757748773}
   destructiveTimer: 0
   duration: 5
+--- !u!114 &4880215809855999619
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5512181695757748773}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db5b4e26c0cdf2d45bd0b86022d7c921, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  playerRB: {fileID: 0}
+  cannon: {fileID: 0}
+  cannonLock: {fileID: 0}
+  cannonLockPoint: {x: 0, y: 0, z: 0}
+  waitTime: 0
+  timeMax: 2
+  xLaunch: 30
+  yLaunch: 15
+  xOffset: 0
+  yOffset: -0.6
+  cannonAnim: {fileID: 0}
+  testPlayer: {fileID: 5512181695757748827}
 --- !u!1 &5512181696815963937
 GameObject:
   m_ObjectHideFlags: 0
