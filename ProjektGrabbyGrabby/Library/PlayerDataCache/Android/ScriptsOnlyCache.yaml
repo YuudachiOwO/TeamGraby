@@ -4,6 +4,7 @@ ScriptsOnlyBuild:
     - AcidTrip
     - CameraClamp
     - Camera_Follow
+    - CannonShot
     - GameManager
     - HardWallBreak
     - JetPack_PowerUp
@@ -88,19 +89,19 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12258}
     - Class: 114
-      Script: {instanceID: 12902}
+      Script: {instanceID: 12904}
     - Class: 114
-      Script: {instanceID: 13252}
+      Script: {instanceID: 13254}
     - Class: 114
-      Script: {instanceID: 13272}
+      Script: {instanceID: 13274}
     - Class: 114
-      Script: {instanceID: 13564}
+      Script: {instanceID: 13566}
     - Class: 114
-      Script: {instanceID: 13664}
+      Script: {instanceID: 13666}
     - Class: 114
-      Script: {instanceID: 13944}
+      Script: {instanceID: 13946}
     - Class: 114
-      Script: {instanceID: 14290}
+      Script: {instanceID: 14292}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -175,41 +176,43 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12206}
     - Class: 114
-      Script: {instanceID: 12878}
+      Script: {instanceID: 12458}
     - Class: 114
-      Script: {instanceID: 12902}
+      Script: {instanceID: 12880}
     - Class: 114
-      Script: {instanceID: 13108}
+      Script: {instanceID: 12904}
     - Class: 114
-      Script: {instanceID: 13122}
+      Script: {instanceID: 13110}
     - Class: 114
-      Script: {instanceID: 13166}
+      Script: {instanceID: 13124}
     - Class: 114
-      Script: {instanceID: 13270}
+      Script: {instanceID: 13168}
     - Class: 114
-      Script: {instanceID: 13524}
+      Script: {instanceID: 13272}
     - Class: 114
-      Script: {instanceID: 13664}
+      Script: {instanceID: 13526}
     - Class: 114
-      Script: {instanceID: 13678}
+      Script: {instanceID: 13666}
     - Class: 114
-      Script: {instanceID: 13734}
+      Script: {instanceID: 13680}
     - Class: 114
-      Script: {instanceID: 13858}
+      Script: {instanceID: 13736}
     - Class: 114
-      Script: {instanceID: 13960}
+      Script: {instanceID: 13860}
     - Class: 114
-      Script: {instanceID: 13994}
+      Script: {instanceID: 13962}
     - Class: 114
-      Script: {instanceID: 14010}
+      Script: {instanceID: 13996}
     - Class: 114
-      Script: {instanceID: 14128}
+      Script: {instanceID: 14012}
     - Class: 114
-      Script: {instanceID: 14170}
+      Script: {instanceID: 14130}
     - Class: 114
-      Script: {instanceID: 14290}
+      Script: {instanceID: 14172}
     - Class: 114
-      Script: {instanceID: 14362}
+      Script: {instanceID: 14292}
+    - Class: 114
+      Script: {instanceID: 14364}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -489,6 +492,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Selectable
+  - hash:
+      serializedVersion: 2
+      Hash: ed2dfd6e18ea4dc62f4a03630105fc2a
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CannonShot
   - hash:
       serializedVersion: 2
       Hash: b3ab2106268377ffe25dd18ac23dca28
@@ -835,4 +844,4 @@ ScriptsOnlyBuild:
   scenePathNames:
   - Assets/Scenes/Menu.unity
   - Assets/Scenes/Teste_scene_(Kevin).unity
-  playerPath: D:/SS2020_Project/TeamGraby/ProjektGrabbyGrabby/0.1.3.2.apk
+  playerPath: D:/SS2020_Project/TeamGraby/ProjektGrabbyGrabby/0.1.3.3.apk

@@ -62,7 +62,7 @@ public class LevelGenerator : MonoBehaviour
             if (Random.Range(0f, 100f) < randomWallThreshold)
             {
                 GameObject newWall = wallPool.GetPooledObject();
-                Vector3 wallPosition = new Vector3(0f, 3f, 0f);
+                Vector3 wallPosition = new Vector3(0f, 2.8f, 0f);
                 newWall.transform.position = transform.position + wallPosition;
                 newWall.transform.rotation = transform.rotation;
                 newWall.SetActive(true);
@@ -81,7 +81,7 @@ public class LevelGenerator : MonoBehaviour
             if (Random.Range(0f, 100f) < randomBreakWallThreshold)
             {
                 GameObject newBreakWall = breakWall.GetPooledObject();
-                Vector3 BreakWallPosition = new Vector3(-6f, 2.5f, 0f);
+                Vector3 BreakWallPosition = new Vector3(-6f, 2.3f, 0f);
                 newBreakWall.transform.position = transform.position + BreakWallPosition;
                 newBreakWall.transform.rotation = transform.rotation;
                 newBreakWall.SetActive(true);
