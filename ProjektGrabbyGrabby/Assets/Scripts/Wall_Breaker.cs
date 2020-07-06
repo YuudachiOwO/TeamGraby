@@ -19,14 +19,15 @@ public class Wall_Breaker : MonoBehaviour
         playerRB = player.GetComponent<Rigidbody2D>();
         wallBreakAnim = WallBreakable.GetComponent<Animator>();
 
-        wallBreakAnim.enabled = false;
+        wallBreakAnim.enabled = true;
     }
 
     void Update()
     {
-        if (!WallBreakable.activeSelf)
+        if (!WallBreakable.GetComponent<SpriteRenderer>().isVisible)
         {
-            wallBreakAnim.enabled = false;
+            wallBreakAnim.SetBool("isBroken", false);
+            this.coll.enabled = true;
         } 
     }
 
@@ -36,7 +37,7 @@ public class Wall_Breaker : MonoBehaviour
         if (playerRB.velocity.x > breakSpeed)
         {
             this.coll.enabled = false;
-            wallBreakAnim.enabled = true;
+            wallBreakAnim.SetBool("isBroken", true);
         }
         else
         {

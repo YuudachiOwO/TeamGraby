@@ -451,8 +451,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerRB: {fileID: 5512181695757748824}
   jetpackBurning: 0
-  boosterStrengthUp: 0.3
-  boosterStrengthSide: 0.5
+  boosterStrengthUp: 0.5
+  boosterStrengthSide: 0.7
 --- !u!114 &3826587181060160294
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -541,8 +541,8 @@ MonoBehaviour:
   cannonLockPoint: {x: 0, y: 0, z: 0}
   waitTime: 0
   timeMax: 2
-  xLaunch: 30
-  yLaunch: 15
+  xLaunch: 75
+  yLaunch: 40
   xOffset: 0
   yOffset: -0.6
   cannonAnim: {fileID: 0}

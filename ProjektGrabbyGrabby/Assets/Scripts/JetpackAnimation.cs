@@ -16,7 +16,7 @@ public class JetpackAnimation : MonoBehaviour
     {
      jetpack = GameObject.FindGameObjectWithTag("Jetpack");
      jetpackAnim = jetpack.GetComponent<Animator>();
-     jetpackAnim.enabled = false;
+     boost.jetpackBurning = false;
     }
 
     void Start()
@@ -33,18 +33,18 @@ public class JetpackAnimation : MonoBehaviour
 
             if (Input.GetMouseButtonDown(0))
             {
-                jetpackAnim.enabled = true;
+                jetpackAnim.SetBool("isActive", true);
             }
 
             if (Input.GetMouseButtonUp(0))
             {
-                jetpackAnim.enabled = false;
+                jetpackAnim.SetBool("isActive", false);
             }
 
             if (jetpackPowerUP.timePassed >= jetpackPowerUP.duration)
             {
+                boost.jetpackBurning = false;
                 jetpack.SetActive(false);
-                jetpackAnim.enabled = false;
             }
 
             if (boost.jetpackBurning)

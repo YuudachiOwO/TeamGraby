@@ -24,7 +24,7 @@ public class Trampoline_Bounce : MonoBehaviour
         playerVelocity = playerRB.velocity;
     }
 
-    void OnCollisionEnter2D(Collision2D coll)
+    void OnTriggerEnter2D(Collider2D coll)
     {
         if (playerVelocity.y < 0)
         {
@@ -34,7 +34,7 @@ public class Trampoline_Bounce : MonoBehaviour
         }
     }
 
-    void OnCollisionStay2D(Collision2D coll)
+    void OnTriggerStay2D(Collider2D coll)
     {
         if (playerVelocity.y <= 0)
         {

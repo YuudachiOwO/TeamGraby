@@ -156,19 +156,24 @@ MonoBehaviour:
   distanceBetween: 0
   distanceBetweenMin: -0.5
   distanceBetweenMax: -0.5
+  player: {fileID: 1450953919}
   theObjectPools:
   - {fileID: 1679022985}
-  randomWallThreshold: 2
   wallPool: {fileID: 163984935}
-  player: {fileID: 1450953919}
+  randomWallThreshold: 2
+  wallRadius: 0
   trampolinePool: {fileID: 881378758}
-  randomTrampolineThreshold: 45
+  randomTrampolineThreshold: 65
+  trampolineRadius: 0
   breakWall: {fileID: 1184538353}
-  randomBreakWallThreshold: 25
+  randomBreakWallThreshold: 33
+  breakWallRadius: 0
   jetpack: {fileID: 1976832576}
-  randomJetpackThreshold: 20
+  randomJetpackThreshold: 10
+  jetpackRadius: 0
   acid: {fileID: 1024421100}
-  randomAcidThreshold: 5
+  randomAcidThreshold: 10
+  acidRadius: 0
 --- !u!4 &25851771
 Transform:
   m_ObjectHideFlags: 0
@@ -1573,7 +1578,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b25be3cd38544de488b453120cc20866, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parallaxEffectMultiplier: {x: 0.3, y: 0}
+  parallaxEffectMultiplier: {x: 0.2, y: 0}
 --- !u!1 &1201316131
 GameObject:
   m_ObjectHideFlags: 0

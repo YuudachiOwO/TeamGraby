@@ -27,7 +27,7 @@ public class CannonShot : MonoBehaviour
         playerRB = player.GetComponent<Rigidbody2D>();
         cannon = GameObject.FindGameObjectWithTag("OldCannon");
         cannonLock = cannon.gameObject.gameObject.transform;
-        cannonAnim.enabled = false;
+        cannonAnim.enabled = true;
     }
 
     void Update()
@@ -35,13 +35,13 @@ public class CannonShot : MonoBehaviour
         cannonLockPoint = cannonLock.position;
         if (!playerRB.isKinematic)
         {
-            cannonAnim.enabled = false;
+            cannonAnim.SetBool("isFiring", false);
             waitTime = 0;
         }
         if (playerRB.isKinematic && !testPlayer.spring.enabled)
         {
             waitTime += Time.deltaTime;
-            cannonAnim.enabled = true;
+            cannonAnim.SetBool("isFiring", true);
 
             if (playerRB.isKinematic && waitTime >= timeMax)
             {
@@ -61,14 +61,6 @@ public class CannonShot : MonoBehaviour
             playerRB.velocity = new Vector3(0, 0, 0);
             player.transform.position = cannonLockPoint + new Vector3(xOffset, yOffset);
 
-        }
-    }
-
-    private IEnumerator LaunchDelay()
-    {
-        while (true)
-        {
-            yield return new WaitForSeconds(waitTime);
         }
     }
 }
