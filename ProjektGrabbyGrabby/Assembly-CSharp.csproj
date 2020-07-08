@@ -69,6 +69,7 @@
      <Compile Include="Assets\Scripts\ObjectPooler.cs" />
      <Compile Include="Assets\Scripts\ParallaxScrolling.cs" />
      <Compile Include="Assets\Scripts\PlatformDestroyer.cs" />
+     <Compile Include="Assets\Scripts\PlayerAnimation.cs" />
      <Compile Include="Assets\Scripts\PlayerController.cs" />
      <Compile Include="Assets\Scripts\Player_Rotation_Lock.cs" />
      <Compile Include="Assets\Scripts\Restart_Script.cs" />

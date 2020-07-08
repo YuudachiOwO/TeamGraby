@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class AcidTrip : MonoBehaviour
 {
@@ -9,10 +10,12 @@ public class AcidTrip : MonoBehaviour
     public GameObject player;
     public float destructiveTimer;
     public int duration = 5;
+    public Button acidActive;
 
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
+        acidActive.enabled = false;
     }
 
     void Update()
@@ -34,7 +37,13 @@ public class AcidTrip : MonoBehaviour
         {
             destructiveTimer = 0;
             Debug.Log("Hit");
-            allDestructive = true;
+            acidActive.enabled = true;
         }
+    }
+
+    public void ButtonActivate()
+    {
+        allDestructive = true;
+        acidActive.enabled = false;
     }
 }
