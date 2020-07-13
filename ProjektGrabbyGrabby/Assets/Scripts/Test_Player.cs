@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Test_Player : MonoBehaviour
 {
@@ -16,6 +17,8 @@ public class Test_Player : MonoBehaviour
     public float timeAfter;
     public Jetpack_Boost boost;
     public JetPack_PowerUp jetpackPowerUp;
+    public GameObject jetpackButton;
+    public Button button;
 
     private void Awake()
     {
@@ -90,8 +93,8 @@ public class Test_Player : MonoBehaviour
     {
         if (other.gameObject.tag == "JetpackPU")
         {
-            jetpackPowerUp.timePassed = 0;
-            boost.enabled = true;
+            button.enabled = true;
+            jetpackButton.SetActive(true);
             other.gameObject.SetActive(false);
         }
     }

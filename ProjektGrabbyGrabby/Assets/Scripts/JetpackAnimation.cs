@@ -24,7 +24,6 @@ public class JetpackAnimation : MonoBehaviour
         jetpack.SetActive(false);
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (boost.enabled)
@@ -53,6 +52,10 @@ public class JetpackAnimation : MonoBehaviour
                 Mathf.RoundToInt(jetpackPowerUP.timePassed);
                 jetpackPowerUP.durationCount = jetpackPowerUP.duration - jetpackPowerUP.timePassed;
             }
+        }
+        else
+        {
+            jetpack.SetActive(false);
         }
     }
 }

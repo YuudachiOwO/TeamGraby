@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8886005382317050125}
   - component: {fileID: 3051376952303508388}
   - component: {fileID: 6234398245584979038}
+  - component: {fileID: 2330952809609108239}
   m_Layer: 0
   m_Name: Asset_jetpack_v1_AG
   m_TagString: Jetpack
@@ -26,11 +27,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3627271127619127259}
   m_LocalRotation: {x: -0, y: -0, z: -0.13052624, w: 0.9914449}
-  m_LocalPosition: {x: -6.68, y: -1.82, z: 0}
+  m_LocalPosition: {x: -6.68, y: -1.8200004, z: 0}
   m_LocalScale: {x: 0.9000003, y: 0.9000003, z: 1}
   m_Children: []
   m_Father: {fileID: 5512181695757748826}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -15}
 --- !u!212 &3051376952303508388
 SpriteRenderer:
@@ -81,7 +82,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
+  m_SpriteSortPoint: 1
 --- !u!95 &6234398245584979038
 Animator:
   serializedVersion: 3
@@ -101,6 +102,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &2330952809609108239
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3627271127619127259}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c53d793d79563eb4490417df84b7c531, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jetpack: {fileID: 0}
 --- !u!1 &3677100384730723363
 GameObject:
   m_ObjectHideFlags: 0
@@ -129,7 +143,7 @@ Transform:
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 5512181695757748826}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5512181695757748773
 GameObject:
@@ -173,8 +187,8 @@ Transform:
   m_LocalPosition: {x: -4.08, y: -2.76, z: 0}
   m_LocalScale: {x: 0.2, y: 0.2, z: 1}
   m_Children:
-  - {fileID: 8886005382317050125}
   - {fileID: 134756905760512036}
+  - {fileID: 8886005382317050125}
   m_Father: {fileID: 5512181696815963938}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -266,7 +280,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!58 &5512181695757748775
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -324,6 +338,8 @@ MonoBehaviour:
   timeAfter: 0
   boost: {fileID: 1193733100}
   jetpackPowerUp: {fileID: 2608066039531644549}
+  jetpackButton: {fileID: 0}
+  button: {fileID: 0}
 --- !u!82 &5512181695757748828
 AudioSource:
   m_ObjectHideFlags: 0
@@ -469,8 +485,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerRB: {fileID: 5512181695757748824}
   jetpackBurning: 0
-  boosterStrengthUp: 0.5
-  boosterStrengthSide: 0.7
+  boosterStrengthUp: 0.9
+  boosterStrengthSide: 1.5
 --- !u!114 &3826587181060160294
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -524,6 +540,7 @@ MonoBehaviour:
   duration: 3
   timePassed: 0
   durationCount: 0
+  button: {fileID: 0}
 --- !u!114 &5295133704967131227
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -539,7 +556,9 @@ MonoBehaviour:
   allDestructive: 0
   player: {fileID: 5512181695757748773}
   destructiveTimer: 0
-  duration: 5
+  duration: 10
+  acidActive: {fileID: 0}
+  button: {fileID: 0}
 --- !u!114 &4880215809855999619
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -559,8 +578,8 @@ MonoBehaviour:
   cannonLockPoint: {x: 0, y: 0, z: 0}
   waitTime: 0
   timeMax: 2
-  xLaunch: 75
-  yLaunch: 40
+  xLaunch: 80
+  yLaunch: 55
   xOffset: 0
   yOffset: -0.6
   cannonAnim: {fileID: 0}

@@ -20,23 +20,32 @@ public class LevelGenerator : MonoBehaviour
 
     public ObjectPooler wallPool;
     public float randomWallThreshold;
-    public float wallRadius;
 
-    public ObjectPooler trampolinePool;
-    public float randomTrampolineThreshold;
-    public float trampolineRadius;
+    public ObjectPooler trampolinePool1;
+    public float randomTrampolineThreshold1;
+
+    public ObjectPooler trampolinePool2;
+    public float randomTrampolineThreshold2;
+
+    public ObjectPooler trampolinePool3;
+    public float randomTrampolineThreshold3;
+
+    public ObjectPooler trampolinePool4;
+    public float randomTrampolineThreshold4;
 
     public ObjectPooler breakWall;
     public float randomBreakWallThreshold;
-    public float breakWallRadius;
+
+    public ObjectPooler cannon;
+    public float randomCannonThreshold;
 
     public ObjectPooler jetpack;
     public float randomJetpackThreshold;
-    public float jetpackRadius;
 
     public ObjectPooler acid;
     public float randomAcidThreshold;
-    public float acidRadius;
+
+
 
     void Start()
     {
@@ -66,35 +75,68 @@ public class LevelGenerator : MonoBehaviour
             newPlatform.transform.rotation = transform.rotation;
             newPlatform.SetActive(true);
 
-            int diceObst = Random.Range(0,100);
+            int diceObst = Random.Range(0, 100);
             int dicePU = Random.Range(0, 100);
 
             if (0 <= diceObst && diceObst < randomWallThreshold)
             {
                 GameObject newWall = wallPool.GetPooledObject();
-                Vector3 wallPosition = new Vector3(Random.Range(2f, 4f), 3.5f, 0f);
+                Vector3 wallPosition = new Vector3(Random.Range(10f, 20f), 3.5f, 0f);
                 newWall.transform.position = transform.position + wallPosition;
                 newWall.transform.rotation = transform.rotation;
                 newWall.SetActive(true);
 
             }
 
-            if (randomWallThreshold <= diceObst && diceObst < randomWallThreshold + randomTrampolineThreshold)
+            if (randomWallThreshold <= diceObst && diceObst < randomWallThreshold + randomTrampolineThreshold1)
             {
-                GameObject newTrampoline = trampolinePool.GetPooledObject();
-                Vector3 trampolinePosition = new Vector3(Random.Range(2f, 4f), 1.2f, 0f);
-                newTrampoline.transform.position = transform.position + trampolinePosition;
-                newTrampoline.transform.rotation = transform.rotation;
-                newTrampoline.SetActive(true);            
+                GameObject newTrampoline1 = trampolinePool1.GetPooledObject();
+                Vector3 trampolinePosition1 = new Vector3(Random.Range(10f, 20f), 2f, 0f);
+                newTrampoline1.transform.position = transform.position + trampolinePosition1;
+                newTrampoline1.transform.rotation = transform.rotation;
+                newTrampoline1.SetActive(true);
+            }
+            if (randomWallThreshold + randomTrampolineThreshold1 <= diceObst && diceObst < randomWallThreshold + randomTrampolineThreshold1 + randomTrampolineThreshold2)
+            {
+                GameObject newTrampoline2 = trampolinePool2.GetPooledObject();
+                Vector3 trampolinePosition2 = new Vector3(Random.Range(10f, 20f), 2f, 0f);
+                newTrampoline2.transform.position = transform.position + trampolinePosition2;
+                newTrampoline2.transform.rotation = transform.rotation;
+                newTrampoline2.SetActive(true);
+            }
+            if (randomWallThreshold + randomTrampolineThreshold1 + randomTrampolineThreshold2 <= diceObst && diceObst < randomWallThreshold + randomTrampolineThreshold1 + randomTrampolineThreshold2 + randomTrampolineThreshold3)
+            {
+                GameObject newTrampoline3 = trampolinePool3.GetPooledObject();
+                Vector3 trampolinePosition3 = new Vector3(Random.Range(10f, 20f), 2f, 0f);
+                newTrampoline3.transform.position = transform.position + trampolinePosition3;
+                newTrampoline3.transform.rotation = transform.rotation;
+                newTrampoline3.SetActive(true);
+            }
+            if (randomWallThreshold + randomTrampolineThreshold1 + randomTrampolineThreshold2 + randomTrampolineThreshold3 <= diceObst && diceObst < randomWallThreshold + randomTrampolineThreshold1 + randomTrampolineThreshold2 + randomTrampolineThreshold3 + randomTrampolineThreshold4)
+            {
+                GameObject newTrampoline4 = trampolinePool4.GetPooledObject();
+                Vector3 trampolinePosition4 = new Vector3(Random.Range(10f, 20f), 2f, 0f);
+                newTrampoline4.transform.position = transform.position + trampolinePosition4;
+                newTrampoline4.transform.rotation = transform.rotation;
+                newTrampoline4.SetActive(true);
             }
 
-            if (randomWallThreshold + randomTrampolineThreshold <= diceObst && diceObst < randomWallThreshold + randomTrampolineThreshold + randomBreakWallThreshold)
+            if (randomWallThreshold + randomTrampolineThreshold1 + randomTrampolineThreshold2 + randomTrampolineThreshold3 + randomTrampolineThreshold4 <= diceObst && diceObst < randomWallThreshold + randomTrampolineThreshold1 + randomTrampolineThreshold2 + randomTrampolineThreshold3 + randomTrampolineThreshold4 + randomBreakWallThreshold)
             {
                 GameObject newBreakWall = breakWall.GetPooledObject();
-                Vector3 BreakWallPosition = new Vector3(Random.Range(2f, 4f), 2.3f, 0f);
+                Vector3 BreakWallPosition = new Vector3(Random.Range(10f, 20f), 2.3f, 0f);
                 newBreakWall.transform.position = transform.position + BreakWallPosition;
                 newBreakWall.transform.rotation = transform.rotation;
                 newBreakWall.SetActive(true);
+            }
+
+            if (randomWallThreshold + randomTrampolineThreshold1 + randomTrampolineThreshold2 + randomTrampolineThreshold3 + randomTrampolineThreshold4 + randomBreakWallThreshold <= diceObst && diceObst < randomWallThreshold + randomTrampolineThreshold1 + randomTrampolineThreshold2 + randomTrampolineThreshold3 + randomTrampolineThreshold4 + randomBreakWallThreshold + randomCannonThreshold)
+            {
+                GameObject newCannon = cannon.GetPooledObject();
+                Vector3 CannonPosition = new Vector3(Random.Range(10f, 20f), 2.3f, 0f);
+                newCannon.transform.position = transform.position + CannonPosition;
+                newCannon.transform.rotation = transform.rotation;
+                newCannon.SetActive(true);
             }
 
             if (0 <= dicePU && dicePU < randomJetpackThreshold)

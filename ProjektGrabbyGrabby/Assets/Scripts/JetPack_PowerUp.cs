@@ -11,6 +11,7 @@ public class JetPack_PowerUp : MonoBehaviour
     public float duration = 5f;
     public float timePassed;
     public float durationCount;
+    public GameObject button;
 
     void Awake()
     {
@@ -19,6 +20,7 @@ public class JetPack_PowerUp : MonoBehaviour
         boost = player.GetComponent<Jetpack_Boost>();
         boost.enabled = false;
         boost.jetpackBurning = false;
+        button.SetActive(false);
     }
 
     void Update()
@@ -33,6 +35,7 @@ public class JetPack_PowerUp : MonoBehaviour
 
             if (Input.GetMouseButtonDown(0))
             {
+                boost.playerRB.velocity = new Vector3(boost.playerRB.velocity.x, 0, 0);
                 boost.jetpackBurning = true;
             }
 
@@ -52,6 +55,13 @@ public class JetPack_PowerUp : MonoBehaviour
             }
         }
 
+    }
+
+    public void ButtonActivate()
+    {
+        timePassed = 0;
+        boost.enabled = true;
+        button.SetActive(false);
     }
 
 }

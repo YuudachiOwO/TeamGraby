@@ -11,11 +11,13 @@ public class AcidTrip : MonoBehaviour
     public float destructiveTimer;
     public int duration = 5;
     public Button acidActive;
+    public GameObject button;
 
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
         acidActive.enabled = false;
+        button.SetActive(false);
     }
 
     void Update()
@@ -37,6 +39,7 @@ public class AcidTrip : MonoBehaviour
         {
             destructiveTimer = 0;
             Debug.Log("Hit");
+            button.SetActive(true);
             acidActive.enabled = true;
         }
     }
@@ -45,5 +48,6 @@ public class AcidTrip : MonoBehaviour
     {
         allDestructive = true;
         acidActive.enabled = false;
+        button.SetActive(false);
     }
 }
