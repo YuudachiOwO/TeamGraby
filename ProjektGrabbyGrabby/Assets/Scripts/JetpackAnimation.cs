@@ -14,9 +14,9 @@ public class JetpackAnimation : MonoBehaviour
 
     public void Awake()
     {
-     jetpack = GameObject.FindGameObjectWithTag("Jetpack");
-     jetpackAnim = jetpack.GetComponent<Animator>();
-     boost.jetpackBurning = false;
+        jetpack = GameObject.FindGameObjectWithTag("Jetpack");
+        jetpackAnim = jetpack.GetComponent<Animator>();
+        boost.jetpackBurning = false;
     }
 
     void Start()
@@ -29,16 +29,7 @@ public class JetpackAnimation : MonoBehaviour
         if (boost.enabled)
         {
             jetpack.SetActive(true);
-
-            if (Input.GetMouseButtonDown(0))
-            {
-                jetpackAnim.SetBool("isActive", true);
-            }
-
-            if (Input.GetMouseButtonUp(0))
-            {
-                jetpackAnim.SetBool("isActive", false);
-            }
+            jetpackAnim.SetBool("isActive", true);
 
             if (jetpackPowerUP.timePassed >= jetpackPowerUP.duration)
             {

@@ -12,6 +12,7 @@ public class Wall_Breaker : MonoBehaviour
     public AcidTrip acidTrip;
     public Animator wallBreakAnim;
     public BoxCollider2D coll;
+    public bool broken;
 
     void Start()
     {
@@ -24,26 +25,27 @@ public class Wall_Breaker : MonoBehaviour
 
     void Update()
     {
+        if (broken)
+        {
+            this.coll.enabled = false;
+            wallBreakAnim.SetBool("isBroken", true);
+        }
+
         if (!WallBreakable.GetComponent<SpriteRenderer>().isVisible)
         {
+            broken = false;
             wallBreakAnim.SetBool("isBroken", false);
             this.coll.enabled = true;
         } 
     }
 
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D other)
     {
+        Debug.Log(other.gameObject.tag);
         if (playerRB.velocity.x > breakSpeed)
         {
-            this.coll.enabled = false;
-            wallBreakAnim.SetBool("isBroken", true);
-        }
-        else
-        {
-            rbv = playerRB.velocity;
-            rbv = new Vector3(0, rbv.y, rbv.z);
-            playerRB.velocity = rbv;
+            broken = true;
         }
 
     }

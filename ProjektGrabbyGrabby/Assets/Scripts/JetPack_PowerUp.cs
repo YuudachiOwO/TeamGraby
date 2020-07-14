@@ -33,27 +33,24 @@ public class JetPack_PowerUp : MonoBehaviour
         if (boost.enabled)
         {
 
-            if (Input.GetMouseButtonDown(0))
-            {
-                boost.playerRB.velocity = new Vector3(boost.playerRB.velocity.x, 0, 0);
-                boost.jetpackBurning = true;
-            }
-
-            if (Input.GetMouseButtonUp(0))
-            {
-                boost.jetpackBurning = false;
-            }
-            if (timePassed >= duration)
-            {
-                boost.jetpackBurning = false;
-                boost.enabled = false;
-            }
-            if (boost.jetpackBurning)
-            {
-                timePassed += Time.deltaTime;
-                Mathf.RoundToInt(timePassed); 
-            }
+            boost.playerRB.velocity = new Vector3(boost.playerRB.velocity.x, 0, 0);
+            boost.jetpackBurning = true;
         }
+        else
+        {
+            boost.jetpackBurning = false;
+        }
+        if (timePassed >= duration)
+        {
+            boost.jetpackBurning = false;
+            boost.enabled = false;
+        }
+        if (boost.jetpackBurning)
+        {
+            timePassed += Time.deltaTime;
+            Mathf.RoundToInt(timePassed);
+        }
+
 
     }
 

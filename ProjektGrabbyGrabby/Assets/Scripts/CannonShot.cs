@@ -25,14 +25,12 @@ public class CannonShot : MonoBehaviour
     {
         player = GameObject.FindGameObjectWithTag("Player");
         playerRB = player.GetComponent<Rigidbody2D>();
-        cannon = GameObject.FindGameObjectWithTag("OldCannon");
-        cannonLock = cannon.gameObject.gameObject.transform;
-        cannonAnim.enabled = true;
+
+
     }
 
     void Update()
     {
-        cannonLockPoint = cannonLock.position;
         if (!playerRB.isKinematic)
         {
             cannonAnim.SetBool("isFiring", false);
@@ -57,6 +55,9 @@ public class CannonShot : MonoBehaviour
     {
         if (other.gameObject.tag == "OldCannon")
         {
+            cannonLock = other.gameObject.transform;
+            cannonLockPoint = cannonLock.position;
+            cannonAnim.enabled = true;
             playerRB.isKinematic = true;
             playerRB.velocity = new Vector3(0, 0, 0);
             player.transform.position = cannonLockPoint + new Vector3(xOffset, yOffset);
