@@ -44,12 +44,21 @@ public class LevelGenerator : MonoBehaviour
 
     public ObjectPooler acid;
     public float randomAcidThreshold;
+    
+    public ObjectPooler jump;
+    public float randomJumpThreshold;
 
     public ObjectPooler bird;
     public float randomBirdThreshold;
 
-    public ObjectPooler coin;
-    public float randomCoinThreshold;
+    public ObjectPooler coin1;
+    public float randomCoinThreshold1;
+    
+    public ObjectPooler coin2;
+    public float randomCoinThreshold2;
+    
+    public ObjectPooler coin3;
+    public float randomCoinThreshold3;
     
     public ObjectPooler platform1;
     public float randomPlatformThreshold1;
@@ -105,7 +114,7 @@ public class LevelGenerator : MonoBehaviour
             if (0 <= diceObst && diceObst < randomWallThreshold)
             {
                 GameObject newWall = wallPool.GetPooledObject();
-                Vector3 wallPosition = new Vector3(Random.Range(10f, 20f), 3.5f, 0f);
+                Vector3 wallPosition = new Vector3(Random.Range(10f, 60f), 3.5f, 0f);
                 newWall.transform.position = transform.position + wallPosition;
                 newWall.transform.rotation = transform.rotation;
                 newWall.SetActive(true);
@@ -115,7 +124,7 @@ public class LevelGenerator : MonoBehaviour
             if (randomWallThreshold <= diceObst && diceObst < randomWallThreshold + randomTrampolineThreshold1)
             {
                 GameObject newTrampoline1 = trampolinePool1.GetPooledObject();
-                Vector3 trampolinePosition1 = new Vector3(Random.Range(10f, 20f), 2f, 0f);
+                Vector3 trampolinePosition1 = new Vector3(Random.Range(10f, 60f), 2f, 0f);
                 newTrampoline1.transform.position = transform.position + trampolinePosition1;
                 newTrampoline1.transform.rotation = transform.rotation;
                 newTrampoline1.SetActive(true);
@@ -123,7 +132,7 @@ public class LevelGenerator : MonoBehaviour
             if (randomWallThreshold + randomTrampolineThreshold1 <= diceObst && diceObst < randomWallThreshold + randomTrampolineThreshold1 + randomTrampolineThreshold2)
             {
                 GameObject newTrampoline2 = trampolinePool2.GetPooledObject();
-                Vector3 trampolinePosition2 = new Vector3(Random.Range(10f, 20f), 2f, 0f);
+                Vector3 trampolinePosition2 = new Vector3(Random.Range(10f, 60f), 2f, 0f);
                 newTrampoline2.transform.position = transform.position + trampolinePosition2;
                 newTrampoline2.transform.rotation = transform.rotation;
                 newTrampoline2.SetActive(true);
@@ -131,7 +140,7 @@ public class LevelGenerator : MonoBehaviour
             if (randomWallThreshold + randomTrampolineThreshold1 + randomTrampolineThreshold2 <= diceObst && diceObst < randomWallThreshold + randomTrampolineThreshold1 + randomTrampolineThreshold2 + randomTrampolineThreshold3)
             {
                 GameObject newTrampoline3 = trampolinePool3.GetPooledObject();
-                Vector3 trampolinePosition3 = new Vector3(Random.Range(10f, 20f), 2f, 0f);
+                Vector3 trampolinePosition3 = new Vector3(Random.Range(10f, 60f), 2f, 0f);
                 newTrampoline3.transform.position = transform.position + trampolinePosition3;
                 newTrampoline3.transform.rotation = transform.rotation;
                 newTrampoline3.SetActive(true);
@@ -139,7 +148,7 @@ public class LevelGenerator : MonoBehaviour
             if (randomWallThreshold + randomTrampolineThreshold1 + randomTrampolineThreshold2 + randomTrampolineThreshold3 <= diceObst && diceObst < randomWallThreshold + randomTrampolineThreshold1 + randomTrampolineThreshold2 + randomTrampolineThreshold3 + randomTrampolineThreshold4)
             {
                 GameObject newTrampoline4 = trampolinePool4.GetPooledObject();
-                Vector3 trampolinePosition4 = new Vector3(Random.Range(10f, 20f), 2f, 0f);
+                Vector3 trampolinePosition4 = new Vector3(Random.Range(10f, 60f), 2f, 0f);
                 newTrampoline4.transform.position = transform.position + trampolinePosition4;
                 newTrampoline4.transform.rotation = transform.rotation;
                 newTrampoline4.SetActive(true);
@@ -148,7 +157,7 @@ public class LevelGenerator : MonoBehaviour
             if (randomWallThreshold + randomTrampolineThreshold1 + randomTrampolineThreshold2 + randomTrampolineThreshold3 + randomTrampolineThreshold4 <= diceObst && diceObst < randomWallThreshold + randomTrampolineThreshold1 + randomTrampolineThreshold2 + randomTrampolineThreshold3 + randomTrampolineThreshold4 + randomBreakWallThreshold)
             {
                 GameObject newBreakWall = breakWall.GetPooledObject();
-                Vector3 BreakWallPosition = new Vector3(Random.Range(10f, 20f), 2.3f, 0f);
+                Vector3 BreakWallPosition = new Vector3(Random.Range(10f, 60f), 2.3f, 0f);
                 newBreakWall.transform.position = transform.position + BreakWallPosition;
                 newBreakWall.transform.rotation = transform.rotation;
                 newBreakWall.SetActive(true);
@@ -157,7 +166,7 @@ public class LevelGenerator : MonoBehaviour
             if (randomWallThreshold + randomTrampolineThreshold1 + randomTrampolineThreshold2 + randomTrampolineThreshold3 + randomTrampolineThreshold4 + randomBreakWallThreshold <= diceObst && diceObst < randomWallThreshold + randomTrampolineThreshold1 + randomTrampolineThreshold2 + randomTrampolineThreshold3 + randomTrampolineThreshold4 + randomBreakWallThreshold + randomCannonThreshold)
             {
                 GameObject newCannon = cannon.GetPooledObject();
-                Vector3 CannonPosition = new Vector3(Random.Range(10f, 20f), 3.21f, 0f);
+                Vector3 CannonPosition = new Vector3(Random.Range(10f, 60f), 3.21f, 0f);
                 newCannon.transform.position = transform.position + CannonPosition;
                 newCannon.transform.rotation = transform.rotation;
                 newCannon.SetActive(true);
@@ -166,7 +175,7 @@ public class LevelGenerator : MonoBehaviour
             if (0 <= dicePU && dicePU < randomJetpackThreshold)
             {
                 GameObject newJetpack = jetpack.GetPooledObject();
-                Vector3 JetpackPosition = new Vector3(Random.Range(10f, 20f), Random.Range(10f, 30f), 0f);
+                Vector3 JetpackPosition = new Vector3(Random.Range(10f, 60f), Random.Range(10f, 20f), 0f);
                 newJetpack.transform.position = transform.position + JetpackPosition;
                 newJetpack.transform.rotation = transform.rotation;
                 newJetpack.SetActive(true);
@@ -176,53 +185,62 @@ public class LevelGenerator : MonoBehaviour
             if (randomJetpackThreshold <= dicePU && dicePU < randomJetpackThreshold + randomAcidThreshold)
             {
                 GameObject newAcid = acid.GetPooledObject();
-                Vector3 AcidPosition = new Vector3(Random.Range(10f, 20f), Random.Range(10f, 30f), 0f);
+                Vector3 AcidPosition = new Vector3(Random.Range(10f, 60f), Random.Range(10f, 20f), 0f);
                 newAcid.transform.position = transform.position + AcidPosition;
                 newAcid.transform.rotation = transform.rotation;
                 newAcid.SetActive(true);
+            }
+            
+            if (randomJetpackThreshold + randomAcidThreshold <= dicePU && dicePU < randomJetpackThreshold + randomAcidThreshold + randomJumpThreshold)
+            {
+                GameObject newJump = jump.GetPooledObject();
+                Vector3 JumpPosition = new Vector3(Random.Range(10f, 60f), Random.Range(10f, 20f), 0f);
+                newJump.transform.position = transform.position + JumpPosition;
+                newJump.transform.rotation = transform.rotation;
+                newJump.SetActive(true);
             }
 
             if (0 <= diceBird && diceBird <= randomBirdThreshold)
             {
                 GameObject newBird = bird.GetPooledObject();
-                Vector3 BirdPosition = new Vector3(Random.Range(10f, 20f), Random.Range(10f, 30f), 0f);
+                Vector3 BirdPosition = new Vector3(Random.Range(10f, 60f), Random.Range(10f, 20f), 0f);
                 newBird.transform.position = transform.position + BirdPosition;
                 newBird.transform.rotation = transform.rotation;
                 newBird.SetActive(true);
             }  
             
-            if (0 <= diceCollect1 && diceCollect1 <= randomCoinThreshold)
+            if (0 <= diceCollect1 && diceCollect1 <= randomCoinThreshold1)
             {
-                GameObject newCoin = coin.GetPooledObject();
-                Vector3 CoinPosition = new Vector3(Random.Range(10f, 20f), Random.Range(10f, 30f), 0f);
-                newCoin.transform.position = transform.position + CoinPosition;
-                newCoin.transform.rotation = transform.rotation;
-                newCoin.SetActive(true);
+                GameObject newCoin1 = coin1.GetPooledObject();
+                Vector3 CoinPosition1 = new Vector3(Random.Range(10f, 60f), Random.Range(10f, 20f), 0f);
+                newCoin1.transform.position = transform.position + CoinPosition1;
+                newCoin1.transform.rotation = transform.rotation;
+                newCoin1.SetActive(true);
             }
                         
-            if (0 <= diceCollect2 && diceCollect2 <= randomCoinThreshold)
+            if (0 <= diceCollect2 && diceCollect2 <= randomCoinThreshold2)
             {
-                GameObject newCoin = bird.GetPooledObject();
-                Vector3 CoinPosition = new Vector3(Random.Range(10f, 20f), Random.Range(10f, 30f), 0f);
-                newCoin.transform.position = transform.position + CoinPosition;
-                newCoin.transform.rotation = transform.rotation;
-                newCoin.SetActive(true);
+                GameObject newCoin2 = coin2.GetPooledObject();
+                Vector3 CoinPosition2 = new Vector3(Random.Range(10f, 60f), Random.Range(10f, 20f), 0f);
+                newCoin2.transform.position = transform.position + CoinPosition2;
+                newCoin2.transform.rotation = transform.rotation;
+                newCoin2.SetActive(true);
             }
 
                                     
-            if (0 <= diceCollect3 && diceCollect3 <= randomCoinThreshold)
+            if (0 <= diceCollect3 && diceCollect3 <= randomCoinThreshold3)
             {
-                GameObject newCoin = coin.GetPooledObject();
-                Vector3 CoinPosition = new Vector3(Random.Range(10f, 20f), Random.Range(10f, 30f), 0f);
-                newCoin.transform.position = transform.position + CoinPosition;
-                newCoin.transform.rotation = transform.rotation;
-                newCoin.SetActive(true);
+                GameObject newCoin3 = coin3.GetPooledObject();
+                Vector3 CoinPosition3 = new Vector3(Random.Range(10f, 60f), Random.Range(10f, 20f), 0f);
+                newCoin3.transform.position = transform.position + CoinPosition3;
+                newCoin3.transform.rotation = transform.rotation;
+                newCoin3.SetActive(true);
             }
 
             if (0 <= diceAirPlatform1 && diceAirPlatform1 <= randomPlatformThreshold1)
             {
                 GameObject newPlatform1 = platform1.GetPooledObject();
-                Vector3 PlatformPosition1 = new Vector3(Random.Range(10f, 20f), Random.Range(10f, 30f), 0f);
+                Vector3 PlatformPosition1 = new Vector3(Random.Range(10f, 60f), Random.Range(10f, 20f), 0f);
                 newPlatform1.transform.position = transform.position + PlatformPosition1;
                 newPlatform1.transform.rotation = transform.rotation;
                 newPlatform1.SetActive(true);
@@ -231,7 +249,7 @@ public class LevelGenerator : MonoBehaviour
             if (0 <= diceAirPlatform2 && diceAirPlatform2 <= randomPlatformThreshold2)
             {
                 GameObject newPlatform2 = platform2.GetPooledObject();
-                Vector3 PlatformPosition2 = new Vector3(Random.Range(10f, 20f), Random.Range(10f, 30f), 0f);
+                Vector3 PlatformPosition2 = new Vector3(Random.Range(10f, 60f), Random.Range(10f, 20f), 0f);
                 newPlatform2.transform.position = transform.position + PlatformPosition2;
                 newPlatform2.transform.rotation = transform.rotation;
                 newPlatform2.SetActive(true);
@@ -240,7 +258,7 @@ public class LevelGenerator : MonoBehaviour
             if (0 <= diceAirPlatform3 && diceAirPlatform3 <= randomPlatformThreshold3)
             {
                 GameObject newPlatform3 = platform3.GetPooledObject();
-                Vector3 PlatformPosition3 = new Vector3(Random.Range(10f, 20f), Random.Range(10f, 30f), 0f);
+                Vector3 PlatformPosition3 = new Vector3(Random.Range(10f, 60f), Random.Range(10f, 20f), 0f);
                 newPlatform3.transform.position = transform.position + PlatformPosition3;
                 newPlatform3.transform.rotation = transform.rotation;
                 newPlatform3.SetActive(true);

@@ -114,7 +114,7 @@ MonoBehaviour:
   playerRB: {fileID: 0}
   player: {fileID: 0}
   trampolineX: 30
-  trampolineY: 40
+  trampolineY: 60
   edgy: {fileID: 0}
 --- !u!61 &7500297800024484096
 BoxCollider2D:

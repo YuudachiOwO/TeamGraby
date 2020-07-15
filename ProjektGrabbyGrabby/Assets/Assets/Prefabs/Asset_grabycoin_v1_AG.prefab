@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 167059100241964343}
   - component: {fileID: 167059100241964336}
   - component: {fileID: 167059100241964337}
+  - component: {fileID: 1161376405324729335}
   m_Layer: 0
   m_Name: Asset_grabycoin_v1_AG
   m_TagString: Coin
@@ -98,3 +99,16 @@ CircleCollider2D:
   m_Offset: {x: -0.1291871, y: 0}
   serializedVersion: 2
   m_Radius: 2.741356
+--- !u!114 &1161376405324729335
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 167059100241964338}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40ac38ed4906f154598e51985340a1f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  platformDestructionPoint: {fileID: 0}
