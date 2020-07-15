@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ClickBoost : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class ClickBoost : MonoBehaviour
     public float clickBoost;
     RaycastHit raycast;
     public Test_Player testplayer;
+    public float clickMax;
 
     void Start()
     {
@@ -16,11 +18,12 @@ public class ClickBoost : MonoBehaviour
         playerRB = player.GetComponent<Rigidbody2D>();
     }
 
-    void Update()
+    void OnMouseDown()
     {
-        if (Input.GetMouseButtonDown(0) && !testplayer.spring.enabled)
+        if (!testplayer.spring.enabled && clickMax > 0)
         {
             playerRB.velocity = new Vector3(playerRB.velocity.x, 0, 0) + new Vector3(0, clickBoost);
+            clickMax--;
         }
     }
 }

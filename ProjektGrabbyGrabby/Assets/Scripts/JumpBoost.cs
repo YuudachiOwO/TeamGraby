@@ -18,11 +18,16 @@ public class JumpBoost : MonoBehaviour
     }
     public void OnJumpPress()
     {
-        playerRB.velocity = new Vector3(playerRB.velocity.x, 0, 0) + new Vector3(0, jumpBoost,0);
+        if (!playerRB.isKinematic)
+        {
+            playerRB.velocity = new Vector3(playerRB.velocity.x, 0, 0) + new Vector3(0, jumpBoost, 0);
+            jumpObject.SetActive(false);
+            jumpButton.enabled = false;
+        }
     }
     void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.gameObject.tag == "Player")
+        if (other.gameObject.tag == "Player")
         {
             jumpObject.SetActive(true);
             jumpButton.enabled = true;

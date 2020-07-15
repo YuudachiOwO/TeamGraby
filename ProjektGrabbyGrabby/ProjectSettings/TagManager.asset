@@ -9,6 +9,8 @@ TagManager:
   - JetpackPU
   - AcidPU
   - OldCannon
+  - Dragon
+  - Coin
   layers:
   - Default
   - TransparentFX

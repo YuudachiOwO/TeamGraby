@@ -158,6 +158,7 @@ MonoBehaviour:
   acidTrip: {fileID: 0}
   wallBreakAnim: {fileID: 0}
   coll: {fileID: 1648378779882562213}
+  broken: 0
 --- !u!114 &3331944744868770156
 MonoBehaviour:
   m_ObjectHideFlags: 0

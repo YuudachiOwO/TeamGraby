@@ -61,6 +61,7 @@
      <Compile Include="Assets\Scripts\Camera_Follow.cs" />
      <Compile Include="Assets\Scripts\CannonShot.cs" />
      <Compile Include="Assets\Scripts\ClickBoost.cs" />
+     <Compile Include="Assets\Scripts\CoinCollection.cs" />
      <Compile Include="Assets\Scripts\GameManager.cs" />
      <Compile Include="Assets\Scripts\HardWallBreak.cs" />
      <Compile Include="Assets\Scripts\JetPack_PowerUp.cs" />
@@ -78,6 +79,7 @@
      <Compile Include="Assets\Scripts\SceneChange.cs" />
      <Compile Include="Assets\Scripts\ScoreManager.cs" />
      <Compile Include="Assets\Scripts\SkyBackgound.cs" />
+     <Compile Include="Assets\Scripts\StopBackwards.cs" />
      <Compile Include="Assets\Scripts\Test_Player.cs" />
      <Compile Include="Assets\Scripts\Trampoline_Bounce.cs" />
      <Compile Include="Assets\Scripts\Wall_Breaker.cs" />
