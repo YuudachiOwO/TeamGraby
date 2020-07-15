@@ -12,6 +12,8 @@ public class Player_Rotation_Lock : MonoBehaviour
     public bool grounded = false;
     public float timeOnGround;
     public AcidTrip acidTrip;
+    public PlayerAnimation playerAnim;
+    public float cosRotation;
 
     void Awake()
     {
@@ -22,7 +24,17 @@ public class Player_Rotation_Lock : MonoBehaviour
 
     void Update()
     {
-        player.transform.rotation = new Quaternion(0, 0, 0, 1);
+
+        if (!playerAnim.playerAnim.GetBool("hasCollided"))
+        {
+            player.transform.rotation = new Quaternion(0, 0, 0, 1);
+
+        }
+
+        if (playerAnim.playerAnim.GetBool("hasCollided") && !grounded)
+        {
+            player.transform.rotation *= new Quaternion(0, 0, -1 * Time.deltaTime, 1);
+        }
 
         if (grounded)
         {

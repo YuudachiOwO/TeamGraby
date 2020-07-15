@@ -5,15 +5,18 @@ ScriptsOnlyBuild:
     - CameraClamp
     - Camera_Follow
     - CannonShot
+    - ClickBoost
     - GameManager
     - HardWallBreak
     - JetPack_PowerUp
     - JetpackAnimation
     - Jetpack_Boost
+    - JumpBoost
     - LevelGenerator
     - ObjectPooler
     - ParallaxScrolling
     - PlatformDestroyer
+    - PlayerAnimation
     - Player_Rotation_Lock
     - Restart_Script
     - SceneChange
@@ -81,27 +84,29 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11192}
     - Class: 114
+      Script: {instanceID: 11484}
+    - Class: 114
       Script: {instanceID: 11538}
     - Class: 114
       Script: {instanceID: 12000}
     - Class: 114
-      Script: {instanceID: 12206}
+      Script: {instanceID: 12208}
     - Class: 114
-      Script: {instanceID: 12258}
+      Script: {instanceID: 12260}
     - Class: 114
-      Script: {instanceID: 12904}
+      Script: {instanceID: 12906}
     - Class: 114
-      Script: {instanceID: 13254}
+      Script: {instanceID: 13256}
     - Class: 114
-      Script: {instanceID: 13274}
+      Script: {instanceID: 13276}
     - Class: 114
-      Script: {instanceID: 13566}
+      Script: {instanceID: 13570}
     - Class: 114
-      Script: {instanceID: 13666}
+      Script: {instanceID: 13670}
     - Class: 114
-      Script: {instanceID: 13946}
+      Script: {instanceID: 13952}
     - Class: 114
-      Script: {instanceID: 14292}
+      Script: {instanceID: 14298}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -141,8 +146,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 62
       Script: {instanceID: 0}
-    - Class: 68
-      Script: {instanceID: 0}
     - Class: 70
       Script: {instanceID: 0}
     - Class: 74
@@ -174,45 +177,51 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11798}
     - Class: 114
-      Script: {instanceID: 12206}
+      Script: {instanceID: 12166}
     - Class: 114
-      Script: {instanceID: 12458}
+      Script: {instanceID: 12208}
     - Class: 114
-      Script: {instanceID: 12880}
+      Script: {instanceID: 12460}
     - Class: 114
-      Script: {instanceID: 12904}
+      Script: {instanceID: 12882}
     - Class: 114
-      Script: {instanceID: 13110}
+      Script: {instanceID: 12906}
     - Class: 114
-      Script: {instanceID: 13124}
+      Script: {instanceID: 13112}
     - Class: 114
-      Script: {instanceID: 13168}
+      Script: {instanceID: 13126}
     - Class: 114
-      Script: {instanceID: 13272}
+      Script: {instanceID: 13170}
     - Class: 114
-      Script: {instanceID: 13526}
+      Script: {instanceID: 13274}
     - Class: 114
-      Script: {instanceID: 13666}
+      Script: {instanceID: 13358}
     - Class: 114
-      Script: {instanceID: 13680}
+      Script: {instanceID: 13530}
     - Class: 114
-      Script: {instanceID: 13736}
+      Script: {instanceID: 13670}
     - Class: 114
-      Script: {instanceID: 13860}
+      Script: {instanceID: 13684}
     - Class: 114
-      Script: {instanceID: 13962}
+      Script: {instanceID: 13740}
     - Class: 114
-      Script: {instanceID: 13996}
+      Script: {instanceID: 13864}
     - Class: 114
-      Script: {instanceID: 14012}
+      Script: {instanceID: 13916}
     - Class: 114
-      Script: {instanceID: 14130}
+      Script: {instanceID: 13968}
     - Class: 114
-      Script: {instanceID: 14172}
+      Script: {instanceID: 14002}
     - Class: 114
-      Script: {instanceID: 14292}
+      Script: {instanceID: 14018}
     - Class: 114
-      Script: {instanceID: 14364}
+      Script: {instanceID: 14136}
+    - Class: 114
+      Script: {instanceID: 14178}
+    - Class: 114
+      Script: {instanceID: 14298}
+    - Class: 114
+      Script: {instanceID: 14370}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -338,7 +347,7 @@ ScriptsOnlyBuild:
     className: TMP_InputField
   - hash:
       serializedVersion: 2
-      Hash: 9890aa04295d8ffb48da5e16904899ac
+      Hash: a7b9698a46ce7e0138040aaae0890f76
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Test_Player
@@ -450,6 +459,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Shadow
+  - hash:
+      serializedVersion: 2
+      Hash: 6b131d8c912446b88603929c1ee18cdd
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: JumpBoost
   - hash:
       serializedVersion: 2
       Hash: cc4274b586df3c02688bac01b88bd16c
@@ -566,7 +581,7 @@ ScriptsOnlyBuild:
     className: VerticalLayoutGroup
   - hash:
       serializedVersion: 2
-      Hash: d4be38a9522902f295cbdf1d1d245ef4
+      Hash: 5fb6afc5ca99bc083118ddc28a1281b8
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Wall_Breaker
@@ -644,6 +659,12 @@ ScriptsOnlyBuild:
     className: Physics2DRaycaster
   - hash:
       serializedVersion: 2
+      Hash: 39827bdd018908aed308621e9e572ed0
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PlayerAnimation
+  - hash:
+      serializedVersion: 2
       Hash: c1933cc0a2f4ff6eb13333347497beb3
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -686,7 +707,7 @@ ScriptsOnlyBuild:
     className: BeforeAfterTestCommandState
   - hash:
       serializedVersion: 2
-      Hash: 5b071837345f7be459023bca09bdccaa
+      Hash: 95b7bb31f7faec4a36eb7f49df63a745
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: LevelGenerator
@@ -702,6 +723,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: MarkerTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 4d7553398a9af13d0512dc3656c9bfbc
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ClickBoost
   - hash:
       serializedVersion: 2
       Hash: d791aa6007fa3640be1164ea75bb087d
@@ -722,7 +749,7 @@ ScriptsOnlyBuild:
     className: PlatformDestroyer
   - hash:
       serializedVersion: 2
-      Hash: 0ebcb96b909306ddb3b63e6720beb9f3
+      Hash: c1b07853b53962bde265c41ef3492a78
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: JetPack_PowerUp
@@ -740,7 +767,7 @@ ScriptsOnlyBuild:
     className: TMP_ColorGradient
   - hash:
       serializedVersion: 2
-      Hash: 39707507b5381e6359f62d507c3bdbf2
+      Hash: d8034d1b00ec4fa1291de76fbe3c628b
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: AcidTrip
@@ -844,4 +871,4 @@ ScriptsOnlyBuild:
   scenePathNames:
   - Assets/Scenes/Menu.unity
   - Assets/Scenes/Teste_scene_(Kevin).unity
-  playerPath: D:/SS2020_Project/TeamGraby/ProjektGrabbyGrabby/0.1.3.3.apk
+  playerPath: C:/Users/MSI/Desktop/0.1.3.4.apk

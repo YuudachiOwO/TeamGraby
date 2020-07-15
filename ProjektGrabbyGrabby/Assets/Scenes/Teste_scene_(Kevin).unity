@@ -685,7 +685,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jumpObject: {fileID: 2020454301}
   jumpButton: {fileID: 2020454303}
-  jumpBoost: 10
+  jumpBoost: 20
 --- !u!212 &474498595
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -745,7 +745,7 @@ Transform:
   m_GameObject: {fileID: 474498593}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.81152904, y: -1.288584, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 11
@@ -1276,7 +1276,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 684469415}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.0040001, y: 145.3, z: 0}
+  m_LocalPosition: {x: 0.0040001, y: 64.4, z: 0}
   m_LocalScale: {x: 1.3662499, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1326,7 +1326,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
-  m_Size: {x: 19.218752, y: 302.62146}
+  m_Size: {x: 19.218752, y: 140.82358}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 1
   m_WasSpriteAssigned: 1
@@ -1857,7 +1857,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 5512181697207518872}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1651424379}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ebbb38fd85c3adc4189652b4c3b33325, type: 3}
@@ -2529,7 +2529,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 5512181697207518872}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1651424379}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b0dc81320d0ba9443a5883911aef7b05, type: 3}
@@ -2571,25 +2571,6 @@ Transform:
   m_Father: {fileID: 713654776}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1651424379 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5512181695757748773, guid: 9be52272eca78ef4b8d6ece023d4e3bd,
-    type: 3}
-  m_PrefabInstance: {fileID: 5512181697207518872}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1651424380
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1651424379}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7598ab8df9f90ed49b1b4b95a0ea71e7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  clickBoost: 1
 --- !u!1 &1679022984
 GameObject:
   m_ObjectHideFlags: 0
@@ -2642,7 +2623,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 5512181697207518872}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1651424379}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8810757e151ce274483802c60dc4d990, type: 3}
@@ -3216,7 +3197,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -157.5, y: 167.09998}
+  m_AnchoredPosition: {x: -157.5, y: 85}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2020454303

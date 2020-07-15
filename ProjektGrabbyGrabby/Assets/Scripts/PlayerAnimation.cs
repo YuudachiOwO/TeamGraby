@@ -52,4 +52,10 @@ public class PlayerAnimation : MonoBehaviour
             playerAnim.SetBool("isFlying", true);
         }
     }
+
+
+    void OnCollisionEnter2D(Collision2D other)
+    {
+        playerAnim.SetBool("hasCollided", true);
+    }
 }

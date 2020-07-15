@@ -156,6 +156,7 @@ GameObject:
   - component: {fileID: 5295133704967131227}
   - component: {fileID: 4880215809855999619}
   - component: {fileID: 6120856791550905933}
+  - component: {fileID: 6455540973186748181}
   m_Layer: 0
   m_Name: Player_Placeholder
   m_TagString: Player
@@ -492,6 +493,8 @@ MonoBehaviour:
   grounded: 0
   timeOnGround: 0
   acidTrip: {fileID: 5295133704967131227}
+  playerAnim: {fileID: 5395900927461122257}
+  cosRotation: 0
 --- !u!114 &3007421803975423648
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -586,6 +589,20 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.82
+--- !u!114 &6455540973186748181
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5512181695757748773}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7598ab8df9f90ed49b1b4b95a0ea71e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clickBoost: 3
+  testplayer: {fileID: 5512181695757748827}
 --- !u!1 &5512181696815963937
 GameObject:
   m_ObjectHideFlags: 0

@@ -8,6 +8,7 @@ public class ClickBoost : MonoBehaviour
     Rigidbody2D playerRB;
     public float clickBoost;
     RaycastHit raycast;
+    public Test_Player testplayer;
 
     void Start()
     {
@@ -17,12 +18,9 @@ public class ClickBoost : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && !testplayer.spring.enabled)
         {
-
-
             playerRB.velocity = new Vector3(playerRB.velocity.x, 0, 0) + new Vector3(0, clickBoost);
-
         }
     }
 }
