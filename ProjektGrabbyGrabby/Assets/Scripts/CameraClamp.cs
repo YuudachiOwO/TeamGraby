@@ -22,7 +22,7 @@ public class CameraClamp : MonoBehaviour
     {
         if(!testPlayer.spring.enabled)
         {
-        float x = player.position.x;
+        float x = player.position.x + 6.5f;
         float y = Mathf.Clamp(player.position.y, yMin, yMax);
         t.position = new Vector3(x ,y ,t.position.z);
         }

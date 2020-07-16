@@ -7,7 +7,8 @@ public class ClickBoost : MonoBehaviour
 {
     GameObject player;
     Rigidbody2D playerRB;
-    public float clickBoost;
+    public float clickBoostX;
+    public float clickBoostY;
     RaycastHit raycast;
     public Test_Player testplayer;
     public float clickMax;
@@ -22,7 +23,7 @@ public class ClickBoost : MonoBehaviour
     {
         if (!testplayer.spring.enabled && clickMax > 0)
         {
-            playerRB.velocity = new Vector3(playerRB.velocity.x, 0, 0) + new Vector3(0, clickBoost);
+            playerRB.velocity = new Vector3(playerRB.velocity.x, 0, 0) + new Vector3(clickBoostX, clickBoostY);
             clickMax--;
         }
     }

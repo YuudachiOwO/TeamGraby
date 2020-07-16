@@ -158,6 +158,7 @@ GameObject:
   - component: {fileID: 6120856791550905933}
   - component: {fileID: 6455540973186748181}
   - component: {fileID: 3399269837901452129}
+  - component: {fileID: 3780687961974713823}
   m_Layer: 0
   m_Name: Player_Placeholder
   m_TagString: Player
@@ -248,6 +249,41 @@ MonoBehaviour:
   playerRotationLock: {fileID: 3826587181060160294}
   testPlayer: {fileID: 5512181695757748827}
   highSpeed: 20
+  damageCounter: 0
+  randomGeneration: 0
+  DamagePhaseOne:
+  - {fileID: 21300000, guid: f3535a8e78644984d9d50072a2ec9fff, type: 3}
+  - {fileID: 21300000, guid: 23abdc71a35ee2b4b9d8d9e2a5f71edf, type: 3}
+  - {fileID: 21300000, guid: b32e5c449d739eb4abfaa9c68ec56288, type: 3}
+  - {fileID: 21300000, guid: e7997ebe037d0254c86045b7545c92d5, type: 3}
+  - {fileID: 21300000, guid: 22f9c4114a5fe77488de2b6a461f3393, type: 3}
+  - {fileID: 21300000, guid: 87f8e2a99ec8baf43b910f54256b118a, type: 3}
+  - {fileID: 21300000, guid: fcca74e79be51484eb66216647b01230, type: 3}
+  - {fileID: 21300000, guid: 08a44dbdd6d786040af9184b6ac47e8f, type: 3}
+  - {fileID: 21300000, guid: 61fb537976b8f0443b9a9441632bd35b, type: 3}
+  - {fileID: 21300000, guid: 81c10e419124eac4e83c2347c5208776, type: 3}
+  DamagePhaseTwo:
+  - {fileID: 21300000, guid: 53ea43d82de6a9f46a1106b8270a23e2, type: 3}
+  - {fileID: 21300000, guid: 57036ae9dffaa8045959d1e8f8021921, type: 3}
+  - {fileID: 21300000, guid: 55227d7e797a09c4ab28381169b839e3, type: 3}
+  - {fileID: 21300000, guid: 7d32013301556b643ac87f32a48bd500, type: 3}
+  - {fileID: 21300000, guid: 832629d26249bdf45bfc44e4c85082ec, type: 3}
+  - {fileID: 21300000, guid: 74022c455b0428541b362b31e1cef24e, type: 3}
+  - {fileID: 21300000, guid: b54e7b7163c282742a4ec94811e33f83, type: 3}
+  - {fileID: 21300000, guid: 5da70e870248fb84e98869154dad2023, type: 3}
+  - {fileID: 21300000, guid: 3848cff9753979443bc19c3efc8c3168, type: 3}
+  - {fileID: 21300000, guid: f019ccde5e052284fb0d50f64dca9ce5, type: 3}
+  DamagePhaseThree:
+  - {fileID: 21300000, guid: cdace0ab5f19eff48a55f345f3f4bf7f, type: 3}
+  - {fileID: 21300000, guid: 2e8dc4107daad554087ad6179a2974f3, type: 3}
+  - {fileID: 21300000, guid: 1d1f13642805c9f4095e33d3f4e2aec3, type: 3}
+  - {fileID: 21300000, guid: d8c50e06c9303034f9776812201f6c38, type: 3}
+  - {fileID: 21300000, guid: ea28467efb8e9474182aa493186fae56, type: 3}
+  - {fileID: 21300000, guid: df91a0ded6f9e604d9f6112bc70bee23, type: 3}
+  - {fileID: 21300000, guid: 6c2b717b30cb10e44a47c695b935f1df, type: 3}
+  - {fileID: 21300000, guid: 3c7217588421e144ea64b1c0a2c8a619, type: 3}
+  - {fileID: 21300000, guid: a88090645575cc4468fd628333b8acde, type: 3}
+  - {fileID: 21300000, guid: c4c00fd9f5e888144b33183cbb8194b0, type: 3}
 --- !u!50 &5512181695757748824
 Rigidbody2D:
   serializedVersion: 4
@@ -282,9 +318,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.15964746, y: 0}
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 4.168489
+  m_Radius: 3
 --- !u!231 &5512181695757748774
 SpringJoint2D:
   m_ObjectHideFlags: 0
@@ -587,9 +623,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.15878081, y: 0}
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 4.185601
+  m_Radius: 3.5
 --- !u!114 &6455540973186748181
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -602,7 +638,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7598ab8df9f90ed49b1b4b95a0ea71e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clickBoost: 10
+  clickBoostX: 10
+  clickBoostY: 10
   testplayer: {fileID: 5512181695757748827}
   clickMax: 5
 --- !u!114 &3399269837901452129
@@ -619,6 +656,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   coins: 0
   oldCoin: 0
+--- !u!114 &3780687961974713823
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5512181695757748773}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f97adb268cd7474ab3d9278ee49da90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  playerRB: {fileID: 0}
+  testPlayer: {fileID: 0}
 --- !u!1 &5512181696815963937
 GameObject:
   m_ObjectHideFlags: 0

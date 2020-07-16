@@ -16,7 +16,7 @@ public class Camera_Follow : MonoBehaviour
     {
         if (!testPlayer.spring.enabled)
         {
-            transform.position = new Vector3(playerPos.position.x, playerPos.position.y, playerZ.position.z);
+            transform.position = new Vector3(playerPos.position.x + 6.5f, playerPos.position.y, playerZ.position.z);
             Vector3 smoothedPosition = Vector3.Lerp(transform.position, pp = new Vector3 (playerPos.position.x, playerPos.position.y, -1f), smoothSpeed);
             transform.position = smoothedPosition;
         }

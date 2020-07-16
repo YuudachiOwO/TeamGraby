@@ -45,6 +45,7 @@ public class CannonShot : MonoBehaviour
             {
                 playerRB.velocity = new Vector3(xLaunch, yLaunch);
                 playerRB.isKinematic = false;
+                player.GetComponent<SpriteRenderer>().enabled = true;
             }
 
         }
@@ -55,6 +56,8 @@ public class CannonShot : MonoBehaviour
     {
         if (other.gameObject.tag == "OldCannon")
         {
+            player.GetComponent<SpriteRenderer>().enabled = false;
+            cannonAnim = other.GetComponent<Animator>();
             cannonLock = other.gameObject.transform;
             cannonLockPoint = cannonLock.position;
             cannonAnim.enabled = true;

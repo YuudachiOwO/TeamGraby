@@ -2,10 +2,12 @@ ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
     - AcidTrip
+    - Anim_Big_Pufferfish
     - CameraClamp
     - Camera_Follow
     - CannonShot
     - ClickBoost
+    - CoinCollection
     - GameManager
     - HardWallBreak
     - JetPack_PowerUp
@@ -22,6 +24,7 @@ ScriptsOnlyBuild:
     - SceneChange
     - ScoreManager
     - SkyBackgound
+    - StopBackwards
     - Test_Player
     - Trampoline_Bounce
     - Wall_Breaker
@@ -88,25 +91,25 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11538}
     - Class: 114
-      Script: {instanceID: 12000}
+      Script: {instanceID: 12002}
     - Class: 114
-      Script: {instanceID: 12208}
+      Script: {instanceID: 12210}
     - Class: 114
-      Script: {instanceID: 12260}
+      Script: {instanceID: 12262}
     - Class: 114
-      Script: {instanceID: 12906}
+      Script: {instanceID: 12908}
     - Class: 114
-      Script: {instanceID: 13256}
+      Script: {instanceID: 13258}
     - Class: 114
-      Script: {instanceID: 13276}
+      Script: {instanceID: 13278}
     - Class: 114
-      Script: {instanceID: 13570}
+      Script: {instanceID: 13572}
     - Class: 114
-      Script: {instanceID: 13670}
+      Script: {instanceID: 13672}
     - Class: 114
-      Script: {instanceID: 13952}
+      Script: {instanceID: 13954}
     - Class: 114
-      Script: {instanceID: 14298}
+      Script: {instanceID: 14300}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -146,6 +149,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 62
       Script: {instanceID: 0}
+    - Class: 68
+      Script: {instanceID: 0}
     - Class: 70
       Script: {instanceID: 0}
     - Class: 74
@@ -160,6 +165,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 95
       Script: {instanceID: 0}
+    - Class: 96
+      Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
@@ -173,55 +180,61 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11538}
     - Class: 114
-      Script: {instanceID: 11620}
+      Script: {instanceID: 11578}
     - Class: 114
-      Script: {instanceID: 11798}
+      Script: {instanceID: 11622}
     - Class: 114
-      Script: {instanceID: 12166}
+      Script: {instanceID: 11732}
     - Class: 114
-      Script: {instanceID: 12208}
+      Script: {instanceID: 11800}
     - Class: 114
-      Script: {instanceID: 12460}
+      Script: {instanceID: 12168}
     - Class: 114
-      Script: {instanceID: 12882}
+      Script: {instanceID: 12210}
     - Class: 114
-      Script: {instanceID: 12906}
+      Script: {instanceID: 12462}
     - Class: 114
-      Script: {instanceID: 13112}
+      Script: {instanceID: 12884}
     - Class: 114
-      Script: {instanceID: 13126}
+      Script: {instanceID: 12908}
     - Class: 114
-      Script: {instanceID: 13170}
+      Script: {instanceID: 13114}
     - Class: 114
-      Script: {instanceID: 13274}
+      Script: {instanceID: 13128}
     - Class: 114
-      Script: {instanceID: 13358}
+      Script: {instanceID: 13172}
     - Class: 114
-      Script: {instanceID: 13530}
+      Script: {instanceID: 13276}
     - Class: 114
-      Script: {instanceID: 13670}
+      Script: {instanceID: 13360}
     - Class: 114
-      Script: {instanceID: 13684}
+      Script: {instanceID: 13532}
     - Class: 114
-      Script: {instanceID: 13740}
+      Script: {instanceID: 13672}
     - Class: 114
-      Script: {instanceID: 13864}
+      Script: {instanceID: 13686}
     - Class: 114
-      Script: {instanceID: 13916}
+      Script: {instanceID: 13742}
     - Class: 114
-      Script: {instanceID: 13968}
+      Script: {instanceID: 13866}
     - Class: 114
-      Script: {instanceID: 14002}
+      Script: {instanceID: 13918}
     - Class: 114
-      Script: {instanceID: 14018}
+      Script: {instanceID: 13970}
     - Class: 114
-      Script: {instanceID: 14136}
+      Script: {instanceID: 14004}
     - Class: 114
-      Script: {instanceID: 14178}
+      Script: {instanceID: 14020}
     - Class: 114
-      Script: {instanceID: 14298}
+      Script: {instanceID: 14138}
     - Class: 114
-      Script: {instanceID: 14370}
+      Script: {instanceID: 14180}
+    - Class: 114
+      Script: {instanceID: 14300}
+    - Class: 114
+      Script: {instanceID: 14372}
+    - Class: 114
+      Script: {instanceID: 14406}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -341,6 +354,12 @@ ScriptsOnlyBuild:
     className: SpriteShapeController
   - hash:
       serializedVersion: 2
+      Hash: 8e2b3c8e99768e7dac4ae5357a9e98f4
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CoinCollection
+  - hash:
+      serializedVersion: 2
       Hash: 234235b9fb07320d11497e08a726cc56
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -359,12 +378,6 @@ ScriptsOnlyBuild:
     className: GridLayoutGroup
   - hash:
       serializedVersion: 2
-      Hash: dde33a8f7a4b70d93ce708d2f0a934ea
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: CameraFollowPlayer
-  - hash:
-      serializedVersion: 2
       Hash: 8aa3d6ccbcb54ee8db6c1229854adaaa
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -375,6 +388,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: SignalAsset
+  - hash:
+      serializedVersion: 2
+      Hash: b84d9b3e0df6663fe43fc09e78a4f39e
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: StopBackwards
   - hash:
       serializedVersion: 2
       Hash: 0dbc3be398b4869a5c8d0d8481ee402c
@@ -635,7 +654,7 @@ ScriptsOnlyBuild:
     className: SpriteLibraryAsset
   - hash:
       serializedVersion: 2
-      Hash: c5330dbeabb3e2e249b2ea8e08a004b2
+      Hash: 2c5545c335a88f3b77546697465b2de2
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Player_Rotation_Lock
@@ -659,7 +678,7 @@ ScriptsOnlyBuild:
     className: Physics2DRaycaster
   - hash:
       serializedVersion: 2
-      Hash: 39827bdd018908aed308621e9e572ed0
+      Hash: fdf5f56b2ea235b7b5550d4bfe8d00e9
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerAnimation
@@ -707,7 +726,7 @@ ScriptsOnlyBuild:
     className: BeforeAfterTestCommandState
   - hash:
       serializedVersion: 2
-      Hash: 95b7bb31f7faec4a36eb7f49df63a745
+      Hash: 7ee5434d55662e163d00fb6a17f8576f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: LevelGenerator
@@ -725,7 +744,7 @@ ScriptsOnlyBuild:
     className: MarkerTrack
   - hash:
       serializedVersion: 2
-      Hash: 4d7553398a9af13d0512dc3656c9bfbc
+      Hash: 846eaf21dd2bfe98379164cb0ca389cb
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ClickBoost
@@ -867,8 +886,14 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
+  - hash:
+      serializedVersion: 2
+      Hash: bebda29e07a2c55969c65c212ebf33a1
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Anim_Big_Pufferfish
   platform: 13
   scenePathNames:
   - Assets/Scenes/Menu.unity
   - Assets/Scenes/Teste_scene_(Kevin).unity
-  playerPath: C:/Users/MSI/Desktop/0.1.3.4.apk
+  playerPath: C:/Users/MSI/Desktop/0.1.4.3.apk

@@ -68,7 +68,7 @@ public class Player_Rotation_Lock : MonoBehaviour
     {
         if (acidTrip.allDestructive)
         {
-            other.gameObject.SetActive(false);
+            other.gameObject.GetComponent<Collider2D>().enabled = false;
         }
     }
 
@@ -76,7 +76,7 @@ public class Player_Rotation_Lock : MonoBehaviour
     {
         if (acidTrip.allDestructive)
         {
-            other.gameObject.SetActive(false);
+            other.gameObject.GetComponent<Collider2D>().enabled = false;
         }
     }
 }

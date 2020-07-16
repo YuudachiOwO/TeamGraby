@@ -34,6 +34,7 @@ public class JetPack_PowerUp : MonoBehaviour
         {
 
             boost.playerRB.velocity = new Vector3(boost.playerRB.velocity.x, 0, 0);
+            player.transform.rotation = new Quaternion(0, 0, 0, 1);
             boost.jetpackBurning = true;
         }
         else

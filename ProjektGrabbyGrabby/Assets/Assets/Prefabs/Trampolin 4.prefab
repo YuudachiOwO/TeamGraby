@@ -13,6 +13,9 @@ GameObject:
   - component: {fileID: -1434003991156179513}
   - component: {fileID: 835861407228470659}
   - component: {fileID: 7500297800024484096}
+  - component: {fileID: 1076917281252395429}
+  - component: {fileID: 6585222391149635405}
+  - component: {fileID: 9135013720732881720}
   m_Layer: 0
   m_Name: Trampolin 4
   m_TagString: Untagged
@@ -128,7 +131,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.005507469, y: -0.7710676}
+  m_Offset: {x: -0.44800568, y: -1.7998767}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -139,5 +142,64 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3.2119784, y: 0.37786484}
+  m_Size: {x: 11.752222, y: 3.4532318}
   m_EdgeRadius: 0
+--- !u!95 &1076917281252395429
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6120527353283132573}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a444cb2ddbec7c24b9ebad4db12baea3, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!61 &6585222391149635405
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6120527353283132573}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.11012292, y: 0.9743402}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 14.4, y: 9}
+    newSize: {x: 3.68, y: 0.84}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 9.774809, y: 2.142953}
+  m_EdgeRadius: 0
+--- !u!114 &9135013720732881720
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6120527353283132573}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a7183ff0d7d35244b02d740c421e31b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bigPuff: {fileID: 0}
+  bigPuffAnim: {fileID: 0}
