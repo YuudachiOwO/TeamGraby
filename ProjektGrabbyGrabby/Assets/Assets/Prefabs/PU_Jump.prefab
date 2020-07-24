@@ -10,11 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 3859679465707607144}
   - component: {fileID: 3859679465707607151}
-  - component: {fileID: 3859679465707607150}
   - component: {fileID: 3859679465707607145}
   m_Layer: 0
   m_Name: PU_Jump
-  m_TagString: Untagged
+  m_TagString: JumpPU
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -83,21 +82,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &3859679465707607150
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3859679465707607149}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a83e59a49cf98fc42bb9aa7bf9b0f653, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  jumpObject: {fileID: 0}
-  jumpButton: {fileID: 0}
-  jumpBoost: 20
 --- !u!58 &3859679465707607145
 CircleCollider2D:
   m_ObjectHideFlags: 0

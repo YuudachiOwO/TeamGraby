@@ -17,7 +17,6 @@ public class CoinCollection : MonoBehaviour
             oldCoin = PlayerPrefs.GetInt("Coins");
             PlayerPrefs.SetInt("Coins", coins + oldCoin);
             PlayerPrefs.Save();
-            Debug.Log(coins);
             other.gameObject.SetActive(false);
         }
     }

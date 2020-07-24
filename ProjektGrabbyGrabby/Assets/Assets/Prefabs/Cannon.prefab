@@ -42,8 +42,9 @@ GameObject:
   - component: {fileID: 6332403422539261775}
   - component: {fileID: 1177866507697434698}
   - component: {fileID: 7455074530781874940}
+  - component: {fileID: -6545162466152799604}
   m_Layer: 0
-  m_Name: Animation_Asset_OldCannon_01
+  m_Name: Cannon
   m_TagString: OldCannon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -159,3 +160,16 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &-6545162466152799604
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8707802995345840390}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40ac38ed4906f154598e51985340a1f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  platformDestructionPoint: {fileID: 0}

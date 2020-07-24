@@ -1,6 +1,7 @@
 ﻿using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -44,7 +45,7 @@ public class LevelGenerator : MonoBehaviour
 
     public ObjectPooler acid;
     public float randomAcidThreshold;
-    
+
     public ObjectPooler jump;
     public float randomJumpThreshold;
 
@@ -53,13 +54,13 @@ public class LevelGenerator : MonoBehaviour
 
     public ObjectPooler coin1;
     public float randomCoinThreshold1;
-    
+
     public ObjectPooler coin2;
     public float randomCoinThreshold2;
-    
+
     public ObjectPooler coin3;
     public float randomCoinThreshold3;
-    
+
     public ObjectPooler platform1;
     public float randomPlatformThreshold1;
 
@@ -69,12 +70,21 @@ public class LevelGenerator : MonoBehaviour
     public ObjectPooler platform3;
     public float randomPlatformThreshold3;
 
+    public Collider2D[] colliders;
+    public Collider2D[] colliderOverlap;
+    public Vector3 colliderPoints;
+    public float colliderRadius;
+    public GameObject[] spawnedObjects;
+    public Transform[] spawnedFind;
+
 
 
 
 
     void Start()
     {
+        spawnedObjects = GameObject.FindObjectsOfType<GameObject>();
+
         platformWidths = new float[theObjectPools.Length];
 
         for (int i = 0; i < theObjectPools.Length; i++)
@@ -91,6 +101,13 @@ public class LevelGenerator : MonoBehaviour
 
     void Update()
     {
+        foreach (Collider2D collider in colliders)
+        {
+            colliderPoints = collider.GetComponentInParent<Transform>().position;
+        }
+
+        colliderOverlap = Physics2D.OverlapCircleAll(colliderPoints, colliderRadius);
+
         if (transform.position.x < generationPoint.position.x)
         {
             distanceBetween = Random.Range(distanceBetweenMin, distanceBetweenMax);
@@ -172,97 +189,99 @@ public class LevelGenerator : MonoBehaviour
                 newCannon.SetActive(true);
             }
 
-            if (0 <= dicePU && dicePU < randomJetpackThreshold)
+
+            if (0 <= dicePU && dicePU < randomJetpackThreshold && colliderOverlap.Length == 0)
             {
                 GameObject newJetpack = jetpack.GetPooledObject();
-                Vector3 JetpackPosition = new Vector3(Random.Range(10f, 30f), Random.Range(5, 20f), 0f);
+                Vector3 JetpackPosition = new Vector3(Random.Range(10f, 60f), Random.Range(5f, 30f), 0f);
                 newJetpack.transform.position = transform.position + JetpackPosition;
                 newJetpack.transform.rotation = transform.rotation;
                 newJetpack.SetActive(true);
             }
 
 
-            if (randomJetpackThreshold <= dicePU && dicePU < randomJetpackThreshold + randomAcidThreshold)
+            if (randomJetpackThreshold <= dicePU && dicePU < randomJetpackThreshold + randomAcidThreshold && colliderOverlap.Length == 0)
             {
                 GameObject newAcid = acid.GetPooledObject();
-                Vector3 AcidPosition = new Vector3(Random.Range(10f, 30f), Random.Range(5, 20f), 0f);
+                Vector3 AcidPosition = new Vector3(Random.Range(10f, 60f), Random.Range(5f, 30f), 0f);
                 newAcid.transform.position = transform.position + AcidPosition;
                 newAcid.transform.rotation = transform.rotation;
                 newAcid.SetActive(true);
             }
-            
-            if (randomJetpackThreshold + randomAcidThreshold <= dicePU && dicePU < randomJetpackThreshold + randomAcidThreshold + randomJumpThreshold)
+
+            if (randomJetpackThreshold + randomAcidThreshold <= dicePU && dicePU < randomJetpackThreshold + randomAcidThreshold + randomJumpThreshold && colliderOverlap.Length == 0)
             {
                 GameObject newJump = jump.GetPooledObject();
-                Vector3 JumpPosition = new Vector3(Random.Range(10f, 30f), Random.Range(5, 20f), 0f);
+                Vector3 JumpPosition = new Vector3(Random.Range(10f, 60f), Random.Range(5f, 30f), 0f);
                 newJump.transform.position = transform.position + JumpPosition;
                 newJump.transform.rotation = transform.rotation;
                 newJump.SetActive(true);
             }
 
-            if (0 <= diceBird && diceBird <= randomBirdThreshold)
+            if (0 <= diceBird && diceBird <= randomBirdThreshold && colliderOverlap.Length == 0)
             {
                 GameObject newBird = bird.GetPooledObject();
-                Vector3 BirdPosition = new Vector3(Random.Range(40f, 50f), Random.Range(10, 20f), 0f);
+                Vector3 BirdPosition = new Vector3(Random.Range(10f, 60f), Random.Range(10, 30f), 0f);
                 newBird.transform.position = transform.position + BirdPosition;
                 newBird.transform.rotation = transform.rotation;
                 newBird.SetActive(true);
-            }  
-            
-            if (0 <= diceCollect1 && diceCollect1 <= randomCoinThreshold1)
+            }
+
+            if (0 <= diceCollect1 && diceCollect1 <= randomCoinThreshold1 && colliderOverlap.Length == 0)
             {
                 GameObject newCoin1 = coin1.GetPooledObject();
-                Vector3 CoinPosition1 = new Vector3(Random.Range(30f, 50f), Random.Range(5, 20f), 0f);
+                Vector3 CoinPosition1 = new Vector3(Random.Range(10f, 60f), Random.Range(5f, 30f), 0f);
                 newCoin1.transform.position = transform.position + CoinPosition1;
                 newCoin1.transform.rotation = transform.rotation;
                 newCoin1.SetActive(true);
             }
-                        
-            if (0 <= diceCollect2 && diceCollect2 <= randomCoinThreshold2)
+
+            if (0 <= diceCollect2 && diceCollect2 <= randomCoinThreshold2 && colliderOverlap.Length == 0)
             {
                 GameObject newCoin2 = coin2.GetPooledObject();
-                Vector3 CoinPosition2 = new Vector3(Random.Range(30f, 50f), Random.Range(5, 20f), 0f);
+                Vector3 CoinPosition2 = new Vector3(Random.Range(10f, 60f), Random.Range(5f, 30f), 0f);
                 newCoin2.transform.position = transform.position + CoinPosition2;
                 newCoin2.transform.rotation = transform.rotation;
                 newCoin2.SetActive(true);
             }
 
-                                    
-            if (0 <= diceCollect3 && diceCollect3 <= randomCoinThreshold3)
+
+            if (0 <= diceCollect3 && diceCollect3 <= randomCoinThreshold3 && colliderOverlap.Length == 0)
             {
                 GameObject newCoin3 = coin3.GetPooledObject();
-                Vector3 CoinPosition3 = new Vector3(Random.Range(30f, 50f), Random.Range(5, 20f), 0f);
+                Vector3 CoinPosition3 = new Vector3(Random.Range(10f, 60f), Random.Range(5f, 30f), 0f);
                 newCoin3.transform.position = transform.position + CoinPosition3;
                 newCoin3.transform.rotation = transform.rotation;
                 newCoin3.SetActive(true);
             }
 
-            if (0 <= diceAirPlatform1 && diceAirPlatform1 <= randomPlatformThreshold1)
+            if (0 <= diceAirPlatform1 && diceAirPlatform1 <= randomPlatformThreshold1 && colliderOverlap.Length == 0)
             {
                 GameObject newPlatform1 = platform1.GetPooledObject();
-                Vector3 PlatformPosition1 = new Vector3(Random.Range(10f, 60f), Random.Range(10, 20f), 0f);
+                Vector3 PlatformPosition1 = new Vector3(Random.Range(10f, 60f), Random.Range(10, 30f), 0f);
                 newPlatform1.transform.position = transform.position + PlatformPosition1;
                 newPlatform1.transform.rotation = transform.rotation;
                 newPlatform1.SetActive(true);
             }
-            
-            if (0 <= diceAirPlatform2 && diceAirPlatform2 <= randomPlatformThreshold2)
+
+            if (0 <= diceAirPlatform2 && diceAirPlatform2 <= randomPlatformThreshold2 && colliderOverlap.Length == 0)
             {
                 GameObject newPlatform2 = platform2.GetPooledObject();
-                Vector3 PlatformPosition2 = new Vector3(Random.Range(10f, 60f), Random.Range(10, 20f), 0f);
+                Vector3 PlatformPosition2 = new Vector3(Random.Range(10f, 60f), Random.Range(10, 30f), 0f);
                 newPlatform2.transform.position = transform.position + PlatformPosition2;
                 newPlatform2.transform.rotation = transform.rotation;
                 newPlatform2.SetActive(true);
             }
-            
-            if (0 <= diceAirPlatform3 && diceAirPlatform3 <= randomPlatformThreshold3)
+
+            if (0 <= diceAirPlatform3 && diceAirPlatform3 <= randomPlatformThreshold3 && colliderOverlap.Length == 0)
             {
                 GameObject newPlatform3 = platform3.GetPooledObject();
-                Vector3 PlatformPosition3 = new Vector3(Random.Range(10f, 60f), Random.Range(10, 20f), 0f);
+                Vector3 PlatformPosition3 = new Vector3(Random.Range(10f, 60f), Random.Range(10, 30f), 0f);
                 newPlatform3.transform.position = transform.position + PlatformPosition3;
                 newPlatform3.transform.rotation = transform.rotation;
                 newPlatform3.SetActive(true);
             }
+
 
             transform.position = new Vector3(transform.position.x + (platformWidths[platformSelector] / 2), transform.position.y, transform.position.z);
 

@@ -11,6 +11,8 @@ TagManager:
   - OldCannon
   - Dragon
   - Coin
+  - Ground
+  - JumpPU
   layers:
   - Default
   - TransparentFX
