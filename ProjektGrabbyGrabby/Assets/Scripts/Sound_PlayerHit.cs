@@ -18,7 +18,7 @@ public class Sound_PlayerHit : MonoBehaviour
     void Update()
     {
 
-        playerHitAudio.clip = playerHitClips[Random.Range(1, 7)];
+        playerHitAudio.clip = playerHitClips[Random.Range(0, 6)];
 
     }
 
