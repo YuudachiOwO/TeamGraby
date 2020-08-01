@@ -8,8 +8,10 @@ ScriptsOnlyBuild:
     - CannonShot
     - ClickBoost
     - CoinCollection
+    - FartPadAnim
     - GameManager
     - HardWallBreak
+    - InitializeAds
     - JetPack_PowerUp
     - JetpackAnimation
     - Jetpack_Boost
@@ -24,14 +26,21 @@ ScriptsOnlyBuild:
     - SceneChange
     - ScoreManager
     - SkyBackgound
+    - Sound_PlayerHit
     - StopBackwards
     - Test_Player
     - Trampoline_Bounce
     - Wall_Breaker
+    GoogleMobileAds.Editor.dll:
+    - GoogleMobileAds.Editor.GoogleMobileAdsSettings
+    GoogleMobileAds.dll:
+    - GoogleMobileAds.Common.MobileAdsEventExecutor
     Unity.2D.Animation.Editor.dll:
     - UnityEditor.U2D.Animation.BoneGizmo
     Unity.2D.Tilemap.Editor.dll:
     - UnityEditor.Tilemaps.GridPaintingState
+    - UnityEditor.Tilemaps.GridPaletteBrushes
+    - UnityEditor.Tilemaps.GridPalettes
     - UnityEditor.Tilemaps.SceneViewGridManager
     - UnityEditor.Tilemaps.TileDragAndDropManager
     Unity.Rider.Editor.dll:
@@ -45,10 +54,8 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -85,31 +92,35 @@ ScriptsOnlyBuild:
     - Class: 109
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11192}
+      Script: {instanceID: 11254}
     - Class: 114
-      Script: {instanceID: 11484}
+      Script: {instanceID: 11566}
     - Class: 114
-      Script: {instanceID: 11538}
+      Script: {instanceID: 11624}
     - Class: 114
-      Script: {instanceID: 12002}
+      Script: {instanceID: 12120}
     - Class: 114
-      Script: {instanceID: 12210}
+      Script: {instanceID: 12334}
     - Class: 114
-      Script: {instanceID: 12262}
+      Script: {instanceID: 12390}
     - Class: 114
-      Script: {instanceID: 12908}
+      Script: {instanceID: 13034}
     - Class: 114
-      Script: {instanceID: 13258}
+      Script: {instanceID: 13100}
     - Class: 114
-      Script: {instanceID: 13278}
+      Script: {instanceID: 13482}
     - Class: 114
-      Script: {instanceID: 13572}
+      Script: {instanceID: 13502}
     - Class: 114
-      Script: {instanceID: 13672}
+      Script: {instanceID: 13822}
     - Class: 114
-      Script: {instanceID: 13954}
+      Script: {instanceID: 13932}
     - Class: 114
-      Script: {instanceID: 14300}
+      Script: {instanceID: 14222}
+    - Class: 114
+      Script: {instanceID: 14592}
+    - Class: 114
+      Script: {instanceID: 14664}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -168,71 +179,75 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11192}
+      Script: {instanceID: 11254}
     - Class: 114
-      Script: {instanceID: 11204}
+      Script: {instanceID: 11266}
     - Class: 114
-      Script: {instanceID: 11240}
+      Script: {instanceID: 11306}
     - Class: 114
-      Script: {instanceID: 11484}
+      Script: {instanceID: 11460}
     - Class: 114
-      Script: {instanceID: 11538}
+      Script: {instanceID: 11566}
     - Class: 114
-      Script: {instanceID: 11578}
+      Script: {instanceID: 11570}
     - Class: 114
-      Script: {instanceID: 11622}
+      Script: {instanceID: 11624}
     - Class: 114
-      Script: {instanceID: 11732}
+      Script: {instanceID: 11664}
     - Class: 114
-      Script: {instanceID: 11800}
+      Script: {instanceID: 11716}
     - Class: 114
-      Script: {instanceID: 12168}
+      Script: {instanceID: 11836}
     - Class: 114
-      Script: {instanceID: 12210}
+      Script: {instanceID: 11908}
     - Class: 114
-      Script: {instanceID: 12462}
+      Script: {instanceID: 12290}
     - Class: 114
-      Script: {instanceID: 12884}
+      Script: {instanceID: 12334}
     - Class: 114
-      Script: {instanceID: 12908}
+      Script: {instanceID: 12618}
     - Class: 114
-      Script: {instanceID: 13114}
+      Script: {instanceID: 13076}
     - Class: 114
-      Script: {instanceID: 13128}
+      Script: {instanceID: 13100}
     - Class: 114
-      Script: {instanceID: 13172}
+      Script: {instanceID: 13314}
     - Class: 114
-      Script: {instanceID: 13276}
+      Script: {instanceID: 13330}
     - Class: 114
-      Script: {instanceID: 13360}
+      Script: {instanceID: 13382}
     - Class: 114
-      Script: {instanceID: 13532}
+      Script: {instanceID: 13500}
     - Class: 114
-      Script: {instanceID: 13672}
+      Script: {instanceID: 13594}
     - Class: 114
-      Script: {instanceID: 13686}
+      Script: {instanceID: 13778}
     - Class: 114
-      Script: {instanceID: 13742}
+      Script: {instanceID: 13932}
     - Class: 114
-      Script: {instanceID: 13866}
+      Script: {instanceID: 13948}
     - Class: 114
-      Script: {instanceID: 13918}
+      Script: {instanceID: 14006}
     - Class: 114
-      Script: {instanceID: 13970}
+      Script: {instanceID: 14132}
     - Class: 114
-      Script: {instanceID: 14004}
+      Script: {instanceID: 14184}
     - Class: 114
-      Script: {instanceID: 14020}
+      Script: {instanceID: 14238}
     - Class: 114
-      Script: {instanceID: 14138}
+      Script: {instanceID: 14274}
     - Class: 114
-      Script: {instanceID: 14180}
+      Script: {instanceID: 14290}
     - Class: 114
-      Script: {instanceID: 14300}
+      Script: {instanceID: 14414}
     - Class: 114
-      Script: {instanceID: 14372}
+      Script: {instanceID: 14462}
     - Class: 114
-      Script: {instanceID: 14406}
+      Script: {instanceID: 14592}
+    - Class: 114
+      Script: {instanceID: 14672}
+    - Class: 114
+      Script: {instanceID: 14706}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -298,6 +313,12 @@ ScriptsOnlyBuild:
     className: TMP_ScrollbarEventHandler
   - hash:
       serializedVersion: 2
+      Hash: 1db2c03fd53b3f801db26ae8a320e3c4
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Sound_PlayerHit
+  - hash:
+      serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -314,6 +335,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Text
+  - hash:
+      serializedVersion: 2
+      Hash: 04bae1db44d6eed97e434af34a0ef536
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: FartPadAnim
   - hash:
       serializedVersion: 2
       Hash: 499fd23433e68e265d153aa6b95d0047
@@ -568,6 +595,12 @@ ScriptsOnlyBuild:
     className: RemoteTestResultSender
   - hash:
       serializedVersion: 2
+      Hash: 6fb512c6733e02f441372611e6f94f11
+    assemblyName: GoogleMobileAds.Editor.dll
+    namespaceName: GoogleMobileAds.Editor
+    className: GoogleMobileAdsSettings
+  - hash:
+      serializedVersion: 2
       Hash: 4fd8bf02e3089425d3502e26c44ba31a
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -686,6 +719,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: TimelineAsset
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: GoogleMobileAds.dll
+    namespaceName: GoogleMobileAds.Common
+    className: MobileAdsEventExecutor
   - hash:
       serializedVersion: 2
       Hash: 889a15d7b18bb736dc2d06fececef650
@@ -868,6 +907,12 @@ ScriptsOnlyBuild:
     className: Slider
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: InitializeAds
+  - hash:
+      serializedVersion: 2
       Hash: 0fd6822f6177297bd0eb4d83cc7a9030
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -894,4 +939,4 @@ ScriptsOnlyBuild:
   scenePathNames:
   - Assets/Scenes/Menu.unity
   - Assets/Scenes/Teste_scene_(Kevin).unity
-  playerPath: C:/Users/MSI/Desktop/0.2.1.apk
+  playerPath: C:/Users/Event/Desktop/0.2.2.1.apk
