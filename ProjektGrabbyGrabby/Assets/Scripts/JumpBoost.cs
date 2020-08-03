@@ -15,7 +15,12 @@ public class JumpBoost : MonoBehaviour
     {
         player = GameObject.FindGameObjectWithTag("Player");
         playerRB = player.GetComponent<Rigidbody2D>();
+        if (PlayerPrefs.GetInt("JumpBought") == 0)
+        {
+            jumpObject.SetActive(false);
+        }
     }
+
     public void OnJumpPress()
     {
         if (!playerRB.isKinematic)
@@ -23,8 +28,10 @@ public class JumpBoost : MonoBehaviour
             playerRB.velocity = new Vector3(playerRB.velocity.x, 0, 0) + new Vector3(0, jumpBoost, 0);
             jumpObject.SetActive(false);
             jumpButton.enabled = false;
+            PlayerPrefs.SetInt("JumpBought", 0);
         }
     }
+
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.tag == "JumpPU")

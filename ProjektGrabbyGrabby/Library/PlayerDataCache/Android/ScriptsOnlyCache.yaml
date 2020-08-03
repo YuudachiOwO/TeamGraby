@@ -8,6 +8,7 @@ ScriptsOnlyBuild:
     - CannonShot
     - ClickBoost
     - CoinCollection
+    - CurrencyAmount
     - FartPadAnim
     - GameManager
     - HardWallBreak
@@ -33,6 +34,8 @@ ScriptsOnlyBuild:
     - Wall_Breaker
     GoogleMobileAds.Editor.dll:
     - GoogleMobileAds.Editor.GoogleMobileAdsSettings
+    GoogleMobileAds.dll:
+    - GoogleMobileAds.Common.MobileAdsEventExecutor
     Unity.2D.Animation.Editor.dll:
     - UnityEditor.U2D.Animation.BoneGizmo
     Unity.2D.Tilemap.Editor.dll:
@@ -90,35 +93,37 @@ ScriptsOnlyBuild:
     - Class: 109
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11252}
+      Script: {instanceID: 11326}
     - Class: 114
-      Script: {instanceID: 11564}
+      Script: {instanceID: 11640}
     - Class: 114
-      Script: {instanceID: 11622}
+      Script: {instanceID: 11706}
     - Class: 114
-      Script: {instanceID: 12118}
+      Script: {instanceID: 12206}
     - Class: 114
-      Script: {instanceID: 12332}
+      Script: {instanceID: 12426}
     - Class: 114
-      Script: {instanceID: 12388}
+      Script: {instanceID: 12482}
     - Class: 114
-      Script: {instanceID: 13032}
+      Script: {instanceID: 13148}
     - Class: 114
-      Script: {instanceID: 13098}
+      Script: {instanceID: 13216}
     - Class: 114
-      Script: {instanceID: 13480}
+      Script: {instanceID: 13602}
     - Class: 114
-      Script: {instanceID: 13500}
+      Script: {instanceID: 13624}
     - Class: 114
-      Script: {instanceID: 13820}
+      Script: {instanceID: 13948}
     - Class: 114
-      Script: {instanceID: 13930}
+      Script: {instanceID: 14060}
     - Class: 114
-      Script: {instanceID: 14220}
+      Script: {instanceID: 14362}
     - Class: 114
-      Script: {instanceID: 14590}
+      Script: {instanceID: 14736}
     - Class: 114
-      Script: {instanceID: 14662}
+      Script: {instanceID: 14808}
+    - Class: 114
+      Script: {instanceID: 17816}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -177,75 +182,75 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11252}
+      Script: {instanceID: 11326}
     - Class: 114
-      Script: {instanceID: 11264}
+      Script: {instanceID: 11338}
     - Class: 114
-      Script: {instanceID: 11304}
+      Script: {instanceID: 11378}
     - Class: 114
-      Script: {instanceID: 11458}
+      Script: {instanceID: 11532}
     - Class: 114
-      Script: {instanceID: 11564}
+      Script: {instanceID: 11640}
     - Class: 114
-      Script: {instanceID: 11568}
+      Script: {instanceID: 11644}
     - Class: 114
-      Script: {instanceID: 11622}
+      Script: {instanceID: 11706}
     - Class: 114
-      Script: {instanceID: 11662}
+      Script: {instanceID: 11746}
     - Class: 114
-      Script: {instanceID: 11714}
+      Script: {instanceID: 11798}
     - Class: 114
-      Script: {instanceID: 11834}
+      Script: {instanceID: 11918}
     - Class: 114
-      Script: {instanceID: 11906}
+      Script: {instanceID: 11992}
     - Class: 114
-      Script: {instanceID: 12288}
+      Script: {instanceID: 12380}
     - Class: 114
-      Script: {instanceID: 12332}
+      Script: {instanceID: 12426}
     - Class: 114
-      Script: {instanceID: 12616}
+      Script: {instanceID: 12714}
     - Class: 114
-      Script: {instanceID: 13074}
+      Script: {instanceID: 13190}
     - Class: 114
-      Script: {instanceID: 13098}
+      Script: {instanceID: 13216}
     - Class: 114
-      Script: {instanceID: 13312}
+      Script: {instanceID: 13432}
     - Class: 114
-      Script: {instanceID: 13328}
+      Script: {instanceID: 13448}
     - Class: 114
-      Script: {instanceID: 13380}
+      Script: {instanceID: 13500}
     - Class: 114
-      Script: {instanceID: 13498}
+      Script: {instanceID: 13622}
     - Class: 114
-      Script: {instanceID: 13592}
+      Script: {instanceID: 13718}
     - Class: 114
-      Script: {instanceID: 13776}
+      Script: {instanceID: 13904}
     - Class: 114
-      Script: {instanceID: 13930}
+      Script: {instanceID: 14060}
     - Class: 114
-      Script: {instanceID: 13946}
+      Script: {instanceID: 14076}
     - Class: 114
-      Script: {instanceID: 14004}
+      Script: {instanceID: 14134}
     - Class: 114
-      Script: {instanceID: 14130}
+      Script: {instanceID: 14266}
     - Class: 114
-      Script: {instanceID: 14182}
+      Script: {instanceID: 14324}
     - Class: 114
-      Script: {instanceID: 14236}
+      Script: {instanceID: 14378}
     - Class: 114
-      Script: {instanceID: 14272}
+      Script: {instanceID: 14414}
     - Class: 114
-      Script: {instanceID: 14288}
+      Script: {instanceID: 14430}
     - Class: 114
-      Script: {instanceID: 14412}
+      Script: {instanceID: 14554}
     - Class: 114
-      Script: {instanceID: 14460}
+      Script: {instanceID: 14602}
     - Class: 114
-      Script: {instanceID: 14590}
+      Script: {instanceID: 14736}
     - Class: 114
-      Script: {instanceID: 14670}
+      Script: {instanceID: 14816}
     - Class: 114
-      Script: {instanceID: 14704}
+      Script: {instanceID: 14852}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -933,6 +938,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Anim_Big_Pufferfish
+  - hash:
+      serializedVersion: 2
+      Hash: 2e6363088e86e2139cb3dbb062e65738
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CurrencyAmount
   platform: 13
   scenePathNames:
   - Assets/Scenes/Menu.unity

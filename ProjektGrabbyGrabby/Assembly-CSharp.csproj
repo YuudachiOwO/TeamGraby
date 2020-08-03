@@ -70,6 +70,8 @@
     <Compile Include="Assets\Scripts\CannonShot.cs" />
     <Compile Include="Assets\Scripts\ClickBoost.cs" />
     <Compile Include="Assets\Scripts\CoinCollection.cs" />
+    <Compile Include="Assets\Scripts\CurrencyAmount.cs" />
+    <Compile Include="Assets\Scripts\EndCardAnimation.cs" />
     <Compile Include="Assets\Scripts\FartPadAnim.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\HardWallBreak.cs" />

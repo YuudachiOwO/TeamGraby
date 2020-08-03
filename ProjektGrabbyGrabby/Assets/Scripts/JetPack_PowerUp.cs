@@ -19,15 +19,16 @@ public class JetPack_PowerUp : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player");
         boost = player.GetComponent<Jetpack_Boost>();
         boost.enabled = false;
-        boost.jetpackBurning = false;
-        button.SetActive(false);
+        boost.jetpackBurning = true;
+        if (PlayerPrefs.GetInt("JetpackBought") == 0)
+        {
+            button.SetActive(false);
+        }
     }
 
     void Update()
     {
         Debug.Log(timePassed);
-
-
         durationCount = duration - timePassed;
 
         if (boost.enabled)
@@ -41,11 +42,13 @@ public class JetPack_PowerUp : MonoBehaviour
         {
             boost.jetpackBurning = false;
         }
+
         if (timePassed >= duration)
         {
             boost.jetpackBurning = false;
             boost.enabled = false;
         }
+
         if (boost.jetpackBurning)
         {
             timePassed += Time.deltaTime;
@@ -60,6 +63,7 @@ public class JetPack_PowerUp : MonoBehaviour
         timePassed = 0;
         boost.enabled = true;
         button.SetActive(false);
+        PlayerPrefs.SetInt("JetpackBought", 0);
     }
 
 }

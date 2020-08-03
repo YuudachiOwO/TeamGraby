@@ -5,19 +5,21 @@ using UnityEngine.UI;
 
 public class AcidTrip : MonoBehaviour
 {
-
-    public bool allDestructive;
     public GameObject player;
+    public GameObject button;
+    public Button acidActive;
+    public bool allDestructive;
     public float destructiveTimer;
     public int duration = 5;
-    public Button acidActive;
-    public GameObject button;
 
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
         acidActive.enabled = false;
-        button.SetActive(false);
+        if (PlayerPrefs.GetInt("AcidBought") == 0)
+        {
+            button.SetActive(false);
+        }
     }
 
     void Update()
@@ -49,5 +51,6 @@ public class AcidTrip : MonoBehaviour
         allDestructive = true;
         acidActive.enabled = false;
         button.SetActive(false);
+        PlayerPrefs.SetInt("AcidBought", 0);
     }
 }

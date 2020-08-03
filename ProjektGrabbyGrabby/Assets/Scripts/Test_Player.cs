@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class Test_Player : MonoBehaviour
 {
     public SpringJoint2D spring;
-    private Rigidbody2D rigid;
+    public Rigidbody2D rigid;
     private float releaseDelay;
     public bool whileTouch = false;
     public Vector2 tPosition;

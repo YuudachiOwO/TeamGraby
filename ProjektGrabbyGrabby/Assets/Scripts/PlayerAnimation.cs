@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerAnimation : MonoBehaviour
 {
@@ -15,6 +16,7 @@ public class PlayerAnimation : MonoBehaviour
     public Sprite[] DamagePhaseOne;
     public Sprite[] DamagePhaseTwo;
     public Sprite[] DamagePhaseThree;
+    public ClickBoost clickBoost;
 
     void Awake()
     {
@@ -77,7 +79,7 @@ public class PlayerAnimation : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D other)
     {
-        randomGeneration = Random.Range(0,10);
+        randomGeneration = Random.Range(0, 10);
         damageCounter++;
         playerAnim.SetBool("hasCollided", true);
         playerAnim.enabled = false;
@@ -86,9 +88,20 @@ public class PlayerAnimation : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.gameObject.tag != "Coin")
+        if (other.gameObject.tag != "Coin")
         {
             damageCounter++;
+        }
+    }
+
+    private void OnMouseDown()
+    {
+        if (!testPlayer.spring.enabled && clickBoost.clickMax > 0)
+        {
+            randomGeneration = Random.Range(0, 10);
+            damageCounter++;
+            playerAnim.SetBool("hasCollided", true);
+            playerAnim.enabled = false;
         }
     }
 }

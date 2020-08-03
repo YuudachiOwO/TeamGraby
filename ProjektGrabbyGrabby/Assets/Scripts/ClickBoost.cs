@@ -12,6 +12,7 @@ public class ClickBoost : MonoBehaviour
     RaycastHit raycast;
     public Test_Player testplayer;
     public float clickMax;
+    public PlayerAnimation playerAnim;
 
     void Start()
     {
