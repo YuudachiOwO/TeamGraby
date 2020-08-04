@@ -18,13 +18,13 @@ public class ScoreManager : MonoBehaviour
 
     void Update()
     {
-        highScoreText.text = "HighScore: " + Mathf.Abs(Mathf.Round(highScore));
+        highScoreText.text = "HighScore: " + Mathf.Abs(Mathf.Round(highScore)) + " m";
         highScore = PlayerPrefs.GetFloat("Highscore");
 
         if (!testPlayer.spring.enabled)
         {
             distance = (checkpoint.transform.position.x + transform.position.x);
-            scoreText.text = "Score: " + Mathf.Abs(Mathf.Round(distance));
+            scoreText.text = "Score: " + Mathf.Abs(Mathf.Round(distance)) + " m";
         }
 
         if (distance > PlayerPrefs.GetFloat("Highscore") && testPlayer.rigid.velocity == new Vector2(0,0))

@@ -12,22 +12,26 @@ public class JetPack_PowerUp : MonoBehaviour
     public float timePassed;
     public float durationCount;
     public GameObject button;
+    public Test_Player testPlayer;
 
     void Awake()
     {
         timePassed = 0;
         player = GameObject.FindGameObjectWithTag("Player");
+        testPlayer = player.GetComponent<Test_Player>();
         boost = player.GetComponent<Jetpack_Boost>();
         boost.enabled = false;
         boost.jetpackBurning = true;
-        if (PlayerPrefs.GetInt("JetpackBought") == 0)
-        {
-            button.SetActive(false);
-        }
     }
 
     void Update()
     {
+
+        if (PlayerPrefs.GetInt("JetpackBought") == 0 && testPlayer.spring.enabled)
+        {
+            button.SetActive(false);
+        }
+
         Debug.Log(timePassed);
         durationCount = duration - timePassed;
 

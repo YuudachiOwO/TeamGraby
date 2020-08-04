@@ -20,7 +20,7 @@ public class ClickBoost : MonoBehaviour
         playerRB = player.GetComponent<Rigidbody2D>();
     }
 
-    void OnMouseDown()
+    public void JumpFuntion()
     {
         if (!testplayer.spring.enabled && clickMax > 0)
         {

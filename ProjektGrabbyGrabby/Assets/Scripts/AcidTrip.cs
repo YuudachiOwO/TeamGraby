@@ -15,7 +15,7 @@ public class AcidTrip : MonoBehaviour
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
-        acidActive.enabled = false;
+        acidActive.enabled = true;
         if (PlayerPrefs.GetInt("AcidBought") == 0)
         {
             button.SetActive(false);
@@ -42,7 +42,6 @@ public class AcidTrip : MonoBehaviour
             destructiveTimer = 0;
             Debug.Log("Hit");
             button.SetActive(true);
-            acidActive.enabled = true;
         }
     }
 
