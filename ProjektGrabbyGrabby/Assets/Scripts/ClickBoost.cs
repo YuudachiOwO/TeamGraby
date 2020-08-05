@@ -30,10 +30,6 @@ public class ClickBoost : MonoBehaviour
         {
             tapObject.SetActive(false);
         }
-        else
-        {
-            tapObject.SetActive(true);
-        }
     }
 
     public void JumpFuntion()

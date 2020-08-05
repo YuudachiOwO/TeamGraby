@@ -17,6 +17,7 @@ public class EndCardAnimation : MonoBehaviour
     public Rigidbody2D playerRB;
     public ScoreManager scoreManager;
     public Test_Player testPlayer;
+    public ClickBoost clickBoost;
     public bool failSafe = true;
 
     void Start()
@@ -27,6 +28,7 @@ public class EndCardAnimation : MonoBehaviour
         playerRB = player.GetComponent<Rigidbody2D>();
         testPlayer = player.GetComponent<Test_Player>();
         scoreManager = player.GetComponent<ScoreManager>();
+        clickBoost = player.GetComponent<ClickBoost>();
         endCardAnimation.SetBool("highScoreBeaten", false);
         endCardAnimation.SetBool("roundFinished", false);
         restart.SetActive(false);
@@ -47,6 +49,7 @@ public class EndCardAnimation : MonoBehaviour
         {
             failSafe = false;
             endCardAnimation.SetBool("roundFinished", true);
+            clickBoost.tapObject.SetActive(false);
             foreach (GameObject button in buttons)
             {
                 button.SetActive(false);
