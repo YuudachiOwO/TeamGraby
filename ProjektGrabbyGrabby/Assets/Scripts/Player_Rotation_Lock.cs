@@ -66,7 +66,7 @@ public class Player_Rotation_Lock : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (acidTrip.allDestructive)
+        if (acidTrip.allDestructive && other.gameObject.tag == "Smash")
         {
             other.gameObject.SetActive(false);
         }
@@ -74,7 +74,7 @@ public class Player_Rotation_Lock : MonoBehaviour
 
     void OnTriggerStay2D(Collider2D other)
     {
-        if (acidTrip.allDestructive)
+        if (acidTrip.allDestructive && other.gameObject.tag == "Smash")
         {
             other.gameObject.SetActive(false);
         }

@@ -120,13 +120,13 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 14060}
     - Class: 114
-      Script: {instanceID: 14362}
+      Script: {instanceID: 14364}
     - Class: 114
-      Script: {instanceID: 14400}
+      Script: {instanceID: 14402}
     - Class: 114
-      Script: {instanceID: 14738}
+      Script: {instanceID: 14740}
     - Class: 114
-      Script: {instanceID: 14810}
+      Script: {instanceID: 14812}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -235,27 +235,27 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 14134}
     - Class: 114
-      Script: {instanceID: 14266}
+      Script: {instanceID: 14256}
     - Class: 114
-      Script: {instanceID: 14324}
+      Script: {instanceID: 14268}
     - Class: 114
-      Script: {instanceID: 14378}
+      Script: {instanceID: 14326}
     - Class: 114
-      Script: {instanceID: 14416}
+      Script: {instanceID: 14380}
     - Class: 114
-      Script: {instanceID: 14432}
+      Script: {instanceID: 14418}
     - Class: 114
-      Script: {instanceID: 14556}
+      Script: {instanceID: 14434}
     - Class: 114
-      Script: {instanceID: 14604}
+      Script: {instanceID: 14558}
     - Class: 114
-      Script: {instanceID: 14738}
+      Script: {instanceID: 14606}
     - Class: 114
-      Script: {instanceID: 14818}
+      Script: {instanceID: 14740}
     - Class: 114
-      Script: {instanceID: 14854}
+      Script: {instanceID: 14820}
     - Class: 114
-      Script: {instanceID: 48970}
+      Script: {instanceID: 14856}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -321,7 +321,7 @@ ScriptsOnlyBuild:
     className: TMP_ScrollbarEventHandler
   - hash:
       serializedVersion: 2
-      Hash: 1db2c03fd53b3f801db26ae8a320e3c4
+      Hash: 729cd09d86a14020b127f577a2ec80d1
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Sound_PlayerHit
@@ -399,7 +399,7 @@ ScriptsOnlyBuild:
     className: TMP_InputField
   - hash:
       serializedVersion: 2
-      Hash: cc414443e2a9b24c4de145af39f87b67
+      Hash: eb60218e117d7a4d15b7df485a7642be
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Test_Player
@@ -777,6 +777,12 @@ ScriptsOnlyBuild:
     className: LevelGenerator
   - hash:
       serializedVersion: 2
+      Hash: 5fa17e4de140a55a122966a51015863b
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: InitializeAdsInGame
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
@@ -949,14 +955,8 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Anim_Big_Pufferfish
-  - hash:
-      serializedVersion: 2
-      Hash: 5fa17e4de140a55a122966a51015863b
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: InitializeAdsInGame
   platform: 13
   scenePathNames:
   - Assets/Scenes/Menu.unity
   - Assets/Scenes/Teste_scene_(Kevin).unity
-  playerPath: C:/Users/Event/Desktop/0.2.3.1.apk
+  playerPath: C:/Users/Event/Desktop/0.2.4.apk

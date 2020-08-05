@@ -146,7 +146,8 @@ GameObject:
   - component: {fileID: 5512181695757748775}
   - component: {fileID: 5512181695757748774}
   - component: {fileID: 5512181695757748827}
-  - component: {fileID: 5512181695757748828}
+  - component: {fileID: 5630220444768354702}
+  - component: {fileID: 1178753849949459203}
   - component: {fileID: 1429520051}
   - component: {fileID: 1193733101}
   - component: {fileID: 1193733100}
@@ -160,7 +161,6 @@ GameObject:
   - component: {fileID: 3399269837901452129}
   - component: {fileID: 3780687961974713823}
   - component: {fileID: 7457811201539762065}
-  - component: {fileID: 5630220444768354702}
   m_Layer: 0
   m_Name: Player_Placeholder
   m_TagString: Player
@@ -287,6 +287,9 @@ MonoBehaviour:
   - {fileID: 21300000, guid: a88090645575cc4468fd628333b8acde, type: 3}
   - {fileID: 21300000, guid: c4c00fd9f5e888144b33183cbb8194b0, type: 3}
   clickBoost: {fileID: 6455540973186748181}
+  endCardAnimation: {fileID: 0}
+  impact: {x: 0, y: 0, z: 0}
+  acidTrip: {fileID: 0}
 --- !u!50 &5512181695757748824
 Rigidbody2D:
   serializedVersion: 4
@@ -357,17 +360,38 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spring: {fileID: 0}
+  rigid: {fileID: 0}
   whileTouch: 0
   tPosition: {x: 0, y: 0}
-  asYeet: {fileID: 0}
-  asYeetClip: {fileID: 0}
   timeStart: 0
   timeAfter: 0
   boost: {fileID: 1193733100}
   jetpackPowerUp: {fileID: 2608066039531644549}
   jetpackButton: {fileID: 0}
   button: {fileID: 0}
---- !u!82 &5512181695757748828
+--- !u!114 &5630220444768354702
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5512181695757748773}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c0e92218f912b448a70b981f163b672, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  playerHitAudio: {fileID: 0}
+  playerHitClips:
+  - {fileID: 8300000, guid: 43456902f2f098a479dcdb5f70ecba80, type: 3}
+  - {fileID: 8300000, guid: 172166faac75c714d87eddf381a56d4d, type: 3}
+  - {fileID: 8300000, guid: 8abd171a524943c4aad51e31a50e89ae, type: 3}
+  - {fileID: 8300000, guid: 4e37ca793e5e3d147915c56988ceeec0, type: 3}
+  - {fileID: 8300000, guid: 21850a0fb119f5248b2d79f81bcd2256, type: 3}
+  - {fileID: 8300000, guid: 4f81ff6f4dc2f0245a5e0c93bb1a4082, type: 3}
+  randomSoundHit: 0
+--- !u!82 &1178753849949459203
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -377,9 +401,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: abbb42787b9cf3340bd7cdda7eefe56f, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 0.515
+  m_Volume: 0.25
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -476,7 +500,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreText: {fileID: 0}
+  highScoreText: {fileID: 0}
   distance: 0
+  highScore: 0
   checkpoint: {fileID: 0}
   testPlayer: {fileID: 5512181695757748827}
 --- !u!95 &1193733101
@@ -570,6 +596,7 @@ MonoBehaviour:
   timePassed: 0
   durationCount: 0
   button: {fileID: 0}
+  testPlayer: {fileID: 0}
 --- !u!114 &5295133704967131227
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -582,12 +609,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8810757e151ce274483802c60dc4d990, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  allDestructive: 0
   player: {fileID: 5512181695757748773}
+  button: {fileID: 0}
+  acidActive: {fileID: 0}
+  allDestructive: 0
   destructiveTimer: 0
   duration: 15
-  acidActive: {fileID: 0}
-  button: {fileID: 0}
 --- !u!114 &4880215809855999619
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -646,6 +673,8 @@ MonoBehaviour:
   testplayer: {fileID: 5512181695757748827}
   clickMax: 5
   playerAnim: {fileID: 5395900927461122257}
+  tapObject: {fileID: 0}
+  tapButton: {fileID: 0}
 --- !u!114 &3399269837901452129
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -690,28 +719,6 @@ MonoBehaviour:
   jumpObject: {fileID: 0}
   jumpButton: {fileID: 0}
   jumpBoost: 0
---- !u!114 &5630220444768354702
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5512181695757748773}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3c0e92218f912b448a70b981f163b672, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 0}
-  playerHitAudio: {fileID: 0}
-  playerHitClips:
-  - {fileID: 8300000, guid: 43456902f2f098a479dcdb5f70ecba80, type: 3}
-  - {fileID: 8300000, guid: 172166faac75c714d87eddf381a56d4d, type: 3}
-  - {fileID: 8300000, guid: 8abd171a524943c4aad51e31a50e89ae, type: 3}
-  - {fileID: 8300000, guid: 4e37ca793e5e3d147915c56988ceeec0, type: 3}
-  - {fileID: 8300000, guid: 21850a0fb119f5248b2d79f81bcd2256, type: 3}
-  - {fileID: 8300000, guid: 4f81ff6f4dc2f0245a5e0c93bb1a4082, type: 3}
-  playerAnim: {fileID: 5395900927461122257}
 --- !u!1 &5512181696815963937
 GameObject:
   m_ObjectHideFlags: 0

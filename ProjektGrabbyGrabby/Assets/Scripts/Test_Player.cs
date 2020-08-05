@@ -11,8 +11,6 @@ public class Test_Player : MonoBehaviour
     public bool whileTouch = false;
     public Vector2 tPosition;
     public Touch touch;
-    public AudioSource asYeet;
-    public AudioClip asYeetClip;
     public bool timeStart = false;
     public float timeAfter;
     public Jetpack_Boost boost;
@@ -24,13 +22,7 @@ public class Test_Player : MonoBehaviour
     {
         spring = GetComponent<SpringJoint2D>();
         rigid = GetComponent<Rigidbody2D>();
-        asYeet = GetComponent<AudioSource>();
         releaseDelay = 1 / (spring.frequency * 4);
-    }
-
-    private void Start()
-    {
-        asYeetClip = asYeet.clip;
     }
 
     //TOUCHSCREEN FUNCTION / TRANSFORM PLAYER IF TOUCH SCREEN//
@@ -67,10 +59,6 @@ public class Test_Player : MonoBehaviour
         whileTouch = false;
         rigid.isKinematic = false;
         StartCoroutine(Release());
-        if (!asYeet.isPlaying && spring.enabled)
-        {
-            asYeet.Play();
-        }
     }
 
     public void FixedUpdate()

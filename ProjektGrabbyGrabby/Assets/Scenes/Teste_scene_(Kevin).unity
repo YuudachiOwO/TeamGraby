@@ -4565,6 +4565,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5933a5f3dd3d7c744984dcdfacc19c67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initializeAds: {fileID: 0}
 --- !u!1 &2104721714
 GameObject:
   m_ObjectHideFlags: 0
@@ -4973,11 +4974,6 @@ PrefabInstance:
       propertyPath: button
       value: 
       objectReference: {fileID: 545992455}
-    - target: {fileID: 5512181695757748828, guid: 9be52272eca78ef4b8d6ece023d4e3bd,
-        type: 3}
-      propertyPath: m_audioClip
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 5512181696815963937, guid: 9be52272eca78ef4b8d6ece023d4e3bd,
         type: 3}
       propertyPath: m_Name

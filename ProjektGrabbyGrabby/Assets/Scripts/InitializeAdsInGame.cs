@@ -15,6 +15,7 @@ public class InitializeAdsInGame : MonoBehaviour
         this.RequestBanner();
     }
 
+
     private void RequestBanner()
     {
 #if UNITY_ANDROID
@@ -43,6 +44,17 @@ public class InitializeAdsInGame : MonoBehaviour
     public void HandleOnAdFailedToLoadBanner(object sender, AdFailedToLoadEventArgs args)
     {
         MonoBehaviour.print("HandleFailedToReceiveAd event received with message: "
-                            + args.Message);
+                            + args.Message); //this forces the game to show the ad.
+    }
+    private void Update()
+    {
+        if (!endCardAnimation.endCardAnimation.GetBool("roundFinished"))
+        {
+            this.bannerView.Hide();
+        }
+        else
+        {
+            bannerView.Show();
+        }
     }
 }
