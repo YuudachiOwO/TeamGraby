@@ -31,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 6120527353283132573}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 3.157582, y: -3.1698632, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -130,7 +130,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 2.749587, y: -1.0950112}
+  m_Offset: {x: 2.3868737, y: -1.6741269}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -141,7 +141,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 8.701258, y: 3.609273}
+  m_Size: {x: 9.157498, y: 4.4277463}
   m_EdgeRadius: 0
 --- !u!95 &7521791707698498265
 Animator:
@@ -174,4 +174,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a67746a1fc4a56540a6cb625eb178a95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fartPad: {fileID: 6120527353283132573}
   fartAnim: {fileID: 7521791707698498265}

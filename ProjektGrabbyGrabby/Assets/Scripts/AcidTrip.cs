@@ -39,8 +39,8 @@ public class AcidTrip : MonoBehaviour
     {
         if (other.gameObject.tag == "AcidPU")
         {
+            allDestructive = false;
             destructiveTimer = 0;
-            Debug.Log("Hit");
             button.SetActive(true);
         }
     }

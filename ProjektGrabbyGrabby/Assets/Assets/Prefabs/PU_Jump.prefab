@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3859679465707607144}
   - component: {fileID: 3859679465707607151}
   - component: {fileID: 3859679465707607145}
+  - component: {fileID: 6586818645103206658}
   m_Layer: 0
   m_Name: PU_Jump
   m_TagString: JumpPU
@@ -98,3 +99,16 @@ CircleCollider2D:
   m_Offset: {x: 0.103084326, y: 0.412333}
   serializedVersion: 2
   m_Radius: 1.774442
+--- !u!114 &6586818645103206658
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3859679465707607149}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40ac38ed4906f154598e51985340a1f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  platformDestructionPoint: {fileID: 0}

@@ -17,11 +17,16 @@ public class PlayerAnimation : MonoBehaviour
     public Sprite[] DamagePhaseTwo;
     public Sprite[] DamagePhaseThree;
     public ClickBoost clickBoost;
+    public EndCardAnimation endCardAnimation;
+    public ContactPoint2D[] collisionPoint;
+    public Vector3 impact;
+    public AcidTrip acidTrip;
 
     void Awake()
     {
         player = GameObject.FindGameObjectWithTag("Player");
         playerAnim = player.GetComponent<Animator>();
+        acidTrip = player.GetComponent<AcidTrip>();
     }
 
     void Start()
@@ -30,10 +35,27 @@ public class PlayerAnimation : MonoBehaviour
         playerAnim.SetBool("wasLaunched", false);
         playerAnim.SetBool("hasCollided", false);
         playerAnim.SetBool("highSpeed", false);
+        playerAnim.SetBool("onAcid", false);
     }
 
     void Update()
     {
+
+        if (acidTrip.allDestructive)
+        {
+            playerAnim.SetBool("onAcid", true);
+        }
+        else
+        {
+            playerAnim.SetBool("onAcid", false);
+        }
+
+        if (playerAnim.GetBool("collisionSmash"))
+        {
+            player.transform.rotation = new Quaternion(0, 0, 0, 1);
+            player.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
+        }
+
         if (!testPlayer.spring.enabled)
         {
             playerAnim.SetBool("wasLaunched", true);
@@ -84,10 +106,47 @@ public class PlayerAnimation : MonoBehaviour
         playerAnim.SetBool("hasCollided", true);
         playerAnim.enabled = false;
 
+
+        if (other.gameObject.tag == "Smash" && other.collider.GetType() == typeof(EdgeCollider2D))
+        {
+
+            playerAnim.SetBool("isFlying", false);
+            playerAnim.SetBool("wasLaunched", false);
+            playerAnim.SetBool("hasCollided", false);
+            playerAnim.SetBool("highSpeed", false);
+            playerAnim.enabled = true;
+            playerAnim.SetBool("collisionSmash", true);
+            player.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
+        }
+    }
+
+
+    private void OnCollisionStay2D(Collision2D other)
+    {
+        if (other.gameObject.tag == "Smash" && other.collider.GetType() == typeof(EdgeCollider2D))
+        {
+            {
+                playerAnim.SetBool("isFlying", false);
+                playerAnim.SetBool("wasLaunched", false);
+                playerAnim.SetBool("hasCollided", false);
+                playerAnim.SetBool("highSpeed", false);
+                playerAnim.enabled = true;
+                playerAnim.SetBool("collisionSmash", true);
+                player.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
+            }
+        }
     }
 
     void OnTriggerEnter2D(Collider2D other)
     {
+        if (other.gameObject.tag == "Smash")
+        {
+            playerAnim.SetBool("isFlying", false);
+            playerAnim.SetBool("wasLaunched", false);
+            playerAnim.SetBool("hasCollided", false);
+            playerAnim.SetBool("highSpeed", false);
+        }
+
         if (other.gameObject.tag != "Coin")
         {
             damageCounter++;

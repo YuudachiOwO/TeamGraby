@@ -31,8 +31,6 @@ public class JetPack_PowerUp : MonoBehaviour
         {
             button.SetActive(false);
         }
-
-        Debug.Log(timePassed);
         durationCount = duration - timePassed;
 
         if (boost.enabled)

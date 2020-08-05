@@ -183,7 +183,7 @@ public class LevelGenerator : MonoBehaviour
             if (randomWallThreshold + randomTrampolineThreshold1 + randomTrampolineThreshold2 + randomTrampolineThreshold3 + randomTrampolineThreshold4 + randomBreakWallThreshold <= diceObst && diceObst < randomWallThreshold + randomTrampolineThreshold1 + randomTrampolineThreshold2 + randomTrampolineThreshold3 + randomTrampolineThreshold4 + randomBreakWallThreshold + randomCannonThreshold)
             {
                 GameObject newCannon = cannon.GetPooledObject();
-                Vector3 CannonPosition = new Vector3(Random.Range(10f, 60f), 3.21f, 0f);
+                Vector3 CannonPosition = new Vector3(Random.Range(10f, 60f), 3.51f, 0f);
                 newCannon.transform.position = transform.position + CannonPosition;
                 newCannon.transform.rotation = transform.rotation;
                 newCannon.SetActive(true);

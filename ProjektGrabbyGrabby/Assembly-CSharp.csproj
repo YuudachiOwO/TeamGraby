@@ -75,6 +75,7 @@
     <Compile Include="Assets\Scripts\FartPadAnim.cs" />
     <Compile Include="Assets\Scripts\HardWallBreak.cs" />
     <Compile Include="Assets\Scripts\InitializeAds.cs" />
+    <Compile Include="Assets\Scripts\InitializeAdsInGame.cs" />
     <Compile Include="Assets\Scripts\JetPack_PowerUp.cs" />
     <Compile Include="Assets\Scripts\JetpackAnimation.cs" />
     <Compile Include="Assets\Scripts\Jetpack_Boost.cs" />

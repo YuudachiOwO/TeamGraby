@@ -12,9 +12,11 @@ public class EndCardAnimation : MonoBehaviour
     public GameObject restart;
     public GameObject returnMenu;
     public GameObject scores;
+    public GameObject[] buttons;
     public Animator endCardAnimation;
     public Rigidbody2D playerRB;
     public ScoreManager scoreManager;
+    public Test_Player testPlayer;
     public bool failSafe = true;
 
     void Start()
@@ -23,6 +25,7 @@ public class EndCardAnimation : MonoBehaviour
         endCardAnimation = endCard.GetComponent<Animator>();
         player = GameObject.FindGameObjectWithTag("Player");
         playerRB = player.GetComponent<Rigidbody2D>();
+        testPlayer = player.GetComponent<Test_Player>();
         scoreManager = player.GetComponent<ScoreManager>();
         endCardAnimation.SetBool("highScoreBeaten", false);
         endCardAnimation.SetBool("roundFinished", false);
@@ -35,17 +38,19 @@ public class EndCardAnimation : MonoBehaviour
     void Update()
     {
 
-        Debug.Log(endCardAnimation.GetBool("roundFinished"));
-
         if (scoreManager.distance > PlayerPrefs.GetFloat("Highscore"))
         {
             endCardAnimation.SetBool("highScoreBeaten", true);
         }
 
-        if (playerRB.velocity == new Vector2(0, 0) && !playerRB.isKinematic && failSafe)
+        if (playerRB.velocity == new Vector2(0, 0) && !playerRB.isKinematic && failSafe && !testPlayer.spring.enabled)
         {
             failSafe = false;
             endCardAnimation.SetBool("roundFinished", true);
+            foreach (GameObject button in buttons)
+            {
+                button.SetActive(false);
+            }
         }
 
         if (endCardAnimation.GetBool("roundFinished") == true)

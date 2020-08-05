@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: -6152124973530188219}
   - component: {fileID: 1212044402629493874}
   - component: {fileID: 923413608280000972}
+  - component: {fileID: 4652482112141988149}
   m_Layer: 0
   m_Name: "B\xFCrd"
   m_TagString: Dragon
@@ -29,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 5760577191629561966}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 24.473328, y: 10.680438, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.65, y: 0.65, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -148,3 +149,22 @@ EdgeCollider2D:
   - {x: 3.418438, y: 0.6617727}
   - {x: 6.0459423, y: 0.09783363}
   - {x: 6.7788143, y: -0.04679966}
+--- !u!95 &4652482112141988149
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5760577191629561966}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2e44fea8982b1ca4ebfd4c732f0dfd32, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

@@ -42,7 +42,6 @@ public class Wall_Breaker : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log(other.gameObject.tag);
         if (playerRB.velocity.x > breakSpeed)
         {
             broken = true;

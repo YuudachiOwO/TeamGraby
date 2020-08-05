@@ -5,13 +5,22 @@ using UnityEngine.SceneManagement;
 
 public class SceneChange : MonoBehaviour
 {
+
+    public InitializeAds initializeAds;
+
+    public void Awake()
+    {
+        initializeAds = GameObject.Find("InitializeAds").GetComponent<InitializeAds>();
+    }
     public void menu()
     {
-        SceneManager.LoadScene("Menu"); //LoadScene when button is clicked
+        SceneManager.LoadScene("Menu");
+        
     }
 
     public void start()
     {
+        initializeAds.bannerView.Hide();
         SceneManager.LoadScene("Teste_scene_(Kevin)"); //LoadScene when button is clicked
     }
 
